@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-            <title>
-                UJAP
-            </title>
-            <link href="Views/Assets/img/logo.ico" rel="icon">
-                <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet prefetch">
-                    <link href="Views/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-                        <link href="Views/Assets/css/style.css" rel="stylesheet">
-                        </link>
-                    </link>
-                </link>
-            </link>
-        </meta>
-    </head>
-    <body>
+<?php
+require_once "head.php";
+?>
         <!-- Form-->
         <section id="banner">
             <div class="bg-color">
@@ -103,13 +87,5 @@
                 </div>
             </div>
         </section>
-    </body>
-</html>
-<script src="Views/Assets/js/jquery.min.js">
-</script>
-<script src="Views/Assets/js/popper.min.js">
-</script>
-<script src="Views/Assets/js/bootstrap.min.js">
-</script>
-<script src="Views/Assets/js/index.js">
-</script>
+<?php
+require_once "fbody.php";?>
