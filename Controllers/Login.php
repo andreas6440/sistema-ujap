@@ -4,7 +4,8 @@ class Login
 {
     public function login()
     {
-        include "Views/index.php";
+        /* require_once "Views/Login.php";*/
+        require_once "Views/Paginas/perfil.php";
     }
 
 }
