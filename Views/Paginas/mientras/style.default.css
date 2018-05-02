@@ -1,16 +1,4 @@
 /*
-==========================================================
-==========================================================
-
-Bootstrap 4 Admin Template
-
-https://bootstrapious.com/p/admin-template
-
-==========================================================
-==========================================================
-*/
-
-/*
 * ==========================================================
 *     GENERAL STYLES
 * ==========================================================
@@ -528,7 +516,7 @@ nav.side-navbar.shrinked .sidebar-header .title {
         width: calc(100% - 90px);
     }
 }
-/*quede aqui
+/*
 * ==========================================================
 *     MAIN NAVBAR
 * ==========================================================
@@ -821,7 +809,7 @@ nav.navbar .dropdown-menu h3 {
 * ==========================================================
 *     DASHBOARD COUNTS SECTION
 * ==========================================================
-*/
+
 
 section.dashboard-counts .icon {
     width: 40px;
@@ -859,10 +847,11 @@ section.dashboard-counts div[class*='col-'] .item {
 }
 section.dashboard-counts div[class*='col-']:last-of-type .item {
     border-right: none;
-}
+}*/
+
 /*  DASHBOARD COUNTS MEDIAQUERIES ------------------------ */
 
-@media (max-width: 1199px) {
+/*@media (max-width: 1199px) {
     section.dashboard-counts div[class*='col-']:nth-of-type(2) .item {
         border-right: none;
     }
@@ -871,12 +860,15 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     section.dashboard-counts div[class*='col-'] .item {
         border-right: none;
     }
-}
+}*/
+
 /*
 * ==========================================================
 *     DASHBOARD HEADER SECTION
 * ==========================================================
 */
+
+/*
 
 .statistic {
     padding: 20px 15px;
@@ -932,19 +924,22 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     padding: 15px;
     width: 100%;
     margin: 0;
-}
+}*/
+
 /*  DASHBOARD HEADER  MEDIAQUERIES ------------------------*/
 
+/*
 @media (max-width: 991px) {
     section.dashboard-header div[class*='col-'] {
         margin-bottom: 20px;
     }
-}
+}*/
+
 /*
 * ==========================================================
 *     PROJECTS SECTION
 * ==========================================================
-*/
+*
 
 .project .row {
     margin: 0;
@@ -988,9 +983,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 .project .card {
     margin-bottom: 0;
-}
+}*/
+
 /* PROJECTS SECTION ------------------------------------- */
 
+/*
 @media (max-width: 991px) {
     .project .right-col {
         margin-top: 20px;
@@ -1004,7 +1001,8 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     .project .project-progress {
         display: none;
     }
-}
+}*/
+
 /*
 * ==========================================================
 *     CLIENT SECTION
@@ -1013,6 +1011,7 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 
 /*====== Work Amount Box ======*/
 
+/*
 .work-amount .chart {
     margin: 40px auto;
     position: relative;
@@ -1047,9 +1046,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     line-height: 7px;
     background: #85b4f2;
     border-radius: 50%;
-}
+}*/
+
 /*====== Client Profile Box ======*/
 
+/*
 .client .client-avatar {
     width: 100px;
     height: 100px;
@@ -1102,9 +1103,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 .client .client-social a {
     color: #aaa;
-}
+}*/
+
 /*====== Total Overdue Box ======*/
 
+/*
 .overdue .chart canvas {
     width: 100% !important;
     z-index: 1;
@@ -1127,7 +1130,8 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     font-weight: 400;
     color: #555;
     margin: 35px 0;
-}
+}*/
+
 /*
 * ==========================================================
 *     FEEDS SECTION
@@ -1136,6 +1140,7 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 
 /*====== Checklist Box ======*/
 
+/*
 .checklist label {
     font-size: 0.8em;
     color: #999;
@@ -1146,9 +1151,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 .checklist .item:nth-of-type(even) {
     background: #fafafa;
-}
+}*/
+
 /*====== Trending Articles Box ======*/
 
+/*
 .articles a {
     text-decoration: none !important;
     display: block;
@@ -1185,7 +1192,8 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 .articles .item small {
     color: #aaa;
     font-size: 0.75em;
-}
+}*/
+
 /*
 * ==========================================================
 *     UPDATES SECTION
@@ -1194,6 +1202,7 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 
 /*====== Recent Updates Box ======*/
 
+/*
 .recent-updates .item {
     padding: 20px;
 }
@@ -1225,9 +1234,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 .recent-updates .date span {
     font-size: 0.9em;
     font-weight: 300;
-}
+}*/
+
 /*====== Daily Feeds Box ======*/
 
+/*
 .daily-feeds .item {
     padding: 20px;
     border-bottom: 1px solid #eee;
@@ -1275,9 +1286,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 .daily-feeds .date {
     font-size: 0.9em;
     color: #aaa;
-}
+}*/
+
 /*====== Recent Activities Box ======*/
 
+/*
 .recent-activities .item {
     padding: 0 15px;
     border-bottom: 1px solid #eee;
@@ -1309,7 +1322,8 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 .recent-activities .date-holder {
     padding: 0 !important;
     border-right: 1px solid #eee;
-}
+}*/
+
 /*
 * ==========================================================
 *     FOOTER
@@ -1353,14 +1367,11 @@ section.charts div[class*="col-"] {
 * ==========================================================
 */
 
+/*
+
 .line-chart-example .card-block {
     padding: 20px;
-}
-/*
-* ==========================================================
-*     POLAR CHART
-* ==========================================================
-*/
+}*/
 
 /*
 * ==========================================================
@@ -1368,45 +1379,62 @@ section.charts div[class*="col-"] {
 * ==========================================================
 */
 
+/*
+* ==========================================================
+*     POLAR CHART
+* ==========================================================
+*/
+
+/*
 .polar-chart-example canvas {
     max-width: 350px;
     max-height: 350px;
     margin: 20px auto;
-}
+}*/
+
 /*
 * ==========================================================
 *     PIE CHART
 * ==========================================================
 */
 
+/*
 .pie-chart-example canvas {
     max-width: 350px;
     max-height: 350px;
     margin: 15px auto;
-}
+}*/
+
 /*
 * ==========================================================
 *     RADAR CHART
 * ==========================================================
 */
 
+/*
+
 .radar-chart-example canvas {
     max-width: 350px;
     max-height: 350px;
     margin: 20px auto;
-}
+}*/
+
 /* FORMS MEDIAQUERIES -------------------------- */
 
+/*
 @media (max-width: 991px) {
     section.charts h2 {
         font-size: 1rem;
     }
-}
+}*/
+
 /*
 * ==========================================================
 *     FORMS
 * ==========================================================
 */
+
+/*
 
 .form-control {
     border: 1px solid #dee2e6;
@@ -1606,7 +1634,8 @@ select {
 }
 select option {
     color: #999;
-}
+}*/
+
 /*
 * ==========================================================
 *     FORM PAGE
