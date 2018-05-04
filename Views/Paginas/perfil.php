@@ -4,16 +4,12 @@
         <header class="header">
             <nav class="navbar">
                 <!-- Search Box-->
-                <div class="search-box">
-                    <button class="dismiss">
-                        <i class="icon-close">
-                        </i>
-                    </button>
-                    <form action="#" id="searchForm" role="search">
-                        <input class="form-control" placeholder="Qué estás buscando..." type="search">
-                        </input>
-                    </form>
-                </div>
+               <div class="search-box">
+            <button class="dismiss"><i class="fa fa-search" ></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="What are you looking for..." class="form-control">
+            </form>
+          </div>
                 <div class="container-fluid">
                     <div class="navbar-holder d-flex align-items-center justify-content-between">
                         <!-- Navbar Header-->
@@ -95,8 +91,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <i class="icon-grid">
-                            </i>
+                            <i class="fa fa-money" ></i>
                             Fideicomiso
                         </a>
                     </li>
@@ -114,9 +109,12 @@
                         </a>
                     </li>
                     <li>
+
                         <a aria-expanded="false" data-toggle="collapse" href="#exampledropdownDropdown">
-                            <i class="icon-interface-windows"></i>
+                           <i class="fa fa-clipboard" aria-hidden="true"></i>
+
                             Constancia de trabajo
+                             <i class="icon-interface-windows"></i>
                         </a>
                         <ul class="collapse list-unstyled " id="exampledropdownDropdown">
                             <li>
