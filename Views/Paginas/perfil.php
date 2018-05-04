@@ -22,15 +22,15 @@
                             <a class="navbar-brand" href="index.html">
                                 <div class="brand-text brand-big">
                                     <span>
-                                        Bootstrap
+                                        Universidad
                                     </span>
                                     <strong>
-                                        Dashboard
+                                        José Antonio Páez
                                     </strong>
                                 </div>
                                 <div class="brand-text brand-small">
                                     <strong>
-                                        BD
+                                        UJAP
                                     </strong>
                                 </div>
                             </a>
@@ -53,12 +53,11 @@
                                     </i>
                                 </a>
                             </li>
-                            <!-- Logout    -->
+                            <!-- Cerrar sesion    -->
                             <li class="nav-item">
                                 <a class="nav-link logout" href="login.html">
-                                    Logout
-                                    <i class="fa fa-sign-out">
-                                    </i>
+                                    Cerrar sesión
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>
@@ -72,7 +71,7 @@
                 <!-- Sidebar Header-->
                 <div class="sidebar-header d-flex align-items-center">
                     <div class="avatar">
-                        <img alt="..." class="img-fluid rounded-circle" src="img/avatar-1.jpg"/>
+                        <img alt="..." class="img-fluid rounded-circle" src="Views/Assets/img/avatar-1.jpg"/>
                     </div>
                     <div class="title">
                         <h1 class="h4">
@@ -89,37 +88,34 @@
                 </span>
                 <ul class="list-unstyled">
                     <li class="active">
-                        <a href="index.html">
-                            <i class="icon-home">
-                            </i>
+                        <a href="">
+                            <i class="fa fa-home" ></i>
                             Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="tables.html">
+                        <a href="">
                             <i class="icon-grid">
                             </i>
                             Fideicomiso
                         </a>
                     </li>
                     <li>
-                        <a href="charts.html">
+                        <a href="">
                             <i class="fa fa-bar-chart">
                             </i>
                             ARC
                         </a>
                     </li>
                     <li>
-                        <a href="forms.html">
-                            <i class="icon-padnote">
-                            </i>
+                        <a href="">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
                             Recibos
                         </a>
                     </li>
                     <li>
                         <a aria-expanded="false" data-toggle="collapse" href="#exampledropdownDropdown">
-                            <i class="icon-interface-windows">
-                            </i>
+                            <i class="icon-interface-windows"></i>
                             Constancia de trabajo
                         </a>
                         <ul class="collapse list-unstyled " id="exampledropdownDropdown">
@@ -192,7 +188,7 @@
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
-                                            <img class="img" src="./assets/img/faces/marc.jpg"/>
+                                            <img class="img" src="Views/Assets/img/marc.jpg"/>
                                         </a>
                                     </div>
                                     <div class="content">

@@ -19,7 +19,7 @@
 
                     <link href="Views/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="Views/Paginas/mientras/style.default.css">
-                    <link rel="stylesheet" type="text/css" href="Views/Assets/css/font-awesome.min.css">
+                    <link rel="stylesheet" type="text/css" href="Views/Assets/font-awesome/css/font-awesome.min.css">
                 <!-- CSS personal-->
                         <link href="Views/Assets/css/style.css" rel="stylesheet">
                         </link>

@@ -1661,7 +1661,7 @@ select option {
 * ==========================================================
 *     LOGIN PAGE
 * ==========================================================
-*/
+
 
 .login-page {
     position: relative;
@@ -1755,14 +1755,14 @@ select option {
         padding-top: 100px !important;
         padding-bottom: 100px !important;
     }
-}
+}*/
+
 /*
 
 =====================
 STYLE SWITCHER FOR DEMO
 =====================
 
-*/
 
 #style-switch-button {
     position: fixed;
@@ -1783,14 +1783,15 @@ STYLE SWITCHER FOR DEMO
 }
 #style-switch h4 {
     color: #495057;
-}
+}*/
+
 /* ========================================= 
    THEMING OF BOOTSTRAP COMPONENTS           
    ========================================= */
 
 /*
  * 1. NAVBAR
- */
+ *
 
 .navbar {
     padding: 0.5rem 1rem;
@@ -1864,7 +1865,8 @@ STYLE SWITCHER FOR DEMO
 }
 .navbar-dark .navbar-text {
     color: rgba(255, 255, 255, 0.5);
-}
+}*/
+
 /*
  * 2. BUTTONS
  */
@@ -2436,7 +2438,7 @@ a.text-primary:focus, a.text-primary:hover {
     color: #503ce9 !important;
 }
 /*
- * 4. PAGINATION
+ * 4. PAGINATION  falta por copiar
  */
 
 .page-item:first-child .page-link {

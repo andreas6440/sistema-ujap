@@ -13,7 +13,9 @@ a:hover, a:focus, i:hover, i:focus, span:hover, span:focus {
 }
 section {
     padding: 50px 0;
-    /*----Login, formulario de registro, pronto recuperación de contraseña----*/
+    /*===================================
+        Login y formulario de registro
+     ===================================*/
     #banner {
         background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
         background-size: cover;
@@ -358,4 +360,4 @@ section {
     left: 0%;
 }
 ---FIN---*/
-    /*Menú y parte principal*/
+    /*
