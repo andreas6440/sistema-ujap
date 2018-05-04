@@ -4,11 +4,11 @@
 
 <script src="Views/Assets/js/popper.min.js">
 </script>
+
 <script src="Views/Assets/js/bootstrap.min.js">
 </script>
 
-<script src="Views/Assets/js/index.js">
-</script>
+
 <script type="Views/Assets/js/front.js"></script>
 
 <!-- hasta aqui-->
