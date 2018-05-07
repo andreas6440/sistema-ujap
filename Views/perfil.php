@@ -140,7 +140,8 @@
                         </h2>
                     </div>
                 </header>
-                <!-- Dashboard Counts Section-->
+
+                <!-- Contenido de la pestaña-->
                 <section class="dashboard-counts no-padding-bottom">
                     <div class="container-fluid">
                         <div class="row ">
@@ -156,32 +157,24 @@
                                     </div>
                                     <div class="card-body">
                                         <form>
-                                            <div class="row">
-                                                <div class="col-md-5">
-                                                    <div id="group">
-                                                        <input class="input2" required="required" type="text"/>
-                                                        <span class="highlight">
-                                                        </span>
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Email
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a class="mr-auto my-5" data-target="#modal_recuperacion" data-toggle="modal" href="#">
-                                                ¿Olvidaste tu contraseña?
-                                            </a>
-                                            <button class="btn pull-right btn-primary titulo" type="submit">
-                                                Actualizar Perfil
-                                            </button>
-                                            <div class="clearfix">
-                                            </div>
-                                        </form>
+               <div class="group">
+                <input class="input2" id="name" required="required" type="text"/>
+                <label class="label2" for="name">
+                    Name
+                </label>
+                <div class="bar">
+                </div>
+            </div>
+
+
+
+            </form>
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div class="col-6 col-md-4">
                                 <div class="card card-profile">
                                     <div class="card-avatar">
