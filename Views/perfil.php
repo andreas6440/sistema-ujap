@@ -157,14 +157,16 @@
                                     </div>
                                     <div class="card-body">
                                         <form>
-               <div class="group">
-                <input class="input2" id="name" required="required" type="text"/>
-                <label class="label2" for="name">
-                    Name
-                </label>
-                <div class="bar">
+                                            <div class="group">
+                    <input class="input2" required="required" type="text"/>
+
+                    <span class="bar">
+                    </span>
+                    <label class="label2">
+                        Name
+                    </label>
                 </div>
-            </div>
+
 
 
 
