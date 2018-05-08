@@ -136,7 +136,7 @@
                 <header class="page-header">
                     <div class="container-fluid">
                         <h2 class="no-margin-bottom">
-                            aqui debe ir el nombre y apellido del trabajador
+                            aqui debe ir como la especificación de la sección
                         </h2>
                     </div>
                 </header>
@@ -145,10 +145,11 @@
                 <section class="dashboard-counts no-padding-bottom">
                     <div class="container-fluid">
                         <div class="row ">
-                            <!-- Item -->
+                            <!--=================================
+                                información de la cuenta - perfil
+                                ================================= -->
                             <div class="col-12 col-md-8 ">
-                                <!--<div class="item d-flex align-items-center">
-                                      </div>-->
+
                                 <div class="card">
                                     <div class="card-header d-flex align-items-center">
                                         <h3 class="h4">
@@ -284,31 +285,28 @@
                                 </div>
                             </div>
 
+                            <!--========================
+                            especificaciones del usuario
+                            ============================-->
 
-
-                         <!--   <div class="col-6 col-md-4">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#pablo">
-                                            <img class="img" src="Views/Assets/img/marc.jpg"/>
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="category text-gray">
-                                            CEO / Co-Founder
-                                        </h6>
-                                        <h4 class="card-title">
-                                            Alec Thompson
-                                        </h4>
-                                        <p class="card-content">
-                                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                                        </p>
-                                        <a class="btn btn-primary btn-round" href="#pablo">
-                                            Follow
-                                        </a>
-                                    </div>
+                         <div class="col-md-4">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#pablo">
+                                        <img class="img" src="Views/Assets/img/marc.jpg" />
+                                    </a>
                                 </div>
-                            </div>-->
+
+                                <div class="content">
+                                    <h6 class="category text-gray">Categoría</h6>
+                                    <h4 class="card-title">Materias ,Cargo, descripción</h4>
+                                    <p class="card-content">
+                                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                                    </p>
+                                    <a href="" class="btn btn-primary btn-round">Follow</a>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </section>
