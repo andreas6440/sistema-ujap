@@ -157,27 +157,136 @@
                                     </div>
                                     <div class="card-body">
                                         <form>
-                                            <div class="group">
-                    <input class="input2" required="required" type="text"/>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            cédula
+                                                        </label>
 
-                    <span class="bar">
-                    </span>
-                    <label class="label2">
-                        Name
-                    </label>
-                </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
 
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nombre
+                                                        </label>
 
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
 
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Apellido
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
 
-            </form>
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Dirección
+                                                        </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                         <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Departamento
+                                                        </label>
+                                            </div>
+                                        </div>
+                                            <div class="col-md-3">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Cargo
+                                                        </label>
+                                            </div>
+                                        </div>
+                                            <div class="col-md-4">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Categoría
+                                                        </label>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                    <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            correo electronico
+                                                        </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Ingreso
+                                                        </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Salario Mensual
+                                                        </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
 
 
 
-                            <div class="col-6 col-md-4">
+                         <!--   <div class="col-6 col-md-4">
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
@@ -199,7 +308,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </section>
