@@ -1,5 +1,6 @@
 <?php
 include_once "head.php";
+include_once "Controllers/Login_control.php"
 ?>
         <!-- Form-->
         <section id="banner">
@@ -16,7 +17,7 @@ include_once "head.php";
                                     </h1>
                                 </div>
                                 <div class="form-content">
-                                    <form>
+                                    <form method="post">
                                         <div class="form-group">
                                             <label for="username">
                                                 Nombre de Usuario
@@ -35,11 +36,22 @@ include_once "head.php";
                                             </a>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit">
-                                                Aceptar
-                                            </button>
+                                            <input type="submit" name="submit" value="Entrar">
                                         </div>
                                     </form>
+                                    <?php                              
+    /*Alcides Estuvo aqui*/
+                                    $user = new Login_control;
+                                    $data=$user->loguear();
+                                    if(isset($data)){
+                                        while ($row = pg_fetch_assoc($data)) {
+                                            echo $row['usuario'];
+                                            echo "<br>";
+                                            echo $row['password'];
+                                        }
+                                    }
+                                    
+                                    ?>
                                 </div>
                             </div>
                             <div class="form-panel two">
@@ -75,9 +87,7 @@ include_once "head.php";
                                             <input id="email" name="email" required="required" type="email"/>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit">
-                                                Registrar
-                                            </button>
+                                            <input type="submit" name="registrar" value="Registrar">
                                         </div>
                                     </form>
                                 </div>

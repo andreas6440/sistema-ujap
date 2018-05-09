@@ -1,5 +1,5 @@
 <?php
-require_once "head.php";
+require_once "Views/head.php";
 ?>
         <!-- Form-->
         <section id="banner">
@@ -93,4 +93,5 @@ require_once "head.php";
             </div>
         </section>
 <?php
-require_once "fbody.php";?>
+require_once "Views/fbody.php";
+?>
