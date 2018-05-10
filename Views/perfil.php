@@ -194,19 +194,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="group">
-                                                <input class="input2" required="required" type="text"/>
 
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Dirección
-                                                        </label>
-                                            </div>
-                                        </div>
-                                    </div>
                                          <div class="row">
                                             <div class="col-md-5">
                                                 <div class="group">
@@ -244,7 +232,20 @@
                                         </div>
 
                                     <div class="row">
-                                            <div class="col-md-5">
+
+
+                                        <div class="col-md-3">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Fecha de Ingreso
+                                                        </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
                                                 <div class="group">
                                                 <input class="input2" required="required" type="text"/>
 
@@ -255,7 +256,6 @@
                                                         </label>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
                                                 <div class="group">
                                                 <input class="input2" required="required" type="text"/>
@@ -263,13 +263,31 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Ingreso
+                                                            teléfono
                                                         </label>
                                             </div>
                                         </div>
 
 
                                     </div>
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="group">
+                                                <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Dirección
+                                                        </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-md-4 btn-box">
+                                                <button type="button" class="btn btn-submit btn-lg" disabled>Guardar Cambios</button>
+                                            </div>
+                                        </div>
                                     </form>
                                     </div>
                                 </div>
@@ -278,7 +296,7 @@
                             <!--========================
                             especificaciones del usuario
                             ============================-->
-
+<!--
                         <div class="col-lg-4">
                   <div class="client card">
 
@@ -301,7 +319,7 @@
 
                     </div>
                   </div>
-                </div>
+                </div>-->
                         </div>
                     </div>
                 </section>
