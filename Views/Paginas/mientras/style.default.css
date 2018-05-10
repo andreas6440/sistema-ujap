@@ -1051,8 +1051,11 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
     border-radius: 50%;
 }*/
 
-/*====== Client Profile Box ======*/
+/*====== especificaciones del usuario ======*/
 
+#client-active {
+    color: #54e69d !important;
+}
 .client .client-avatar {
     width: 100px;
     height: 100px;

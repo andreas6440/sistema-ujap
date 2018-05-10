@@ -83,7 +83,7 @@
                     Principal
                 </span>
                 <ul class="list-unstyled">
-                    <li class="active">
+                    <li class="">
                         <a href="">
                             <i class="fa fa-home" ></i>
                             Inicio
@@ -267,17 +267,7 @@
                                                         </label>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                                <div class="group">
-                                                <input class="input2" required="required" type="text"/>
 
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Salario Mensual
-                                                        </label>
-                                            </div>
-                                        </div>
 
                                     </div>
                                     </form>
@@ -299,9 +289,11 @@
                       <div class="client-title">
                         <h3>Jason Doe</h3><span>Web Developer</span>
                       </div>
-                      <div class="client-info center">
+                      <div class="client-materias"></div>
+                      <div class="client-salario"></div>
+                      <div class="client-info center my-3">
                         <div class="row">
-                          <div class="col-4"><strong><i class="fa fa-book" aria-hidden="true"></i></strong><br><small>Materias</small></div>
+                          <div id="client-active" class="col-4"><strong><i  class="fa fa-book" aria-hidden="true"></i></strong><br><small>Materias</small></div>
                           <div class="col-4"><strong><i class="fa fa-money" aria-hidden="true"></i></strong><br><small>salario</small></div>
 
                         </div>
