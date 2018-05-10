@@ -35,14 +35,13 @@ canvas {
 header.page-header {
     padding: 20px 0;
 }
-/*
-table {
-  font-size: 0.9em;
-  color: #666;
-}
-revisar
+/*pendiente por revisar
 
-.card-close {
+table {
+    font-size: 0.9em;
+    color: #666;
+}
+revisar .card-close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -75,6 +74,8 @@ revisar
     -webkit-transition: none;
     transition: none;
 }*/
+
+/*hasta aqui*/
 
 .content-inner {
     position: relative;
@@ -168,6 +169,7 @@ button, input {
 .bg-yellow:hover {
     color: #fff;
 }
+
 .bg-green {
     background: #54e69d !important;
     color: #fff;
@@ -175,6 +177,7 @@ button, input {
 .bg-green:hover {
     color: #fff;
 }
+
 .bg-orange {
     background: #ffc36d !important;
     color: #fff;
@@ -1050,7 +1053,6 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 
 /*====== Client Profile Box ======*/
 
-/*
 .client .client-avatar {
     width: 100px;
     height: 100px;
@@ -1098,12 +1100,13 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 .client .client-info strong {
     font-weight: 700;
 }
+/*
 .client .client-social {
     margin-top: 20px;
 }
 .client .client-social a {
     color: #aaa;
-}*/
+}}*/
 
 /*====== Total Overdue Box ======*/
 

@@ -289,24 +289,27 @@
                             especificaciones del usuario
                             ============================-->
 
-                         <div class="col-md-4">
-                            <div class="card card-profile">
-                                <div class="card-avatar">
-                                    <a href="#pablo">
-                                        <img class="img" src="Views/Assets/img/marc.jpg" />
-                                    </a>
-                                </div>
+                        <div class="col-lg-4">
+                  <div class="client card">
 
-                                <div class="content">
-                                    <h6 class="category text-gray">Categoría</h6>
-                                    <h4 class="card-title">Materias ,Cargo, descripción</h4>
-                                    <p class="card-content">
-                                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                                    </p>
-                                    <a href="" class="btn btn-primary btn-round">Follow</a>
-                                </div>
-                            </div>
+                    <div class="card-body text-center">
+                      <div class="client-avatar"><img src="Views/Assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                        <div class="status bg-green"></div>
+                      </div>
+                      <div class="client-title">
+                        <h3>Jason Doe</h3><span>Web Developer</span>
+                      </div>
+                      <div class="client-info center">
+                        <div class="row">
+                          <div class="col-4"><strong><i class="fa fa-book" aria-hidden="true"></i></strong><br><small>Materias</small></div>
+                          <div class="col-4"><strong><i class="fa fa-money" aria-hidden="true"></i></strong><br><small>salario</small></div>
+
                         </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
                         </div>
                     </div>
                 </section>

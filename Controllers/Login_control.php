@@ -4,7 +4,7 @@ class Login_control{
     
     public function login(){   
         
-        require_once "Views/Login.php";
+        require_once "Views/perfil.php";
     }
     
 /*Alcides estuvo aqui*/    
