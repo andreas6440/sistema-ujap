@@ -22,7 +22,7 @@
                <!-- Css de toda la pagina por ahora-->
 
 
-                    <link rel="stylesheet" type="text/css" href="Views/Paginas/mientras/style.default.css">
+                    <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.default.css">
 
 
 
