@@ -1,4 +1,5 @@
 <?php require_once "Views/head.php";
+$menu = 'perfil';
 require_once "Views/Paginas/menu.php";
 ?>
 

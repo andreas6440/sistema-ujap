@@ -1,3 +1,7 @@
+<?php require_once "Views/head.php";
+$menu = 'Inicio';
+require_once "Views/Paginas/menu.php";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -450,26 +454,9 @@
                         Bootstrapious
                     </a>
                 </p>
-                
+
             </div>
         </div>
     </div>
 </footer>-->
-<!-- JavaScript files-->
-<script src="../Assets/js/jquery.min.js">
-</script>
-<script src="../Assets/js/popper.min.js">
-</script>
-<script src="../Assets/js/bootstrap.min.js">
-</script>
-<script src="mientras/jquery.cookie.js">
-</script>
-<script src="mientras/Chart.min.js">
-</script>
-<script src="mientras/jquery.validate.js">
-</script>
-<script src="mientras/charts-home.js">
-</script>
-<!-- Main File-->
-<script src="mientras/front.js">
-</script>
+<?php require_once "Views/fbody.php"?>

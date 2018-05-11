@@ -82,53 +82,65 @@
                     Principal
                 </span>
                 <ul class="list-unstyled">
-                    <li class="">
-                        <a href="">
+                    <li class="<?php
+if ($menu == 'Inicio') {
+    echo 'active';
+}
+
+?>">
+                        <a href="Views/Paginas/Inicio.php">
                             <i class="fa fa-home" ></i>
                             Inicio
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                    <li class="<?php
+if ($menu == 'Fideicomiso') {
+    echo 'active';
+}
+
+?>">
+                        <a href="Views/Paginas/Fideicomiso.php">
                             <i class="fa fa-money" ></i>
                             Fideicomiso
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                     <li class="<?php
+if ($menu == 'ARC') {
+    echo 'active';
+}
+
+?>">
+                        <a href="Views/Paginas/ARC.php">
                             <i class="fa fa-bar-chart">
                             </i>
                             ARC
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                     <li class="<?php
+if ($menu == 'Recibo') {
+    echo 'active';
+}
+
+?>">
+
+                        <a href="Views/Paginas/Recibo.php">
                             <i class="fa fa-file-text" aria-hidden="true"></i>
                             Recibos
                         </a>
                     </li>
-                    <li>
+                     <li class="<?php
+if ($menu == 'Constancia') {
+    echo 'active';
+}
 
-                        <a aria-expanded="false" data-toggle="collapse" href="#exampledropdownDropdown">
-                           <i class="fa fa-clipboard" aria-hidden="true"></i>
+?>">
 
-                            Constancia de trabajo
-                             <i class="icon-interface-windows"></i>
+                        <a href="Views/Paginas/Constancia.php">
+                            <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            Constancia de Trabajo
                         </a>
-                        <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                            <li>
-                                <a href="#">
-                                    Simple
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Resumen de trayectoria
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                </ul>
+                                     </ul>
             </nav>
             <div class="content-inner">
                 <!-- Page Header-->
