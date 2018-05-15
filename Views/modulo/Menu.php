@@ -88,7 +88,7 @@ if ($menu == 'Inicio') {
 }
 
 ?>">
-                        <a href="Views/Paginas/Inicio.php">
+                        <a href="Views/Inicio.php">
                             <i class="fa fa-home" ></i>
                             Inicio
                         </a>
@@ -99,7 +99,7 @@ if ($menu == 'Fideicomiso') {
 }
 
 ?>">
-                        <a href="Views/Paginas/Fideicomiso.php">
+                        <a href="Views/Fideicomiso.php">
                             <i class="fa fa-money" ></i>
                             Fideicomiso
                         </a>
@@ -110,7 +110,7 @@ if ($menu == 'ARC') {
 }
 
 ?>">
-                        <a href="Views/Paginas/ARC.php">
+                        <a href="Views/ARC.php">
                             <i class="fa fa-bar-chart">
                             </i>
                             ARC
@@ -123,7 +123,7 @@ if ($menu == 'Recibo') {
 
 ?>">
 
-                        <a href="Views/Paginas/Recibo.php">
+                        <a href="Views/Recibo.php">
                             <i class="fa fa-file-text" aria-hidden="true"></i>
                             Recibos
                         </a>
@@ -135,7 +135,7 @@ if ($menu == 'Constancia') {
 
 ?>">
 
-                        <a href="Views/Paginas/Constancia.php">
+                        <a href="Views/Constancia.php">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
                             Constancia de Trabajo
                         </a>

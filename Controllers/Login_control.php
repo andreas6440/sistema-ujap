@@ -6,7 +6,7 @@ class Login_control
     public function login()
     {
 
-        require_once "Views/Paginas/Constancia.php";
+        require_once "Views/Plantilla.php";
     }
 
 /*Alcides estuvo aqui*/

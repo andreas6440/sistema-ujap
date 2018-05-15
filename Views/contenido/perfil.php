@@ -1,6 +1,6 @@
-<?php require_once "Views/head.php";
+<?php /*require_once "Views/head.php";
 $menu = 'perfil';
-require_once "Views/Paginas/menu.php";
+require_once "Views/menu.php";*/
 ?>
 
 
@@ -211,6 +211,6 @@ require_once "Views/Paginas/menu.php";
         </div>
     </div>
 </footer>-->
-<?php
-require_once "Views/fbody.php";
+<?php/*
+require_once "Views/fbody.php";*/
 ?>
