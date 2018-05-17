@@ -61,18 +61,12 @@ echo $row['password'];
                                     </h1>
                                 </div>
                                 <div class="form-content">
-                                    <form>
+                                    <form method="post">
                                         <div class="form-group">
                                             <label for="username-r">
                                                 Nombre de Usuario
                                             </label>
                                             <input id="username-r" name="username-r" required="required" type="text"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="cedula">
-                                                Cédula
-                                            </label>
-                                            <input id="cedula" name="cedula" required="required" type="text"/>
                                         </div>
                                         <div class="form-group">
                                             <label for="password-r">
@@ -81,8 +75,32 @@ echo $row['password'];
                                             <input id="password-r" name="password-r" required="required" type="password"/>
                                         </div>
                                         <div class="form-group">
+                                            <label for="cedula">
+                                                Cédula
+                                            </label>
+                                            <input id="cedula" name="cedula" required="required" type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nombre">
+                                                Nombre
+                                            </label>
+                                            <input id="nombre" name="nombre" required="required" type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="apellido">
+                                                Apellido
+                                            </label>
+                                            <input id="apellido" name="apellido" required="required" type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="telefono">
+                                                Numero de telefono
+                                            </label>
+                                            <input id="telefono" name="telefono" required="required" type="number"/>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="email">
-                                                correo electrónico
+                                                Correo electrónico
                                             </label>
                                             <input id="email" name="email" required="required" type="email"/>
                                         </div>
