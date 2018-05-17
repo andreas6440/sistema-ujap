@@ -1,7 +1,4 @@
-<?php /*require_once "Views/head.php";
-$menu = 'perfil';
-require_once "Views/menu.php";*/
-?>
+
 
 
                 <!-- Contenido de la pestaña-->
@@ -211,6 +208,3 @@ require_once "Views/menu.php";*/
         </div>
     </div>
 </footer>-->
-<?php/*
-require_once "Views/fbody.php";*/
-?>

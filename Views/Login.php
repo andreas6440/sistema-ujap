@@ -1,6 +1,6 @@
 <?php
-include_once "head.php";
-include_once "Controllers/Login_control.php"
+include_once "Views/modulo/head.php";
+
 ?>
         <!-- Form-->
         <section id="banner">
@@ -39,19 +39,19 @@ include_once "Controllers/Login_control.php"
                                             <input type="submit" name="submit" value="Entrar">
                                         </div>
                                     </form>
-                                    <?php                              
-    /*Alcides Estuvo aqui*/
-                                    $user = new Login_control;
-                                    $data=$user->loguear();
-                                    if(isset($data)){
-                                        while ($row = pg_fetch_assoc($data)) {
-                                            echo $row['usuario'];
-                                            echo "<br>";
-                                            echo $row['password'];
-                                        }
-                                    }
-                                    
-                                    ?>
+                                    <?php
+/*Alcides Estuvo aqui- recuerda quitar el comentario
+$user = new Login_control;
+$data = $user->loguear();
+if (isset($data)) {
+while ($row = pg_fetch_assoc($data)) {
+echo $row['usuario'];
+echo "<br>";
+echo $row['password'];
+}
+}
+ */
+?>
                                 </div>
                             </div>
                             <div class="form-panel two">
@@ -98,4 +98,4 @@ include_once "Controllers/Login_control.php"
             </div>
         </section>
 <?php
-require_once "fbody.php";?>
+require_once "Views/modulo/fbody.php";?>
