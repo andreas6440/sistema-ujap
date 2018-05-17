@@ -1,4 +1,4 @@
-
+<?php echo $pagina ?>
 
 
                 <!-- Contenido de la pestaña-->

@@ -1,20 +1,22 @@
 <?php
 
-// Pequeña lógica para capturar la pagina que queremos abrir
-$pagina = isset($_POST['p']) ? strtolower($_POST['p']) : 'Plantilla';
+$pagina = isset($_GET['p']) ? $_GET['p'] : 'ARC';
 
-// El fragmento de html que contiene la cabecera de nuestra web
 require_once 'Views/modulo/head.php';
 
-/* Estamos considerando que el parámetro enviando tiene el mismo nombre del archivo a cargar, si este no fuera así
-se produciría un error de archivo no encontrado */
-if ($pagina == 'Plantilla') {
-    require_once 'Views/' . $pagina . '.php';
+if ($pagina == 'Login' || $pagina == ' ') {
+    $ruta = 'Views/' . $pagina . '.php';
+    require_once $ruta;
 } else {
-    require_once 'Views/contenido/' . $pagina . '.php';
+    $ruta = 'Views/' . $pagina . '.php';
+    if (is_readable($ruta)) {
+        require_once 'Views/modulo/Menu.php';
+        require_once $ruta;
+
+        /*Alcides aqui pon que si no ha iniciado sesión no se puede dirigir a ese lugar*/
+    } else {
+        echo "Esta pagina no existe,crea una pagina de error";
+    }
 }
 
-// Otra opción es validar usando un switch, de esta manera para el valor esperado le indicamos que página cargar
-
-// El fragmento de html que contiene el pie de página de nuestra web
 require_once 'Views/modulo/fbody.php';

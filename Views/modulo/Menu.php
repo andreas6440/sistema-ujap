@@ -70,7 +70,7 @@
                     </div>
                     <div class="title">
                         <h1 class="h4">
-                            Nombre de usuario
+                          <a href="?p=Perfil">  Nombre de usuario</a>
                         </h1>
                         <p>
                             categoría
@@ -82,60 +82,50 @@
                     Principal
                 </span>
                 <ul class="list-unstyled">
+
                     <li class="<?php
-if ($menu == 'Inicio') {
+if ($pagina == 'Fideicomiso') {
     echo 'active';
 }
 
 ?>">
-                        <a href="Views/Inicio.php">
-                            <i class="fa fa-home" ></i>
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="<?php
-if ($menu == 'Fideicomiso') {
-    echo 'active';
-}
-
-?>">
-                        <a href="Views/Fideicomiso.php">
+                       <a href="?p=Fideicomiso">
                             <i class="fa fa-money" ></i>
                             Fideicomiso
                         </a>
                     </li>
                      <li class="<?php
-if ($menu == 'ARC') {
+if ($pagina == 'ARC') {
     echo 'active';
 }
 
 ?>">
-                        <a href="Views/ARC.php">
+                        <a href="?p=ARC">
                             <i class="fa fa-bar-chart">
                             </i>
                             ARC
                         </a>
                     </li>
                      <li class="<?php
-if ($menu == 'Recibo') {
+if ($pagina == 'Recibo') {
     echo 'active';
 }
 
 ?>">
 
-                        <a href="Views/Recibo.php">
+                        <a href="?p=Recibo">
                             <i class="fa fa-file-text" aria-hidden="true"></i>
                             Recibos
                         </a>
                     </li>
                      <li class="<?php
-if ($menu == 'Constancia') {
+if ($pagina == 'Constancia') {
     echo 'active';
 }
 
 ?>">
 
-                        <a href="Views/Constancia.php">
+                        <a href="?p=Constancia">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
                             Constancia de Trabajo
                         </a>

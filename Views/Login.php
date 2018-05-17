@@ -1,7 +1,4 @@
-<?php
-include_once "Views/modulo/head.php";
 
-?>
         <!-- Form-->
         <section id="banner">
             <div class="bg-color">
@@ -115,5 +112,3 @@ echo $row['password'];
                 </div>
             </div>
         </section>
-<?php
-require_once "Views/modulo/fbody.php";?>
