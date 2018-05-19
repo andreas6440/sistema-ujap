@@ -50,7 +50,7 @@
                             </li>
                             <!-- Cerrar sesion    -->
                             <li class="nav-item">
-                                <a class="nav-link logout" href="login.html">
+                                <a class="nav-link logout" href="?p=Salir">
                                     Cerrar sesión
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </a>
