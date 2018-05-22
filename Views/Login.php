@@ -1,4 +1,3 @@
-
         <!-- Form-->
         <section id="banner">
             <div class="bg-color">
@@ -36,19 +35,6 @@
                                             <input type="submit" name="submit" value="Entrar">
                                         </div>
                                     </form>
-                                    <?php
-/*Alcides Estuvo aqui- recuerda quitar el comentario
-$user = new Login_control;
-$data = $user->loguear();
-if (isset($data)) {
-while ($row = pg_fetch_assoc($data)) {
-echo $row['usuario'];
-echo "<br>";
-echo $row['password'];
-}
-}
- */
-?>
                                 </div>
                             </div>
                             <div class="form-panel two">
@@ -112,3 +98,12 @@ echo $row['password'];
                 </div>
             </div>
         </section>
+<?php
+
+require_once 'Controllers/Login_control.php';
+$login = new Login_control;
+$login -> registrar();
+$login -> loguear();
+
+
+?>

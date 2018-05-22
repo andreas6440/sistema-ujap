@@ -1,6 +1,3 @@
-
-
-
                 <!-- Contenido de la pestaña-->
                 <section class="dashboard-counts no-padding-bottom">
                     <div class="container-fluid">
