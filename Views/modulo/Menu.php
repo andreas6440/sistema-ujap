@@ -50,7 +50,8 @@
                             </li>
                             <!-- Cerrar sesion    -->
                             <li class="nav-item">
-                                <a class="nav-link logout" href="login.html">
+
+                                <a class="nav-link logout" href="?p=Login">
                                     Cerrar sesión
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </a>
@@ -137,7 +138,7 @@ if ($pagina == 'Constancia') {
                 <header class="page-header">
                     <div class="container-fluid">
                         <h2 class="no-margin-bottom">
-                            aqui debe ir como la especificación de la sección
+                            Inicio / <?php echo $pagina ?>
                         </h2>
                     </div>
                 </header>
