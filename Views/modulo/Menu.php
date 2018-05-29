@@ -50,16 +50,7 @@
                             </li>
                             <!-- Cerrar sesion    -->
                             <li class="nav-item">
-<<<<<<< HEAD
                                 <a class="nav-link logout" href="?p=Salir">
-=======
-<<<<<<< HEAD
-
-                                <a class="nav-link logout" href="?p=Login">
-=======
-                                <a class="nav-link logout" href="?p=Salir">
->>>>>>> c526c0d7ea24d1670f1f6f2267504bc4bf4cf678
->>>>>>> 7615fd6ea47b7796ee6f3efac7f4d18e68749667
                                     Cerrar sesión
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </a>
@@ -146,7 +137,7 @@ if ($pagina == 'Constancia') {
                 <header class="page-header">
                     <div class="container-fluid">
                         <h2 class="no-margin-bottom">
-                            Inicio / <?php echo $pagina ?>
+                            aqui debe ir como la especificación de la sección
                         </h2>
                     </div>
                 </header>
