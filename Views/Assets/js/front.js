@@ -1,51 +1,69 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
     'use strict';
-
-    // ------------------------------------------------------- //
-    // Search Box
-    // ------------------------------------------------------ //
-    $('#search').on('click', function (e) {
+    /* ------------------------------------------------------- 
+     abrir panel de regristro
+    ------------------------------------------------------ */
+    var panelOne = $('.form-panel.two').height(),
+        //panelTwo = $('.form-panel.two')[0].scrollHeight;
+        $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
+            e.preventDefault();
+            $('.form-toggle').addClass('visible');
+            $('.form-panel.one').addClass('hidden');
+            $('.form-panel.two').addClass('active');
+            $('.form').animate({
+                'height': panelTwo
+            }, 200);
+        });
+    /* ------------------------------------------------------- 
+      cerrar panel de regitro
+    ------------------------------------------------------ */
+    $('.form-toggle').on('click', function(e) {
+        e.preventDefault();
+        $(this).removeClass('visible');
+        $('.form-panel.one').removeClass('hidden');
+        $('.form-panel.two').removeClass('active');
+        $('.form').animate({
+            'height': panelOne
+        }, 200);
+    });
+    /* ------------------------------------------------------- 
+     Search Box
+    ------------------------------------------------------ */
+    $('#search').on('click', function(e) {
         e.preventDefault();
         $('.search-box').fadeIn();
     });
-    $('.dismiss').on('click', function () {
+    $('.dismiss').on('click', function() {
         $('.search-box').fadeOut();
     });
-
-    // ------------------------------------------------------- //
-    // Card Close
-    // ------------------------------------------------------ //
-    $('.card-close a.remove').on('click', function (e) {
+    /* ------------------------------------------------------- 
+     Card Close
+    ------------------------------------------------------ */
+    $('.card-close a.remove').on('click', function(e) {
         e.preventDefault();
         $(this).parents('.card').fadeOut();
     });
-
-
-    // ------------------------------------------------------- //
-    // Adding fade effect to dropdowns
-    // ------------------------------------------------------ //
-    $('.dropdown').on('show.bs.dropdown', function () {
+    /* ------------------------------------------------------- 
+     Adding fade effect to dropdowns
+     ------------------------------------------------------ */
+    $('.dropdown').on('show.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeIn();
     });
-    $('.dropdown').on('hide.bs.dropdown', function () {
+    $('.dropdown').on('hide.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
     });
-
-
-    // ------------------------------------------------------- //
-    // Login  form validation
-    // ------------------------------------------------------ //
+    /*------------------------------------------------------- 
+     Login  form validation
+     ------------------------------------------------------ */
     $('#login-form').validate({
         messages: {
             loginUsername: 'please enter your username',
             loginPassword: 'please enter your password'
         }
     });
-
-    // ------------------------------------------------------- //
-    // Register form validation
-    // ------------------------------------------------------ //
+    /* ------------------------------------------------------- 
+     Register form validation
+     ------------------------------------------------------ */
     $('#register-form').validate({
         messages: {
             registerUsername: 'please enter your first name',
@@ -53,18 +71,15 @@ $(document).ready(function () {
             registerPassword: 'please enter your password'
         }
     });
-
-    // ------------------------------------------------------- //
-    // Sidebar Functionality
-    // ------------------------------------------------------ //
-    $('#toggle-btn').on('click', function (e) {
+    /* ------------------------------------------------------- 
+     Sidebar Functionality
+     ------------------------------------------------------ */
+    $('#toggle-btn').on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('active');
-
         $('.side-navbar').toggleClass('shrinked');
         $('.content-inner').toggleClass('active');
         $(document).trigger('sidebarChanged');
-
         if ($(window).outerWidth() > 1183) {
             if ($('#toggle-btn').hasClass('active')) {
                 $('.navbar-header .brand-small').hide();
@@ -74,48 +89,39 @@ $(document).ready(function () {
                 $('.navbar-header .brand-big').hide();
             }
         }
-
         if ($(window).outerWidth() < 1183) {
             $('.navbar-header .brand-small').show();
         }
     });
-
-    // ------------------------------------------------------- //
-    // Material Inputs
-    // ------------------------------------------------------ //
-
+    /* ------------------------------------------------------- 
+     Material Inputs
+     ------------------------------------------------------ */
     var materialInputs = $('input.input-material');
-
     // activate labels for prefilled values
-    materialInputs.filter(function() { return $(this).val() !== ""; }).siblings('.label-material').addClass('active');
-
+    materialInputs.filter(function() {
+        return $(this).val() !== "";
+    }).siblings('.label-material').addClass('active');
     // move label on focus
-    materialInputs.on('focus', function () {
+    materialInputs.on('focus', function() {
         $(this).siblings('.label-material').addClass('active');
     });
-
     // remove/keep label on blur
-    materialInputs.on('blur', function () {
+    materialInputs.on('blur', function() {
         $(this).siblings('.label-material').removeClass('active');
-
         if ($(this).val() !== '') {
             $(this).siblings('.label-material').addClass('active');
         } else {
             $(this).siblings('.label-material').removeClass('active');
         }
     });
-
-    // ------------------------------------------------------- //
-    // Footer 
-    // ------------------------------------------------------ //   
-
+    /* ------------------------------------------------------- 
+     Footer 
+     ------------------------------------------------------ */
     var contentInner = $('.content-inner');
-
-    $(document).on('sidebarChanged', function () {
+    $(document).on('sidebarChanged', function() {
         adjustFooter();
     });
-
-    $(window).on('resize', function () {
+    $(window).on('resize', function() {
         adjustFooter();
     })
 
@@ -123,44 +129,31 @@ $(document).ready(function () {
         var footerBlockHeight = $('.main-footer').outerHeight();
         contentInner.css('padding-bottom', footerBlockHeight + 'px');
     }
-
-    // ------------------------------------------------------- //
-    // External links to new window
-    // ------------------------------------------------------ //
-    $('.external').on('click', function (e) {
-
+    /* ------------------------------------------------------- 
+     External links to new window
+     ------------------------------------------------------ */
+    $('.external').on('click', function(e) {
         e.preventDefault();
         window.open($(this).attr("href"));
     });
-
-    // ------------------------------------------------------ //
-    // For demo purposes, can be deleted
-    // ------------------------------------------------------ //
-
+    /* ------------------------------------------------------ 
+     For demo purposes, can be deleted
+     ------------------------------------------------------ */
     var stylesheet = $('link#theme-stylesheet');
     $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
     var alternateColour = $('link#new-stylesheet');
-
     if ($.cookie("theme_csspath")) {
         alternateColour.attr("href", $.cookie("theme_csspath"));
     }
-
-    $("#colour").change(function () {
-
+    $("#colour").change(function() {
         if ($(this).val() !== '') {
-
             var theme_csspath = 'css/style.' + $(this).val() + '.css';
-
             alternateColour.attr("href", theme_csspath);
-
             $.cookie("theme_csspath", theme_csspath, {
                 expires: 365,
                 path: document.URL.substr(0, document.URL.lastIndexOf('/'))
             });
-
         }
-
         return false;
     });
-
 });

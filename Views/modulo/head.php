@@ -25,11 +25,5 @@
                     <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.default.css">
 
 
-
-                        </link>
-                    </link>
-                </link>
-            </link>
-
     </head>
     <body>

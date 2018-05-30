@@ -1,4 +1,4 @@
-
+<!-- script-->
 <script src="Views/Assets/js/jquery.min.js">
 </script>
 
@@ -9,9 +9,9 @@
 </script>
 
 
-<script type="Views/Assets/js/front.js"></script>
+<script src="Views/Assets/js/index.js"></script>
 
-<!-- hasta aqui-->
+
 
 </body>
 </html>

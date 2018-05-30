@@ -18,7 +18,7 @@
                                             <label for="username">
                                                 Nombre de Usuario
                                             </label>
-                                            <input id="username" name="username" required="required" type="text"/>
+                                            <input  id="username" name="username" required="required" type="text"/>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">
@@ -32,7 +32,7 @@
                                             </a>
                                         </div>
                                         <div class="form-group">
-                                            <input type="submit" name="submit" value="Entrar">
+                                            <input class="boton-azul" type="submit" name="submit" value="Entrar">
                                         </div>
                                     </form>
                                 </div>
@@ -43,53 +43,63 @@
                                         Registro de Usuario
                                     </h1>
                                 </div>
-                                <div class="form-content">
+                                <div class="form-content container">
                                     <form method="post">
-                                        <div class="form-group">
+                                        <div class="row">
+                                        <div class="form-group col-6 my-2">
                                             <label for="username-r">
                                                 Nombre de Usuario
                                             </label>
                                             <input id="username-r" name="username-r" required="required" type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-6 my-2">
                                             <label for="password-r">
                                                 Contraseña
                                             </label>
                                             <input id="password-r" name="password-r" required="required" type="password"/>
                                         </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-6 my-2">
                                             <label for="cedula">
                                                 Cédula
                                             </label>
                                             <input id="cedula" name="cedula" required="required" type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-6 my-2">
                                             <label for="nombre">
                                                 Nombre
                                             </label>
                                             <input id="nombre" name="nombre" required="required" type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-6 my-2">
                                             <label for="apellido">
                                                 Apellido
                                             </label>
                                             <input id="apellido" name="apellido" required="required" type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-6 my-2">
                                             <label for="telefono">
                                                 Numero de telefono
                                             </label>
-                                            <input id="telefono" name="telefono" required="required" type="number"/>
+                                            <input id="telefono" name="telefono" required="required" type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 my-2">
                                             <label for="email">
                                                 Correo electrónico
                                             </label>
                                             <input id="email" name="email" required="required" type="email"/>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="submit" name="registrar" value="Registrar">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 my-2">
+                                            <input class="boton-blanco" type="submit" name="registrar" value="Registrar">
                                         </div>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
@@ -102,8 +112,7 @@
 
 require_once 'Controllers/Login_control.php';
 $login = new Login_control;
-$login -> registrar();
-$login -> loguear();
-
+$login->registrar();
+$login->loguear();
 
 ?>
