@@ -1,4 +1,7 @@
         <!-- Form-->
+<?php
+require_once 'Controllers/Login_control.php';
+$login = new Login_control;?>
         <section id="banner">
             <div class="bg-color">
                 <div class="container-fluid">
@@ -97,10 +100,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-12 my-2">
-                                            <input class="boton-blanco" type="submit" name="registrar" value="Registrar">
+                                            <input class="boton-blanco" type="submit" name="registrar" value="Registrar" >
                                         </div>
                                     </div>
                                     </form>
+                                       <?php
+
+$login->registrar();
+?>
                                 </div>
                             </div>
                         </div>
@@ -108,11 +115,4 @@
                 </div>
             </div>
         </section>
-<?php
 
-require_once 'Controllers/Login_control.php';
-$login = new Login_control;
-$login->registrar();
-$login->loguear();
-
-?>

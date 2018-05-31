@@ -3,14 +3,6 @@
 class Login_control
 {
 
-    public function login()
-    {
-
-        require_once "Views/Login.php";
-    }
-
-/*Alcides estuvo aqui*/
-
     public function loguear()
     {
 
@@ -55,7 +47,8 @@ class Login_control
             $telefono = $_POST['telefono'];
             $email    = $_POST['email'];
             $data     = array("usuario" => $usuario, "password" => $password, "cedula" => $cedula, "nombre" => $nombre, "apellido" => $apellido, "telefono" => $telefono, "email" => $email);
-            $reg      = $login_model->registrar($data);
+
+            $reg = $login_model->registrar($data);
 
         }
 
