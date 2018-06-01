@@ -1,13 +1,11 @@
 <?php
 
-class Login_model
-{
-
-    public function logueo($datos)
-    {
-
-        require_once "conexion.php";
-        $query = "SELECT usuario, password FROM public." . '"usuariosweb"' . " where usuario = $1 and password = $2 ;";
+class Login_model{ 
+    
+    public function logueo($datos){
+        
+        require_once"conexion.php";
+        $query = "SELECT usuario, password FROM public.".'"UsuariosWeb"'." where usuario = $1 and password = $2 ;";
 
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(
@@ -16,14 +14,12 @@ class Login_model
         return $prepared;
 
     }
-
-    public function registrar($datos)
-    {
-
-        require_once "conexion.php";
-
-        $nivel    = 1;
-        $query    = "INSERT INTO public." . '"usuariosweb"' . "(cedula, usuario, password, nombre, apellido, telefono, email, nivel) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);";
+    
+    public function registrar($datos){
+        
+        require_once"conexion.php";
+        $nivel=1;
+        $query = "INSERT INTO public.".'"UsuariosWeb"'."(cedula, usuario, password, nombre, apellido, telefono, email, nivel) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);";
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(
             $datos["cedula"],
@@ -35,6 +31,7 @@ class Login_model
             $datos["email"],
             $nivel));
         return $prepared;
+        
 
     }
 

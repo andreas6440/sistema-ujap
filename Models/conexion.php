@@ -1,7 +1,8 @@
 <?php
+
 $host   = "127.0.0.1";
-$port   = "5432";
-$dbname = "sistema";
+$port   = "8000";
+$dbname = "Ujap";
 $dbuser = "postgres";
 $dbpass = "asd123";
 
