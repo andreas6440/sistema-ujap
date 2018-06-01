@@ -21,6 +21,7 @@ class Login_model
     {
 
         require_once "conexion.php";
+
         $nivel    = 1;
         $query    = "INSERT INTO public." . '"usuariosweb"' . "(cedula, usuario, password, nombre, apellido, telefono, email, nivel) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);";
         $prepared = pg_prepare($dbcon, "", $query);
