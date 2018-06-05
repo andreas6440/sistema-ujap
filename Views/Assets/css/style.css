@@ -160,8 +160,9 @@ body, html {
 .two .form-group input {
     color: #FFFFFF;
 }
-.two .form-group input:focus {
-    color: #FFFFFF;
+.two .form-group .boton-blanco:focus {
+    /*color: #FFFFFF;*/
+    color: #0A0A0A;
 }
 .form-group .boton-azul {
     outline: none;
@@ -181,22 +182,17 @@ body, html {
 .two .form-group .boton-blanco {
     background: #FFFFFF;
     color: #4285F4;
-}
-.form-group .form-remember {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: none;
-}
-.form-group .form-remember input[type='checkbox'] {
-    display: inline-block;
-    width: auto;
-    margin: 0 10px 0 0;
-}
-.form-group .form-recovery {
-    color: #4285F4;
-    font-size: 12px;
-    text-decoration: none;
+    outline: none;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 .form-panel {
     padding: 60px calc(5% + 60px) 60px 60px;

@@ -35,13 +35,13 @@ canvas {
 header.page-header {
     padding: 20px 0;
 }
-/*pendiente por revisar
+/*pendiente por revisar*/
 
 table {
     font-size: 0.9em;
     color: #666;
 }
-revisar .card-close {
+.card-close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -73,7 +73,7 @@ revisar .card-close {
     margin-right: 10px;
     -webkit-transition: none;
     transition: none;
-}*/
+}
 
 /*hasta aqui*/
 
