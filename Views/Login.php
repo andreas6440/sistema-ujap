@@ -1,10 +1,16 @@
 <?php 
 require_once "Controllers/Login_control.php";
 
-        $login = new Login_control;
-if (isset($_POST['registrar'])) {
-    $login->registrar();
-}
+    $login = new Login_control;
+    
+    if (isset($_POST['registrar'])) {
+        $login->registrar();
+    }
+
+    if (isset($_POST['submit'])) {
+        $login->loguear();
+    }
+    
  ?>
         <section id="banner">
 
@@ -14,10 +20,9 @@ if (isset($_POST['registrar'])) {
                         <div class="form">
                             <div class="form-toggle">
                             </div>
-                            <div class="form-panel two">
+                            <div class="form-panel one">
                                 <div class="form-header">
                                     <h1>
-
                                         Iniciar Sesión
                                     </h1>
                                 </div>
@@ -42,19 +47,18 @@ if (isset($_POST['registrar'])) {
                                         </div>
                                         <div class="form-group">
                                             <input class="boton-azul" type="submit" name="submit" value="Entrar">
-                                            
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <div class="form-panel one">
+                            <div class="form-panel two">
                                 <div class="form-header">
                                     <h1>
                                         Registro de Usuario
                                     </h1>
                                 </div>
                                 <div class="form-content container">
-                                    <form method="post"  >
+                                    <form method="post">
                                         <div class="form-row">
                                         <div class="form-group col-md-6 my-2">
                                             <label for="username-r">
@@ -120,3 +124,4 @@ if (isset($_POST['registrar'])) {
                 </div>
             </div>
         </section>
+        

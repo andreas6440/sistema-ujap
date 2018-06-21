@@ -14,8 +14,6 @@ class Login_model{
         return $prepared;
 
     }
-     
-    
     
     public function registrar($datos){
         
