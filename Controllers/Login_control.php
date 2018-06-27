@@ -10,7 +10,7 @@ class Login_control
     }
 
 /*Alcides estuvo aqui*/
- 
+
     public function loguear(){
 
         require_once "Models/Login_model.php";

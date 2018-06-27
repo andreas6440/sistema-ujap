@@ -16,8 +16,6 @@ class Login_model{
 
 
     }
-     
-    
     
     public function registrar($datos){
         
