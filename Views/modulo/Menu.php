@@ -1,143 +1,214 @@
-<div class="page">
-        <!-- Main Navbar-->
-        <header class="header">
-            <nav class="navbar">
-                <!-- Search Box-->
-               <div class="search-box">
-            <button class="dismiss"><i class="fa fa-search" ></i></button>
-            <form id="searchForm" action="#" role="search">
-              <input type="search" placeholder="What are you looking for..." class="form-control">
-            </form>
-          </div>
-                <div class="container-fluid">
-                    <div class="navbar-holder d-flex align-items-center justify-content-between">
-                        <!-- Navbar Header-->
-                        <div class="navbar-header">
-                            <!-- Navbar Brand -->
-                            <a class="navbar-brand" href="index.html">
-                                <div class="brand-text brand-big">
-                                    <span>
-                                        Universidad
-                                    </span>
-                                    <strong>
-                                        José Antonio Páez
-                                    </strong>
-                                </div>
-                                <div class="brand-text brand-small">
-                                    <strong>
-                                        UJAP
-                                    </strong>
-                                </div>
-                            </a>
-                            <!-- Toggle Button-->
-                            <a class="menu-btn active" href="#" id="toggle-btn">
-                                <span>
-                                </span>
-                                <span>
-                                </span>
-                                <span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- Navbar Menu -->
-                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                            <!-- Search-->
-                            <li class="nav-item d-flex align-items-center">
-                                <a href="#" id="search">
-                                    <i class="icon-search">
-                                    </i>
-                                </a>
-                            </li>
-                            <!-- Cerrar sesion    -->
-                            <li class="nav-item">
-                                <a class="nav-link logout" href="?p=Salir">
-                                    Cerrar sesión
-                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="page-content d-flex align-items-stretch">
-            <!-- Side Navbar -->
-            <nav class="side-navbar">
-                <!-- Sidebar Header-->
-                <div class="sidebar-header d-flex align-items-center">
-                    <div class="avatar">
-                        <img alt="..." class="img-fluid rounded-circle" src="Views/Assets/img/avatar-1.jpg"/>
-                    </div>
-                    <div class="title">
-                        <h1 class="h4">
-                          <a href="?p=Perfil">  Nombre de usuario</a>
-                        </h1>
-                        <p>
-                            categoría
-                        </p>
-                    </div>
-                </div>
-                <!-- Sidebar Navidation Menus-->
-                <span class="heading">
-                    Principal
-                </span>
-                <ul class="list-unstyled">
-
-                    <li class="<?php
+<!--<li class="<?php
 if ($pagina == 'Fideicomiso') {
     echo 'active';
 }
 
-?>">
+?>"
                        <a href="?p=Fideicomiso">
                             <i class="fa fa-money" ></i>
                             Fideicomiso
                         </a>
-                    </li>
-                     <li class="<?php
-if ($pagina == 'ARC') {
-    echo 'active';
-}
+                    </li>-->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="search-box">
+            <button class="dismiss"><i class="fa fa-times"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="Qué estás buscando..." class="form-control">
+            </form>
+          </div>
+   <img class="img-responsive img-rounded logo-little mx-2" src="Views/Assets/img/logo.ico" >
+   <div class="navbar-header mr-auto opcion ">
+                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
+                    
+                  <div class="brand-text brand-big "><span>Universidad </span><strong> José Antonio Páez</strong></div>
+                  <div class="brand-text brand-small "><strong>Ujap</strong></div></a>
+                <button id="show-sidebar" type="button" class="btn btn-dark my-0"><i class="fa fa-bars"></i></button>
+    </div>
 
-?>">
-                        <a href="?p=ARC">
-                            <i class="fa fa-bar-chart">
-                            </i>
-                            ARC
-                        </a>
-                    </li>
-                     <li class="<?php
-if ($pagina == 'Recibo') {
-    echo 'active';
-}
+    <div class="navbar-header ml-auto">
+                <div id="opciones" class="navbar-brand gru-minuscula ">
+                          
+                
+                <a href="#" class=" brand-big  d-inline mx-2 ">
 
-?>">
-
-                        <a href="?p=Recibo">
-                            <i class="fa fa-file-text" aria-hidden="true"></i>
-                            Recibos
-                        </a>
-                    </li>
-                     <li class="<?php
-if ($pagina == 'Constancia') {
-    echo 'active';
-}
-
-?>">
-
-                        <a href="?p=Constancia">
-                            <i class="fa fa-clipboard" aria-hidden="true"></i>
-                            Constancia de Trabajo
-                        </a>
-                    </li>
-                                     </ul>
-            </nav>
-            <div class="content-inner">
-                <!-- Page Header-->
-                <header class="page-header">
-                    <div class="container-fluid">
-                        <h2 class="no-margin-bottom">
-                            aqui debe ir como la especificación de la sección
-                        </h2>
+                    <i id="search" class="fa fa-search"></i>
+                    
+                </a>
+                <a href="#" class="brand-big  d-inline mx-2 ">
+                    <span> Perfil <i class="fa fa-user-o"></i> </span>
+                </a>
+                <a href="#" class="brand-big  d-inline mx-2 ">
+                    <span> Cerrar Sesión <i class="fa fa-sign-out"></i> </span>
+                </a>
+            
+                 </div>
+                
+              </div>
+  </nav>
+</div>
+   <div class="page-wrapper cool-theme ">
+        
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand p-2 mx-2">
+                    <img class="img-responsive img-rounded logo-little" src="Views/Assets/img/logo.ico" >
+                    <a href="#" class="mx-2"> UJAP</a>
+                    <div id="close-sidebar">
+                        <i class="fa fa-times"></i>
                     </div>
-                </header>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/bootstrap4/assets/img/user.jpg" alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Jhon
+                            <strong>Smith</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search baba">
+                    <nav class="navbar sidebar-search">
+  <form class="form-inline">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" ></i></span>
+      </div>
+      <input type="text" class="form-control search-menu" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+    </div>
+  </form>
+</nav>
+
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>  
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bar-chart"></i>
+                                <span>ARC</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-clipboard"></i>
+                                <span>Constancia de Trabajo</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-clipboard"></i>
+                                <span>Constancia de trabajo</span>
+                                
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Simple
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trayectoria</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-file-text"></i>
+                                <span>Recibo de Pago</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div   class="sidebar-footer">
+                
+                
+                <a href="#" class="baba">
+                    <i class="fa fa-user"></i>
+                    
+                </a>
+                <a href="#" class="baba">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+        
+       
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+<div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">
+                      <div class="dropdown">
+                        <!--======================
+                            posiblemente lo quite
+                            =====================-->
+                        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                      </div>
+                    </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Tabla de ARC</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Nº de ARC
+                              </th>
+                              <th>Fecha</th>
+                              <th>Monto</th>
+                              <th>info</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+        </main>
+    </div>

@@ -4,6 +4,8 @@ require_once "Controllers/Login_control.php";
         $login = new Login_control;
 if (isset($_POST['registrar'])) {
     $login->registrar();
+}elseif (isset($_POST['submit'])) {
+    $login->loguear();
 }
  ?>
         <section id="banner">
@@ -14,7 +16,7 @@ if (isset($_POST['registrar'])) {
                         <div class="form">
                             <div class="form-toggle">
                             </div>
-                            <div class="form-panel two">
+                            <div class="form-panel one">
                                 <div class="form-header">
                                     <h1>
 
@@ -47,7 +49,7 @@ if (isset($_POST['registrar'])) {
                                     </form>
                                 </div>
                             </div>
-                            <div class="form-panel one">
+                            <div class="form-panel two">
                                 <div class="form-header">
                                     <h1>
                                         Registro de Usuario

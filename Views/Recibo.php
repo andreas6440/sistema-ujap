@@ -36,20 +36,14 @@
                               <td>Mark</td>
                               <td>Otto</td>
                               <td>@mdo</td>
-                              <td>@mdo</td>
+                              <td>
+                                <ul class="model-4">
+  <li><a class="colorpdf" href="https://twitter.com/vineethtrv"><i class="fa fa-file-pdf-o" title="Ver documento"></i></a></li>
+  
+</ul>
+
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
+                            
                           </tbody>
                         </table>
                       </div>
@@ -61,3 +55,4 @@
               </div>
             </div>
           </section>
+          

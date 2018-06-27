@@ -21,8 +21,8 @@
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
                <!-- Css de toda la pagina por ahora-->
 
-                     <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.css">
-                    <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.default.css">
+                     <link rel="stylesheet" type="text/css" href="Views/Assets/css/sidebar.css">
+                   <!-- <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.default.css">-->
 
 
     </head>
