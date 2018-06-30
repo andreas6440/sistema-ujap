@@ -1,12 +1,25 @@
 <?php 
 require_once "Controllers/Login_control.php";
 
+<<<<<<< HEAD
         $login = new Login_control;
 if (isset($_POST['registrar'])) {
     $login->registrar();
 }elseif (isset($_POST['submit'])) {
     $login->loguear();
 }
+=======
+    $login = new Login_control;
+    
+    if (isset($_POST['registrar'])) {
+        $login->registrar();
+    }
+
+    if (isset($_POST['submit'])) {
+        $login->loguear();
+    }
+    
+>>>>>>> 04fb05597fd2143e4e3ad786b445317750af0a9b
  ?>
         <section id="banner">
 
@@ -19,7 +32,6 @@ if (isset($_POST['registrar'])) {
                             <div class="form-panel one">
                                 <div class="form-header">
                                     <h1>
-
                                         Iniciar Sesión
                                     </h1>
                                 </div>
@@ -44,7 +56,6 @@ if (isset($_POST['registrar'])) {
                                         </div>
                                         <div class="form-group">
                                             <input class="boton-azul" type="submit" name="submit" value="Entrar">
-                                            
                                         </div>
                                     </form>
                                 </div>
@@ -56,7 +67,7 @@ if (isset($_POST['registrar'])) {
                                     </h1>
                                 </div>
                                 <div class="form-content container">
-                                    <form method="post"  >
+                                    <form method="post">
                                         <div class="form-row">
                                         <div class="form-group col-md-6 my-2">
                                             <label for="username-r">
@@ -122,3 +133,4 @@ if (isset($_POST['registrar'])) {
                 </div>
             </div>
         </section>
+        

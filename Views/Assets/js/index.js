@@ -44,4 +44,5 @@ $(".sidebar-dropdown > a").click(function() {
       .addClass("active");
   }
 });
+
 });
