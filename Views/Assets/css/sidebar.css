@@ -229,12 +229,16 @@ body {
   left: -40px;
 }*/
 /*----------------sidebar-wrapper----------------*/
-
+.punto{
+   z-index:1;
+}
 .sidebar-wrapper {
   width: 260px;
   height: 100%;
   max-height: 100%;
   position: fixed;
+   z-index:2;
+
   top: 0;
   left: -300px;
   z-index: 999;
@@ -866,8 +870,8 @@ body {
 box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 }
 .responsive-table thead th {
-  background-color: #A4A4A4;
-  border: 1px solid #A4A4A4;
+  background-color: #01DFD7;
+  border: 1px solid #01DFD7;
   font-weight: normal;
   text-align: center;
   color: white;
@@ -949,12 +953,19 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 }
 .responsive-table tbody tr {
   margin-bottom: 1em;
-  border: 2px solid #A4A4A4;
+  border: 2px solid #01DFD7;
 }
 @media (min-width: 48em) {
   .responsive-table tbody tr {
     display: table-row;
     border-width: 1px;
+  }
+}
+@media(max-width: 48em){
+  .responsive-table tbody th[scope="row"] {
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
+-moz-box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
+box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
   }
 }
 .responsive-table tbody tr:last-of-type {
@@ -966,9 +977,9 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
   }
 }
 .responsive-table tbody th[scope="row"] {
-  background-color: #A4A4A4;
+  background-color: #01DFD7;
   color: white;
-
+   
 }
 @media (min-width: 48em) {
   .responsive-table tbody th[scope="row"] {
@@ -978,13 +989,14 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 
 
   }
+
 }
 .responsive-table tbody td {
   text-align: right;
 }
 @media (min-width: 30em) {
   .responsive-table tbody td {
-    border-bottom: 1px solid #A4A4A4;
+    border-bottom: 1px solid #01DFD7;
 
   }
 }
