@@ -15,6 +15,6 @@ require_once 'Views/modulo/Menu.php';
 require_once 'Views/ARC.php';/*
 
 rutear($_SESSION['rut']);*/
-
+require_once 'Views/modulo/Footer.php';
 require_once 'Views/modulo/fbody.php';
 

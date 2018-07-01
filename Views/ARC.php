@@ -65,6 +65,127 @@
                                 </button></td>
         
       </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td data-title="Fecha">15-2-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td data-title="Fecha">15-3-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td data-title="Fecha">15-2-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td data-title="Fecha">15-3-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td data-title="Fecha">15-2-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td data-title="Fecha">15-3-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td data-title="Fecha">15-2-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td data-title="Fecha">15-3-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        <td data-title="Monto" >$1,159,398,397</td>
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+        
+      </tr>
+    
     
       
     </tbody>
@@ -76,5 +197,4 @@
               </div>
             </div>
           </div>
-          <!-- Page Footer-->
-          
+         

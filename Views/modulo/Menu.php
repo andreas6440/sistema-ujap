@@ -9,7 +9,7 @@ if ($pagina == 'Fideicomiso') {
                             Fideicomiso
                         </a>
                     </li>-->
-<nav class="navbar navbar-dark bg-dark ">
+<nav class="navbar navbar-dark bg-dark fixed-top ">
     <div class="search-box">
             <button class="dismiss"><i class="fa fa-times"></i></button>
             <form id="searchForm" action="#" role="search">
