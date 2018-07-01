@@ -1,6 +1,6 @@
 </main>
     </div>
-    <footer class="main-footer">
+    <!--<footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-12 col-sm-6">
@@ -9,7 +9,7 @@
                 
               </div>
             </div>
-          </footer>
+          </footer>-->
           
 </body><!-- script-->
 <script src="Views/Assets/js/jquery.min.js">
