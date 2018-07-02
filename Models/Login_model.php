@@ -11,9 +11,7 @@ class Login_model{
         $prepared = pg_execute($dbcon, "", array(
             $datos["usuario"],
             $datos["password"]));
-        var_dump($prepared);
         return $prepared;
-
 
     }
     
