@@ -108,7 +108,7 @@ if ($pagina == 'Fideicomiso') {
                             <a href="#">
                                 <i class="fa fa-clipboard"></i>
                                 <span>Constancia de trabajo</span>
-                                
+                              
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>

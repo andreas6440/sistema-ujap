@@ -44,5 +44,10 @@ $(".sidebar-dropdown > a").click(function() {
       .addClass("active");
   }
 });
+var $alto=$( '.card-body' ).height();
+
+ if ($alto<200) {
+  $("footer").css({"position":"fixed"});
+ }
 
 });
