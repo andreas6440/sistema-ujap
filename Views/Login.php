@@ -1,14 +1,13 @@
 <?php 
 require_once "Controllers/Login_control.php";
 
-<<<<<<< HEAD
         $login = new Login_control;
 if (isset($_POST['registrar'])) {
     $login->registrar();
 }elseif (isset($_POST['submit'])) {
     $login->loguear();
 }
-=======
+
     $login = new Login_control;
     
     if (isset($_POST['registrar'])) {
@@ -19,11 +18,11 @@ if (isset($_POST['registrar'])) {
         $login->loguear();
     }
     
->>>>>>> 04fb05597fd2143e4e3ad786b445317750af0a9b
- ?>
-        <section id="banner">
 
-            <div class="bg-color">
+ ?>
+        <section id="banner" >
+
+            <div class="bg-color ">
                 <div class="container-fluid">
                     <div class="materialContainer">
                         <div class="form">
