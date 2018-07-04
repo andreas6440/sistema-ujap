@@ -135,7 +135,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                            <div class="col-md-4 btn-box">
+                                            <div class="col-md-4 ">
                                                 <button type="button" class="btn color-azul btn-submit btn-lg" disabled>Guardar Cambios</button>
                                             </div>
                                         </div>
@@ -145,3 +145,60 @@
 </div>
 </div>
 </div>
+<div class="container-fluid my-0 punto  ">
+              <div class="row wrapper">
+                <div class="col-12">
+                  <div class="card ">
+                    
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Cambiar Contraseña</h3>
+
+                    </div>
+                    <div class="card-body ">
+                      <form>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Contraseña Actual
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nueva Contraseña
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="group">
+                                                        <input class="input2" required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Repetir Contraseña
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 my-5">
+                                                  <button type="button" class="btn color-azul btn-submit btn-lg" disabled>Guardar Cambios</button>
+                                                </div>
+                                                
+                                            </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
