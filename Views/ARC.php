@@ -1,4 +1,4 @@
-<div class="container-fluid my-5 punto wrapper ">
+<div class="container-fluid my-5 punto  ">
               <div class="row wrapper">
                 <div class="col-12">
                   <div class="card ">

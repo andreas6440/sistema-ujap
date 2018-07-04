@@ -1,14 +1,20 @@
-<div class="container-fluid my-5 punto  ">
-              <div class="row wrapper">
-                <div class="col-12">
-                  <div class="card ">
-                    
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4 mx-2">Perfil del Usuario</h3>
+                <!-- Contenido de la pestaña-->
+                <section class="#perfil ">
+                    <div class="container-fluid">
+                        <div class="row ">
+                            <!--=================================
+                                información de la cuenta - perfil
+                                ================================= -->
+                            <div class="col-lg-8  col-md-8 ">
 
-                    </div>
-                    <div class="card-body ">
-                      <form>
+                                <div class="card">
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">
+                                            Información de la cuenta
+                                        </h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
@@ -136,12 +142,46 @@
                                     </div>
                                     <div class="row">
                                             <div class="col-md-4 btn-box">
-                                                <button type="button" class="btn color-azul btn-submit btn-lg" disabled>Guardar Cambios</button>
+                                                <button type="button" class="btn btn-submit btn-lg" disabled>Guardar Cambios</button>
                                             </div>
                                         </div>
                                     </form>
-  </div>
-</div>
-</div>
-</div>
-</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--========================
+                            especificaciones del usuario
+                            ============================-->
+<!--
+                        <div class="col-lg-4">
+                  <div class="client card">
+
+                    <div class="card-body text-center">
+                      <div class="client-avatar"><img src="Views/Assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                        <div class="status bg-green"></div>
+                      </div>
+                      <div class="client-title">
+                        <h3>Jason Doe</h3><span>Web Developer</span>
+                      </div>
+                      <div class="client-materias"></div>
+                      <div class="client-salario"></div>
+                      <div class="client-info center my-3">
+                        <div class="row">
+                          <div id="client-active" class="col-4"><strong><i  class="fa fa-book" aria-hidden="true"></i></strong><br><small>Materias</small></div>
+                          <div class="col-4"><strong><i class="fa fa-money" aria-hidden="true"></i></strong><br><small>salario</small></div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>-->
+                        </div>
+                    </div>
+                </section>
+                <!-- Dashboard Header Section    -->
+            </div>
+        </div>
+    </div>
+   

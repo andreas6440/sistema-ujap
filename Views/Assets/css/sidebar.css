@@ -1045,7 +1045,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
 .bg-color {
     background-color: RGBA(0, 0, 0, 0.61);
     min-height: 100vh;
-    
+
 }
 
 .materialContainer {
@@ -1319,4 +1319,83 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
 .cp-fab {
     background: #FFFFFF !important;
     color: #4285F4 !important;
+}
+
+/*
+==============================
+información de la cuenta - perfil
+==============================
+*/
+
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+.input2 {
+    background: none;
+    color: #c6c6c6;
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #c6c6c6;
+}
+.input2:focus {
+    outline: none;
+}
+.input2:focus~.label2, .input2:valid~.label2 {
+    top: -14px;
+    font-size: 12px;
+    color: #c6c6c6;
+}
+.input2:focus~.bar:before {
+    width: 100%;
+}
+.label2 {
+    color: #c6c6c6;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+}
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #796AEE;
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+    left: 0%;
+}
+/*
+===========
+  Botones
+=========== */
+
+.color-azul:hover {
+    color: #8b8b8b;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.48), 0 5px 5px rgba(0, 0, 0, 0.52);
+}
+.btn.color-azul {
+    background: #304e91;
+    font-size: 14px;
+    color: #bce0fb;
+}
+.btn.color-azul:hover {
+    background: #2b4580;
+    font-size: 14px;
+    color: #deeffd;
 }
