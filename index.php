@@ -11,7 +11,7 @@ if (!isset($_SESSION['rut'])) {
 }
 rutear($_SESSION['rut']);*/
 require_once 'Views/modulo/Menu.php';
-require_once 'Views/Perfil.php';
+require_once 'Views/RH/InfoTrabajador.php';
 require_once 'Views/modulo/Footer.php';
 require_once 'Views/modulo/fbody.php';
 

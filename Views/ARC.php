@@ -7,6 +7,7 @@
                         <!--======================
                             posiblemente lo quite /aqui deberia que al seleccionarce un año , se vean los recibos de ese año
                             =====================-->
+                            
                              <h5 class="h6 d-inline ">año: aqui pon el año seleccionado</h5>
                         <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle "><i class="fa fa-caret-down"></i></button>
                         <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2018</a><a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2017</a>
