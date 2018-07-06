@@ -35,6 +35,16 @@ class dpdf{
         
     }
     
+    public function buscarARC(){
+        
+        require_once('conexion.php');
+        
+        $row=$this->perfil();
+        
+        return $row;
+        
+    }
+    
     public function perfil(){
         
         require('conexion.php');

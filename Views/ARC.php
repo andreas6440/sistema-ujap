@@ -40,176 +40,36 @@
    
     <tbody>
       
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Nº de ARC">Universal</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Monto" >$1,159,398,397</td>
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
+       <?php
+          require_once("../Controllers/ContadorPDF_control.php");
+          
+          $cont=1;
+          
+          $row = SARC();
+          
+          while($row2 = pg_fetch_array($row)){
+              
+              setlocale(LC_TIME, "es_VE");
+              $date = strftime("%B",strtotime($row2["fecha_c"]));
+              
+              echo '<tr>';
+              echo '<th scope="row">'.$cont.'</th>';
+              echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+              echo '<td data-title="Asunto">'.$date.'</td>';
+              if($row2["fecha_v"]!=null){
+                  echo '<td data-title="Estado">Revisado</td>';
+              }else{
+                  echo '<td data-title="Estado">Sin Revisar</td>';
+              }
+              echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
+              echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
+              echo '<td data-title="Info" ><button class="button type1">
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                    </button></td>';
+              echo '</tr>';
+          }
+          
+          ?>
       
     </tbody>
   </table>
