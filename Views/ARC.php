@@ -41,7 +41,7 @@
     <tbody>
       
        <?php
-          require_once("../Controllers/ContadorPDF_control.php");
+          require_once("Controllers/ContadorPDF_control.php");
           
           $cont=1;
           
