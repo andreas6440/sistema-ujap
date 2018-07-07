@@ -1,4 +1,5 @@
 <div class="container-fluid my-5 punto  ">
+    <h5><i class="fa fa-filter" ></i> Perfil</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
@@ -12,7 +13,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="cedula" required="required" type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -23,7 +24,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="nombre" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -35,7 +36,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="apellido" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -48,7 +49,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="group">
-                                                <input class="input2" required="required" type="text"/>
+                                                <input class="input2" id="direccion" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -65,7 +66,7 @@
                                         
                                         <div class="col-md-5">
                                                 <div class="group">
-                                                <input class="input2" required="required" type="text"/>
+                                                <input class="input2" id="correo" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -76,7 +77,7 @@
                                         </div>
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" required="required" type="text"/>
+                                                <input class="input2" id="telefono" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -110,7 +111,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="claveActual" required="required" type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -123,7 +124,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="claveNueva" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -137,7 +138,7 @@
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" required="required" type="text"/>
+                                                        <input class="input2" id="claveRepetida" required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
