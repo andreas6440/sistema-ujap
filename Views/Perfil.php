@@ -1,5 +1,5 @@
 <div class="container-fluid my-5 punto  ">
-    <h5><i class="fa fa-filter" ></i> Perfil</h5>
+    <h5><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
@@ -17,7 +17,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            cédula
+                                                            Cédula
                                                         </label>
 
                                                     </div>
@@ -71,7 +71,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            correo electronico
+                                                            Correo electronico
                                                         </label>
                                             </div>
                                         </div>
@@ -82,7 +82,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            teléfono
+                                                            Teléfono
                                                         </label>
                                             </div>
                                         </div>

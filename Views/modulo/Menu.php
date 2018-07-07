@@ -14,7 +14,7 @@
                           
                 
                 
-                <a href="#" class="brand-big  d-inline mx-2 ">
+                <a href="?p=Perfil" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
                 <a href="#" class="brand-big  d-inline mx-2 ">
@@ -61,7 +61,12 @@
                             <span>General</span>
                         </li>
                         
-                        
+                        <li>
+                            <a href="?p=ARC">
+                                <i class="fa fa-bar-chart" ></i>
+                                <span>ARC</span>
+                            </a>
+                        </li>
                        
                         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,7 +84,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="?p=Recibo">
                                 <i class="fa fa-file-text"></i>
                                 <span>Recibo de Pago</span>
                             </a>
@@ -92,7 +97,7 @@
             <div   class="sidebar-footer">
                 
                 
-                <a href="#" class="baba">
+                <a href="?p=Perfil" class="baba">
                     <i class="fa fa-user"></i>
                     
                 </a>
