@@ -40,6 +40,8 @@ display:none;
 
 }
 
+
+
  /*
 * ==========================================================
 *     GENERAL STYLES
@@ -175,7 +177,7 @@ h6,
 
 body {
   font-size: 0.9rem;
-  background: #EFFBFB;
+  background: #F2F2F2;
 }
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
@@ -874,8 +876,8 @@ body {
 box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 }
 .responsive-table thead th {
-  background-color: #01DFD7;
-  border: 1px solid #01DFD7;
+  background-color: #0404B4;
+  border: 1px solid #0404B4;
   font-weight: normal;
   text-align: center;
   color: white;
@@ -1386,16 +1388,16 @@ información de la cuenta - perfil
 =========== */
 
 .color-azul:hover {
-    color: #8b8b8b;
+    color: #08088A;
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.48), 0 5px 5px rgba(0, 0, 0, 0.52);
 }
 .btn.color-azul {
-    background: #304e91;
+    background: #0404B4;
     font-size: 14px;
     color: #bce0fb;
 }
 .btn.color-azul:hover {
-    background: #2b4580;
+    background: #0000FF;
     font-size: 14px;
     color: #deeffd;
 }

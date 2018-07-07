@@ -1,5 +1,6 @@
+
 <nav class="navbar navbar-dark bg-dark fixed-top punto  ">
-   
+    
    <img class="img-responsive img-rounded logo-little mx-2" src="Views/Assets/img/logo.ico" >
    <div class="navbar-header mr-auto opcion ">
                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
@@ -13,8 +14,12 @@
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
                 
-                
-                <a href="?p=Perfil" class="brand-big  d-inline mx-2 ">
+                <a href="#" class=" brand-big  d-inline mx-2 ">
+
+                    <i id="search" class="fa fa-search"></i>
+                    
+                </a>
+                <a href="#" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
                 <a href="#" class="brand-big  d-inline mx-2 ">
@@ -46,12 +51,24 @@
                             <strong>Smith</strong>
                         </span>
                         <span class="user-role">Administrator</span>
-                        
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
                     </div>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-search baba">
-                    
+                    <nav class="navbar sidebar-search">
+  <form class="form-inline">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" ></i></span>
+      </div>
+      <input type="text" class="form-control search-menu" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+    </div>
+  </form>
+</nav>
 
                 </div>
                 <!-- sidebar-search  -->
@@ -60,31 +77,40 @@
                         <li class="header-menu">
                             <span>General</span>
                         </li>
-                        
                         <li>
-                            <a href="?p=ARC">
-                                <i class="fa fa-bar-chart" ></i>
+                            <a href="#">
+                                <i class="fa fa-bar-chart"></i>
                                 <span>ARC</span>
                             </a>
                         </li>
-                       
-                        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-clipboard"></i>  Constancia de Trabajo
-        </a>
-        <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Simple</a>
-          <a class="dropdown-item" href="#">Trayectoria</a>
-        </div>
-      </li>
-       <li>
+                        <li>
                             <a href="#">
-                                <i class="fa fa-cutlery" ></i>
-                                <span>Bono alimenticio</span>
+                                <i class="fa fa-file-archive-o"></i>
+                                <span>Constancia de Trabajo</span>
                             </a>
                         </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-clipboard"></i>
+                                <span>Constancia de trabajo</span>
+                              
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Simple
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trayectoria</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
                         <li>
-                            <a href="?p=Recibo">
+                            <a href="#">
                                 <i class="fa fa-file-text"></i>
                                 <span>Recibo de Pago</span>
                             </a>
@@ -97,7 +123,7 @@
             <div   class="sidebar-footer">
                 
                 
-                <a href="?p=Perfil" class="baba">
+                <a href="#" class="baba">
                     <i class="fa fa-user"></i>
                     
                 </a>
