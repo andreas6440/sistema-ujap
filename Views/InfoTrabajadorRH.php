@@ -171,12 +171,10 @@
       <tr class="h5 text-center">
         
                               <th scope="col">#</th>
-                              <th scope="col">Nº de ARC
+                              <th scope="col">Nº de Documento
                               </th>
-                              <th scope="col">Asunto</th>
-                              <th scope="col">Estado</th>
-                              <th scope="col">Recibido</th>
-                              <th scope="col">Revisado</th>
+                              <th scope="col">Fecha de emisión</th>
+                              
                               <th scope="col">Seleccionar</th>
                             
       </tr>
@@ -184,44 +182,21 @@
    
     <tbody>
       
-       <?php
-          require_once("Controllers/ContadorPDF_control.php");
-          require_once("Controllers/SeleccionarDoc_control.php");
-          
-          $cont=1;
-          
-          $row = SARC();
-          
-          while($row2 = pg_fetch_array($row)){
-              
-              setlocale(LC_TIME, "es_VE");
-              $date = strftime("%B",strtotime($row2["fecha_c"]));
-              
-              echo '<tr>';
-              echo '<th scope="row">'.$cont.'</th>';
-              echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
-              echo '<td data-title="Asunto">'.$date.'</td>';
-              if($row2["fecha_v"]!=null){
-                  echo '<td data-title="Estado">Revisado</td>';
-              }else{
-                  echo '<td data-title="Estado">Sin Revisar</td>';
-              }
-              echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
-              echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
-              ?>
-              <form target="_blank" method="post">
-              <?php
-              echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
-              echo '<td data-title="Info" >
-                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
-                    </td>';
-              echo '</tr>';
-              $cont = $cont + 1;
-          }
-          seleccionarDoc(2,$cont);
-          ?>
-      </form>
+      <tr>
+        <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
+        <td data-title="Nº de ARC">Universal</td>
+        
+        <td data-title="Info" ><button class="button type1">
+                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
+                                </button></td>
+     
+    
+    </tr>
+
+     
+     
+  
       
     </tbody>
   </table>
