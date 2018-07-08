@@ -1,29 +1,23 @@
-<div class="container-fluid my-5 punto">
-   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Usuario/ Recibo de Pago</h5>
+<div class="container-fluid my-5">
               <div class="row">
                 <div class="col-12">
                   <div class="card">
-                    
+                    <div class="card-close">
+                      <div class="dropdown">
+                        <!--======================
+                            posiblemente lo quite /aqui deberia que al seleccionarce un año , se vean los recibos de ese año
+                            =====================-->
+                             <h5 class="h6 d-inline ">año: aqui pon el año seleccionado</h5>
+                        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle "><i class="fa fa-caret-down"></i></button>
+                        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2018</a><a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2017</a>
+                          <a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2016</a>
+                          <a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2015</a>
+                          <a href="#" class="dropdown-item remove"> <i class="fa fa-calendar"></i>2014</a></div>
+                      </div>
+                    </div>
                     <div class="card-header d-flex align-items-center">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg-6 col-sm-12  ">
-                      <h3 class="h4 mx-2 py-2 ">Tabla de Recibos de Pago</h3>
-                      </div>
-                      <div class="col-lg-6 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto">
-                        <select id="sele" name="slct" id="slct">
-                          <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
-                        </select>
-                      </div>
-                    </div >
-                    </div>
-                    </div>
+                      <h3 class="h4 mx-2">Tabla de ARC</h3>
+
                     </div>
                     <div class="card-body">
                       <table class="responsive-table table-hover">
@@ -48,6 +42,7 @@
       
        <?php
           require_once("Controllers/ContadorPDF_control.php");
+          require_once("Controllers/SeleccionarDoc_control.php");
           
           $cont=1;
           
@@ -69,16 +64,22 @@
               }
               echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
               echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
-              echo '<td data-title="Info" ><button class="button type1">
-                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                    </button></td>';
+              
+        ?>
+        <form target="_blank" method="post">
+        <?php
+              echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
+              echo '<td data-title="Info" >
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        <input type="submit" value="Ver" name="'.$cont.'" class="button type1">
+                    </td>';
               echo '</tr>';
+              $cont = $cont + 1;
           }
-          
+          seleccionarDoc(1,$cont);
           ?>
-      
+      </form>
    
-    
       
     
     

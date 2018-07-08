@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once('../Models/PDF_model.php');//recordar quitar el ../
 require_once('../tfpdf.php');
 
