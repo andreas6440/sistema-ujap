@@ -197,6 +197,8 @@ function generarARC(){
         $pdf->SetXY(45,104);
         $pdf->Write(5,$row['cargo']);
     
+        $pdf->SetFont('DejaVu','',11);
+    
         $pdf->SetY(120);
         $pdf->SetX(20);
         $pdf->MultiCell(36,5,'Fecha de Pago: '. "\n \n ",1,'C');
@@ -214,13 +216,13 @@ function generarARC(){
         $pdf->MultiCell(36,5,'Impuesto Retenido Acumulado: ',1,'C');
     
         $x=0;
-        while($x<5){
+        while($x<12){
             $pdf->SetX(20);
-            $pdf->Cell(36,10,'fecha',1,0);
-            $pdf->Cell(36,10,'money',1,0);
-            $pdf->Cell(36,10,'money',1,0);
-            $pdf->Cell(36,10,'money',1,0);
-            $pdf->Cell(36,10,'money',1,1); 
+            $pdf->Cell(36,6,'fecha',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,1); 
             $x++;
         }
         

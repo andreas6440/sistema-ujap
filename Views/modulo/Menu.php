@@ -73,8 +73,32 @@
         <i class="fa fa-clipboard"></i>  Constancia de Trabajo
         </a>
         <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Simple</a>
-          <a class="dropdown-item" href="#">Trayectoria</a>
+          <form target="_blank" method="post">
+              <input type="submit" class="dropdown-item" value="Simple" name="constanciab">
+          </form>
+          <?php 
+              
+              if (isset($_REQUEST['constanciab'])) {
+                
+                    $_SESSION['doc'] =  3;
+                    echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';
+
+                }
+              
+              ?>
+          <form target="_blank" method="post">
+              <input type="submit" class="dropdown-item" value="Trayectoria" name="constanciad">
+          </form>
+          <?php 
+              
+              if (isset($_REQUEST['constanciad'])) {
+                
+                    $_SESSION['doc'] =  4;
+                    echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';
+
+                }
+              
+              ?>
         </div>
       </li>
        <li>

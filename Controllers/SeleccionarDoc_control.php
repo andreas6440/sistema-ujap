@@ -44,7 +44,11 @@ function seleccionarDoc($doc,$max){
         
     }elseif($doc==3){
         
-        
+        if (isset($_REQUEST['constanciab'])) {
+            
+            echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';
+            
+        }
         
     }elseif($doc==4){
         

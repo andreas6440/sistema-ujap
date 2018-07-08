@@ -82,7 +82,20 @@
               echo '</tr>';
               $cont = $cont + 1;
           }
-          seleccionarDoc(1,$cont);
+        $cont1 = 1;
+        
+        while($cont1<=$cont){
+            
+            if (isset($_REQUEST['1'.$cont1])) {
+            
+                seleccionarDoc(1,$cont);
+
+            }
+            
+            $cont1 = $cont1 + 1;
+            
+        }
+          
           ?>
       </form>
    
