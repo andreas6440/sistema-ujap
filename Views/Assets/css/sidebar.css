@@ -26,12 +26,15 @@ display:none;
   display:none;
 }
 
+
+
 }
 
 @media only screen and (min-width: 700px) {
 .brand-small{
 display:none;
 }
+
 
 .baba{
   display:none;
@@ -47,7 +50,9 @@ display:none;
 *     GENERAL STYLES
 * ==========================================================
 */
-
+.pestaña{
+  color: #0B3B39;
+}
   a,a:hover{
     color:#ffffff;
   }
@@ -225,7 +230,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
-    padding-left: 270px;
+    padding-left: 260px;
   }
 }
 /*----------------show sidebar button----------------*//*
@@ -878,6 +883,7 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 .responsive-table thead th {
   background-color: #0404B4;
   border: 1px solid #0404B4;
+
   font-weight: normal;
   text-align: center;
   color: white;
@@ -959,7 +965,7 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 }
 .responsive-table tbody tr {
   margin-bottom: 1em;
-  border: 2px solid #01DFD7;
+  border: 2px solid #0404B4;
 }
 @media (min-width: 48em) {
   .responsive-table tbody tr {
@@ -983,7 +989,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
   }
 }
 .responsive-table tbody th[scope="row"] {
-  background-color: #01DFD7;
+  background-color:#0404B4;
   color: white;
    
 }
@@ -1002,7 +1008,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
 }
 @media (min-width: 30em) {
   .responsive-table tbody td {
-    border-bottom: 1px solid #01DFD7;
+    border-bottom: 1px solid #0404B4;
 
   }
 }

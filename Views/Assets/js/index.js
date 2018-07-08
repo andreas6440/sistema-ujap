@@ -10,16 +10,7 @@ $("#show-sidebar").click(function() {
   $(".page-wrapper").addClass("toggled");
   $('.opcion').hide();
 });
-// ------------------------------------------------------- //
-    // Search Box
-    // ------------------------------------------------------ //
-    $('#search').on('click', function(e) {
-        e.preventDefault();
-        $('.search-box').fadeIn();
-    });
-    $('.dismiss').on('click', function() {
-        $('.search-box').fadeOut();
-    });
+
 /*===============================
             DropDown
   ===============================*/
@@ -65,6 +56,8 @@ if ($('#banner').length) {
             'height': panelTwo
         }, 200);
     });
+
+    
     /*==================================
             activar panel
       ==================================*/

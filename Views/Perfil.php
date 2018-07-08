@@ -46,19 +46,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="group">
-                                                <input class="input2" id="direccion" type="text"/>
-
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Dirección
-                                                        </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        
 
                                     <div class="row">
 
