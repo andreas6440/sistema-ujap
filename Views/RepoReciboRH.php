@@ -1,5 +1,5 @@
 <div class="container-fluid my-5 punto  ">
-  <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos Humanos/ Reportes Recibos de Pago</h5>
+  <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos Humanos/  Recibo de Pago</h5>
               <div class="row wrapper">
                 <div class="col-12">
                   <div class="card ">
