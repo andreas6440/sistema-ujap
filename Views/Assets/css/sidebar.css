@@ -1470,7 +1470,7 @@ información de la cuenta - perfil
 @media only screen and (max-width: 1199px) {
   .pagination {
     height: 20px;
-    margin-top: 50px;
+    margin-top: 0px;
     padding: 0 10px;
     border-radius: 25px;
   }
