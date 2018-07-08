@@ -26,11 +26,7 @@ class Login_control
                 while ($row = pg_fetch_assoc($log)) {
                     $_SESSION['user'] = $row['usuario'];
                     if(isset($_SESSION['user'])){
-
-                        $_SESSION['rut']='InfoTrabajador';
-
                         $_SESSION['rut']='Perfil';
-
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                     }
                 }

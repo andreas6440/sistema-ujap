@@ -181,20 +181,20 @@ function generarARC(){
 
         $pdf->AddPage('P', 'Letter', '0');
         $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
-        $pdf->SetFont('DejaVu','',11);
+        $pdf->SetFont('DejaVu','',12);
         $pdf->SetTitle('ARC', TRUE);
         $pdf->Image('../Views/Assets/img/ARC.jpg', 0, 0, -300);
     
     //Nombre
-        $pdf->SetXY(48,99);
+        $pdf->SetXY(50,91);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);
 
     //Cedula
-        $pdf->SetXY(48,106);
+        $pdf->SetXY(48,97.5);
         $pdf->Write(5,$row['ci']);
     
     //Cargo
-        $pdf->SetXY(48,113);
+        $pdf->SetXY(45,104);
         $pdf->Write(5,$row['cargo']);
     
         $pdf->SetY(120);
