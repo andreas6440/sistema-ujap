@@ -33,7 +33,6 @@ class bdoc{
     private function id(){
         
         require('conexion.php');
-        session_start();
         
         $query = "SELECT cedula FROM public.".'"UsuariosWeb"'." where usuario = $1;";
         $prepared = pg_prepare($dbcon, "", $query);
