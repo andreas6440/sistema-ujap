@@ -47,6 +47,7 @@
       
        <?php
           require_once("Controllers/ContadorPDF_control.php");
+          require_once("Controllers/SeleccionarDoc_control.php");
           
           $cont=1;
           
@@ -68,13 +69,20 @@
               }
               echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
               echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
-              echo '<td data-title="Info" ><button class="button type1">
-                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                    </button></td>';
+              ?>
+              <form target="_blank" method="post">
+              <?php
+              echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+              echo '<td data-title="Info" >
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                    </td>';
               echo '</tr>';
+              $cont = $cont + 1;
           }
-          
+          seleccionarDoc(2,$cont);
           ?>
+      </form>
       
     </tbody>
   </table>

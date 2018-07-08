@@ -62,6 +62,19 @@ class ActualizarUser{
         
     }
     
+    public function FechaVisto($datos,$doc,$tipo){
+        
+        require"conexion.php";
+        
+        if($tipo==1){
+            pg_update($dbcon, 'Recibos', $datos, array('id_recibo'=>$doc));
+        }elseif($tipo==2){
+            pg_update($dbcon, 'ARC', $datos, array('id_arc'=>$doc));
+        }
+        
+        
+    }
+    
 }
 
 ?>
