@@ -173,8 +173,8 @@
                               <th scope="col">#</th>
                               <th scope="col">Nº de Documento
                               </th>
-                              <th scope="col">Fecha de emisión</th>
-                              
+                              <th scope="col">Recibido</th>
+                              <th scope="col">Revisado</th>
                               <th scope="col">Seleccionar</th>
                             
       </tr>
@@ -184,6 +184,7 @@
       
       <tr>
         <th scope="row">1</th>
+        <td data-title="Fecha">15-1-2018</td>
         <td data-title="Fecha">15-1-2018</td>
         <td data-title="Nº de ARC">Universal</td>
         
