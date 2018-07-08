@@ -12,9 +12,7 @@
   overflow: auto;
 }
 
-.pestaña{
-  color: #0B2161;
-}
+
 
 * {
 margin: 0;
@@ -216,8 +214,7 @@ body {
 
 
 .page-wrapper .theme.cool-theme {
-  background:#38373d ;
-  
+  background: #38373d;
   
 }
 /*----------------toggeled sidebar----------------*/
@@ -228,7 +225,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
-    padding-left: 260px;
+    padding-left: 270px;
   }
 }
 /*----------------show sidebar button----------------*//*
@@ -390,7 +387,6 @@ box-shadow: 3px 4px 5px -2px rgba(0,0,0,1);
   display: inline-block;
   animation: swing ease-in-out 0.5s 1 alternate;
 }
-/*
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
   
@@ -398,7 +394,7 @@ box-shadow: 3px 4px 5px -2px rgba(0,0,0,1);
   content:"\f078";
   
 }
-*/
+
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul {
   padding: 5px 0;
 }
@@ -524,12 +520,11 @@ box-shadow: 3px 4px 5px -2px rgba(0,0,0,1);
 .cool-theme .sidebar-wrapper .sidebar-search,
 .cool-theme .sidebar-wrapper .sidebar-menu {
   border-top: 1px solid #504e57;
-  /*#fff*/
 }
 
 .cool-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .cool-theme .sidebar-wrapper .sidebar-search .input-group-text {
-  border-color: #fff;
+  border-color: #504e57;
   box-shadow: none;
 }
 
@@ -964,7 +959,7 @@ box-shadow: 0px 2px 5px 0px rgba(99,99,99,1);
 }
 .responsive-table tbody tr {
   margin-bottom: 1em;
-  border: 2px solid #0000FF;
+  border: 2px solid #01DFD7;
 }
 @media (min-width: 48em) {
   .responsive-table tbody tr {
@@ -988,7 +983,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
   }
 }
 .responsive-table tbody th[scope="row"] {
-  background-color: #0000FF;
+  background-color: #01DFD7;
   color: white;
    
 }
@@ -1007,7 +1002,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
 }
 @media (min-width: 30em) {
   .responsive-table tbody td {
-    border-bottom: 1px solid #0000FF;
+    border-bottom: 1px solid #01DFD7;
 
   }
 }
@@ -1340,7 +1335,7 @@ información de la cuenta - perfil
 }
 .input2 {
     background: none;
-    color: #070719;
+    color: #c6c6c6;
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -1355,14 +1350,13 @@ información de la cuenta - perfil
 .input2:focus~.label2, .input2:valid~.label2 {
     top: -14px;
     font-size: 12px;
-    /*esto aui*/
-    color: #070719;
+    color: #c6c6c6;
 }
 .input2:focus~.bar:before {
     width: 100%;
 }
 .label2 {
-    color: #070719;
+    color: #c6c6c6;
     font-size: 16px;
     font-weight: normal;
     position: absolute;
@@ -1383,7 +1377,7 @@ información de la cuenta - perfil
     width: 0;
     bottom: 0px;
     position: absolute;
-    background: #0000FF;
+    background: #796AEE;
     -webkit-transition: 300ms ease all;
     transition: 300ms ease all;
     left: 0%;

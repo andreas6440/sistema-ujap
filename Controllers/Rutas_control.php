@@ -17,7 +17,6 @@ function rutear($rut){
             $ruta = 'Views/' . $pagina . '.php';
             if (is_readable($ruta)) {
                 require_once ('Views/modulo/Menu.php');
-                 
                 require_once $ruta;
                 if (!isset($_SESSION['user'])){
                     echo '<meta http-equiv="Refresh" content="0;URL=index.php">';

@@ -1,5 +1,5 @@
 <div class="container-fluid my-5 punto  ">
-    <h5 class="pestaña"><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
+    <h5><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
@@ -9,11 +9,11 @@
 
                     </div>
                     <div class="card-body ">
-                      <form>
+                      <form method="post">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" id="cedula" required="required" type="text"/>
+                                                        <input class="input2" name="cedula" id="cedula" type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -24,7 +24,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" id="nombre" required="required" type="text"/>
+                                                        <input class="input2" name="nombre" id="nombre" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -36,7 +36,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" id="apellido" required="required" type="text"/>
+                                                        <input class="input2" name="apellido" id="apellido" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -49,7 +49,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="group">
-                                                <input class="input2" id="direccion" required="required" type="text"/>
+                                                <input class="input2" id="direccion" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -66,7 +66,7 @@
                                         
                                         <div class="col-md-5">
                                                 <div class="group">
-                                                <input class="input2" id="correo" required="required" type="text"/>
+                                                <input class="input2" name="email" id="correo" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" id="telefono" required="required" type="text"/>
+                                                <input class="input2" name="telefono" id="telefono" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -92,7 +92,10 @@
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">
-                                                <button type="button" class="btn color-azul btn-submit btn-lg" disabled>Guardar Cambios</button>
+                                                <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                <?php
+                                                require_once("Controllers/ActualizarUser_control.php");
+                                                ActualizarPerfil(); ?>
                                             </div>
                                         </div>
                                     </form>
@@ -107,11 +110,11 @@
 
                     </div>
                     <div class="card-body ">
-                      <form>
+                      <form method="post">
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" id="claveActual" required="required" type="text"/>
+                                                        <input class="input2" name="passa" id="claveActual" type=password required="required" type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -124,7 +127,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" id="claveNueva" required="required" type="text"/>
+                                                        <input class="input2" name="pass1" id="claveNueva" type=password required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -138,7 +141,7 @@
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" id="claveRepetida" required="required" type="text"/>
+                                                        <input class="input2" name="pass2" id="claveRepetida" type=password required="required" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -150,7 +153,10 @@
                                             </div>
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
-                                                  <button type="button" class="btn color-azul btn-submit btn-lg" disabled>Guardar Cambios</button>
+                                                  <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                <?php
+                                                require_once("Controllers/ActualizarUser_control.php");
+                                                ActualizarPassword(); ?>
                                                 </div>
                                                 
                                             </div>
