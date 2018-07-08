@@ -1407,4 +1407,46 @@ información de la cuenta - perfil
     font-size: 14px;
     color: #deeffd;
 }
-
+/*===========
+  dropdown
+  ===========*/
+.select {
+  position: relative;
+  display: block;
+  width: 15em;
+  height: 2em;
+  line-height: 2;
+  color: white;
+  background: #0000FF;
+  overflow: hidden;
+  border-radius: .20em;
+}
+#sele {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #2c3e50;
+  cursor: pointer;
+}
+#sele::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #0000FF;
+}
+.select::after {
+  transition: .25s all ease;
+}
