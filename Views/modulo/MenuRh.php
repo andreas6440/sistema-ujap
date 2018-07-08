@@ -81,29 +81,29 @@
                     <ul>  
                         <li class="header-menu">
                             <span>General</span>
-                        </li>
-                        
-                        
-                       
-                        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-clipboard"></i>  Constancia de Trabajo
-        </a>
-        <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Simple</a>
-          <a class="dropdown-item" href="#">Trayectoria</a>
-        </div>
-      </li>
-       <li>
-                            <a href="#">
-                                <i class="fa fa-cutlery" ></i>
-                                <span>Bono alimenticio</span>
+                        </li>                      
+                        <li>
+                            <a href="?p=FideicomisoRH">
+                                <i class="fa fa-handshake-o" ></i>
+                                <span>Fideicomiso</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="?p=InfoTrabajadorRH">
+                                <i class="fa fa-address-book" ></i>
+                                <span>Información del Usuario</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?p=RepoAlimenticioRH">
+                                <i class="fa fa-cutlery" ></i>
+                                <span>Reporte Bono alimenticio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?p=RepoReciboRH">
                                 <i class="fa fa-file-text"></i>
-                                <span>Recibo de Pago</span>
+                                <span> Reporte Recibo de Pago</span>
                             </a>
                         </li>
                     </ul>
@@ -114,7 +114,7 @@
             <div   class="sidebar-footer">
                 
                 
-                <a href="#" class="baba">
+                <a href="?p=Perfil" class="baba">
                     <i class="fa fa-user"></i>
                     
                 </a>
