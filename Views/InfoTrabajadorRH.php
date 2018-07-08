@@ -152,12 +152,12 @@
                       <div class="col-lg-6 col-sm-12 ">
                       <div class="select ml-auto mr-sm-auto">
                         <select id="sele" name="slct" id="slct">
-                          <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
+                          <option>Seleccione Documento</option>
+                          <option value="1">ARC</option>
+                          <option value="2">Bono Alimenticio</option>
+                          <option value="4">Constancia Simple</option>
+                          <option value="5">Constancia de Trayectoria</option>
+                          <option value="6">Recibo de Pago</option>
                         </select>
                       </div>
                     </div >
