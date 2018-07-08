@@ -71,7 +71,7 @@
               echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
               echo '<td data-title="Info" >
                         <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="'.$cont.'" class="button type1">
+                        <input type="submit" value="Ver" name="1'.$cont.'" class="button type1">
                     </td>';
               echo '</tr>';
               $cont = $cont + 1;

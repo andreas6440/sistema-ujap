@@ -17,7 +17,7 @@
                 <a href="?p=Perfil" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
-                <a href="#" class="brand-big  d-inline mx-2 ">
+                <a href="?p=Salir" class="brand-big  d-inline mx-2 ">
                     <span> Cerrar Sesión <i class="fa fa-sign-out"></i> </span>
                 </a>
             
