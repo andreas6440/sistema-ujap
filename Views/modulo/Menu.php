@@ -125,7 +125,7 @@
                     <i class="fa fa-user"></i>
                     
                 </a>
-                <a href="#" class="baba">
+                <a href="?p=Salir" class="baba">
                     <i class="fa fa-power-off"></i>
                 </a>
             </div>
