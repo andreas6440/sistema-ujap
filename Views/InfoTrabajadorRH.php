@@ -146,26 +146,28 @@
                     <div class="card-header d-flex align-items-center">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-lg-6 col-sm-12  ">
-                      <h3 class="h4 mx-2 py-2 ">Documentos del Usuario</h3>
+                          <div class="col-lg-4 col-sm-12  ">
+                      <h3 class="h4 mx-2 py-2 ">Documentos del usuario</h3>
                       </div>
-                      <div class="col-lg-6 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto ">
+                      <div class="col-lg-8 col-sm-12 ">
+                         <form  class="form-inline ">
+                      <div class="select ml-auto ">
                         <select id="sele" name="slct" id="slct">
-                          <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
+                          <option>Tipo de documento</option>
+                          <option value="1">ARC</option>
+                          <option value="2">Bono Alimenticio</option>
+                          <option value="3">Contancia Simple</option>
+                          <option value="3">Constancia de Trayectoria</option>
+                          <option value="3">Recibo de Pago</option>
                         </select>
                       </div>
-                    <form  class="flex-form">
-      <label for="from">
-        <i class="ion-location"></i>
-      </label>
-      <input type="search" placeholder="Nº de documento?">
-      <input type="submit" value="Buscar">
+                      
+             <div class="mr-auto mx-2">     
+      
+      <input class="form-control" type="search" placeholder="Nº Documento" >
+      <input type="submit" name="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+             </div>                                    
+                                                
     </form>
                     </div >
                     </div>
