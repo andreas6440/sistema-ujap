@@ -16,6 +16,20 @@ class bdoc{
         
     }
     
+    public function recibosO($inicio,$registros){
+
+        
+        require('conexion.php');
+        
+        $select = $this->id();
+         
+        $query = "SELECT * FROM public.".'"Recibos"'." where id_user = $1 ORDER BY id_recibo ASC LIMIT $registros OFFSET $inicio;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
     public function ARC(){
         
         require('conexion.php');
@@ -23,6 +37,19 @@ class bdoc{
         $select = $this->id();
         
         $query = "SELECT * FROM public.".'"ARC"'." where id_user = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
+    public function ARCO($inicio,$registros){
+        
+        require('conexion.php');
+        
+        $select = $this->id();
+        
+        $query = "SELECT * FROM public.".'"ARC"'." where id_user = $1 ORDER BY id_arc ASC LIMIT $registros OFFSET $inicio;";
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
         return $prepared;

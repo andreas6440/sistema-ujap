@@ -25,7 +25,7 @@
                 
               </div>
   </nav>
-</div>
+
    <div class="page-wrapper cool-theme ">
         
         <nav id="sidebar" class="sidebar-wrapper">
