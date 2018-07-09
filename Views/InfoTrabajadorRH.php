@@ -150,7 +150,7 @@
                       <h3 class="h4 mx-2 py-2 ">Documentos del Usuario</h3>
                       </div>
                       <div class="col-lg-6 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto">
+                      <div class="select ml-auto mr-sm-auto ">
                         <select id="sele" name="slct" id="slct">
                           <option>Seleccione el año</option>
                           <option value="1">2018</option>
@@ -160,6 +160,13 @@
                           <option value="3">2014</option>
                         </select>
                       </div>
+                    <form  class="flex-form">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="search" placeholder="Nº de documento?">
+      <input type="submit" value="Buscar">
+    </form>
                     </div >
                     </div>
                     </div>
