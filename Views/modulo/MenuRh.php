@@ -12,8 +12,8 @@
     <div class="navbar-header ml-auto">
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
-                
-                <a href="#" class=" brand-big  d-inline mx-2 ">
+             <!--   
+                <a href="#"  class=" brand-big  d-inline mx-2 buscador">
 
 <form class="form-inline d-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar Trabajador.." aria-label="Search">
@@ -21,7 +21,7 @@
      </form>
                     
                     
-                </a>
+                </a>-->
                 <a href="#" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <!-- sidebar-header  -->
-                <div class="sidebar-search baba">
+                <div class="sidebar-search baba buscador">
                     <nav class="navbar sidebar-search">
   
    <form class="form-inline">

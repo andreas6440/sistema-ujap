@@ -1,12 +1,30 @@
-<div class="container-fluid my-5 punto  ">
+
+<div id="InfoTrabajador" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos Humanos/ Información del usuario</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
                     
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4 mx-2">Perfil del Trabajador</h3>
-
+                     <div class="card-header d-flex align-items-center">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-lg-6 col-sm-12  ">
+                      <h3 class="h4 mx-2 my-2 ">Perfil del Trabajador</h3>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 ">
+                         <form  class="form-inline ">
+                      
+                      
+             <div class="mr-auto mx-2">     
+      
+      <input class="form-control" type="search" placeholder="Nº de Cédula" >
+      <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
+             </div>                                    
+                                                
+    </form>
+                    </div >
+                    </div>
+                    </div>
                     </div>
                     <div class="card-body ">
                       <form method="post">
@@ -157,15 +175,16 @@
                           <option value="1">ARC</option>
                           <option value="2">Bono Alimenticio</option>
                           <option value="3">Contancia Simple</option>
-                          <option value="3">Constancia de Trayectoria</option>
-                          <option value="3">Recibo de Pago</option>
+                          <option value="4">Constancia de Trayectoria</option>
+                          <option value="5">Recibo de Pago</option>
+
                         </select>
                       </div>
                       
-             <div class="mr-auto mx-2">     
+             <div id="documentos" class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" placeholder="Nº Documento" >
-      <input type="submit" name="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+      <input class="form-control" type="search" name="NumDocumento" id="NumDocumento" placeholder="Nº Documento" >
+      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
              </div>                                    
                                                 
     </form>

@@ -1,4 +1,4 @@
-<div class="container-fluid my-5 punto  ">
+<div id="RepoAlimenticio" class="container-fluid my-5 punto  ">
   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos Humanos/ Bono Alimenticio</h5>
               <div class="row wrapper">
                 <div class="col-12">

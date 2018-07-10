@@ -73,5 +73,23 @@ if ($('#banner').length) {
 }else{
  $("html").css({"overflow":"auto"});
 }
- 
+$('#NumDocumento').remove();
+    
+    $('#Burecibo').remove();
+/*=====================
+  select de infousuario
+  =====================*/
+  
+  $('select#sele').on('change',function(){
+   /* var valor = $('#sele option:selected').html();*/
+   var valor=$(this).val();
+   if (valor==2 || valor==5) {
+    $( "#documentos" ).append( "<input class='form-control' type='search' name='NumDocumento' id='NumDocumento'placeholder='Nº Documento' >");
+     $( "#documentos" ).append( "  <input type='submit' id='Burecibo' name='Burecibo' class='btn color-azul btn-submit btn-lg' value='Buscar'>" );
+   }else{  
+    $('#NumDocumento').remove();
+    
+    $('#Burecibo').remove();
+   }
+});
 });
