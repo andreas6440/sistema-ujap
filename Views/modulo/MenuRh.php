@@ -2,7 +2,7 @@
    
    <img class="img-responsive img-rounded logo-little mx-2" src="Views/Assets/img/logo.ico" >
    <div class="navbar-header mr-auto opcion ">
-                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
+                <!-- Navbar Brand --><a href="index.php" class="navbar-brand">
                     
                   <div class="brand-text brand-big "><span>Universidad </span><strong> José Antonio Páez</strong></div>
                   <div class="brand-text brand-small "><strong>Ujap</strong></div></a>
@@ -12,10 +12,6 @@
     <div class="navbar-header ml-auto">
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
-            
-                <a href="#" class="brand-big  d-inline mx-2 ">
-                    <span> Perfil <i class="fa fa-user-o"></i> </span>
-                </a>
                 <a href="#" class="brand-big  d-inline mx-2 ">
                     <span> Cerrar Sesión <i class="fa fa-sign-out"></i> </span>
                 </a>

@@ -25,5 +25,17 @@ function SARCO($inicio,$registros){
 return $row;
 }
 
+function SFideicomiso(){
+    $drow = new bdoc;
+    $row = $drow->fideicomiso();
+return $row;
+}
+
+function SFideicomisoO($inicio,$registros){
+    $drow = new bdoc;
+    $row = $drow->fideicomisoO($inicio,$registros);
+return $row;
+}
+
 
 ?>

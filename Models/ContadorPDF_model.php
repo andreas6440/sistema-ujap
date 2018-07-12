@@ -56,6 +56,28 @@ class bdoc{
         
     }
     
+    public function fideicomiso(){
+        
+        require('conexion.php');
+        
+        $query = "SELECT * FROM public.".'"Fideicomiso"'.";";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array());
+        return $prepared;
+        
+    }
+    
+    public function fideicomisoO($inicio,$registros){
+        
+        require('conexion.php');
+        
+        $query = "SELECT * FROM public.".'"Fideicomiso"'." ORDER BY id_fideicomiso ASC LIMIT $registros OFFSET $inicio;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array());
+        return $prepared;
+        
+    }
+    
     
     private function id(){
         

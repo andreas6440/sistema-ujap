@@ -45,7 +45,19 @@ function seleccionarDoc($doc,$max){
         
     }elseif($doc==5){
         
+        $cont = 1;
         
+        while($cont<=$max){
+            
+            if (isset($_REQUEST['5'.$cont])) {
+            
+                echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';
+
+            }
+            
+            $cont = $cont + 1;
+            
+        }
         
     }elseif($doc==6){
         

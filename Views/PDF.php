@@ -10,5 +10,7 @@ if($_SESSION['doc'] == 1){
     generarconstanciab();
 }elseif($_SESSION['doc'] == 4){
     generarconstanciad();
+}elseif($_SESSION['doc'] == 5){
+    generarfideicomiso();
 }
 ?>

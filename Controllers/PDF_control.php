@@ -234,6 +234,68 @@ function generarARC(){
     
 }
 
+function generarfideicomiso(){
+    
+    $drow = new dpdf;
+    $row = $drow->buscarARC();
+    
+    $pdf = new tFPDF;
+
+        $pdf->AddPage('P', 'Letter', '0');
+        $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
+        $pdf->SetFont('DejaVu','',12);
+        $pdf->SetTitle('ARC', TRUE);
+        $pdf->Image('../Views/Assets/img/ARC.jpg', 0, 0, -300);
+    
+    //Nombre
+        $pdf->SetXY(50,91);
+        $pdf->Write(5,$row['nombre']." ".$row['apellido']);
+
+    //Cedula
+        $pdf->SetXY(48,97.5);
+        $pdf->Write(5,$row['ci']);
+    
+    //Cargo
+        $pdf->SetXY(45,104);
+        $pdf->Write(5,$row['cargo']);
+    
+        $pdf->SetFont('DejaVu','',11);
+    
+        $pdf->SetY(120);
+        $pdf->SetX(20);
+        $pdf->MultiCell(36,5,'Fecha de Pago: '. "\n \n ",1,'C');
+        $pdf->SetY(120);
+        $pdf->SetX(56);
+        $pdf->MultiCell(36,5,'Remuneraciones: '. "\n ",1,'C');
+        $pdf->SetY(120);
+        $pdf->SetX(92);
+        $pdf->MultiCell(36,5,'Remuneraciones Acumuladas: '. "\n ",1,'C');
+        $pdf->SetY(120);
+        $pdf->SetX(128);
+        $pdf->MultiCell(36,5,'Impuesto Retenido: '. "\n ",1,'C');
+        $pdf->SetY(120);
+        $pdf->SetX(164);
+        $pdf->MultiCell(36,5,'Impuesto Retenido Acumulado: ',1,'C');
+    
+        $x=0;
+        while($x<12){
+            $pdf->SetX(20);
+            $pdf->Cell(36,6,'fecha',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,0);
+            $pdf->Cell(36,6,'money',1,1); 
+            $x++;
+        }
+        
+    
+    $pdf->output();
+    
+    return $pdf;
+    
+    
+}
+
 
 
 

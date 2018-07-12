@@ -12,16 +12,25 @@
                       <h3 class="h4 mx-2 my-2 ">Perfil del trabajador</h3>
                       </div>
                       <div class="col-lg-7 col-sm-12 ">
-                         <form  class="form-inline ">
+                         <form  class="form-inline" method="post">
                       
                       
              <div class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" placeholder="Nº de Cédula" >
+      <input class="form-control" type="search" placeholder="Nº de Cédula" name="cedula">
       <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
              </div>                                    
                                                 
     </form>
+                   <?php
+                          
+                          if (isset($_REQUEST["BuCedula"])) {
+                              
+                           
+
+                            }
+                          
+                          ?>
                     </div >
                     </div>
                     </div>
@@ -228,24 +237,6 @@
       
     </tbody>
   </table>
-                    </div>
-<div class="card-footer">
-                      <div class="pagination-wrapper">
-  <div class="pagination">
-    <a class="prev page-numbers" href="javascript:;">prev</a>
-    <span aria-current="page" class="page-numbers current">1</span>
-    <a class="page-numbers" href="javascript:;">2</a>
-    <a class="page-numbers" href="javascript:;">3</a>
-    <a class="page-numbers" href="javascript:;">4</a>
-    <a class="page-numbers" href="javascript:;">5</a>
-    <a class="page-numbers" href="javascript:;">6</a>
-    <a class="page-numbers" href="javascript:;">7</a>
-    <a class="page-numbers" href="javascript:;">8</a>
-    <a class="page-numbers" href="javascript:;">9</a>
-    <a class="page-numbers" href="javascript:;">10</a>
-    <a class="next page-numbers" href="javascript:;">next</a>
-  </div>
-</div>
                     </div>
                 </div>
                 
