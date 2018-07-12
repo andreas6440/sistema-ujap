@@ -56,14 +56,15 @@
                     
                     
                     <div class="card-body ">
+                      <div class="activoC">
                         <h5 class="h5 mx-2 my-2 ">Nombre: nombre y apellido</h5>
-                         <form  class="form-inline ">
+                         <form id="modiRango"  class="form-inline ">
                       
                       
-             <div class="mr-auto mx-2">     
+                  
         
       <input class="form-control" type="search" placeholder="Nº de Cédula" >
-      <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
+      <input type="submit" name="BuCedula"  class="btn color-azul btn-submit btn-lg " value="Modificar firma">
              </div>                                    
                                                 
     </form>

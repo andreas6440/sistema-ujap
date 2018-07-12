@@ -79,6 +79,7 @@ $('#NumDocumento').remove();
 /*=====================
   select de infousuario
   =====================*/
+ 
   
   $('select#sele').on('change',function(){
    /* var valor = $('#sele option:selected').html();*/
@@ -94,4 +95,12 @@ $('#NumDocumento').remove();
     $('#Burecibo').remove();
    }
 });
+
+if ($('#Configuraciones').length) {
+  $( ".activoC" ).hide();
+
+}
+$("input[name=BuCedula]").click(function(){
+    alert('Evento click sobre un input text con nombre="nombre1"');
+  });
 });
