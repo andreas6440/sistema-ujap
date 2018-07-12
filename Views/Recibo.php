@@ -1,4 +1,4 @@
-<div class="container-fluid my-5">
+<div id="recibo" class="container-fluid my-5">
    <h5 class=" pestaña"><i class="fa fa-filter" ></i> Usuario/ Recibo de Pago</h5>
               <div class="row">
                 <div class="col-12">

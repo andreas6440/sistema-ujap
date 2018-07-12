@@ -1,5 +1,5 @@
 
-<div id="InfoTrabajador" class="container-fluid my-5 punto  ">
+<div id="Configuraciones" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Administrador/ Configuración</h5>
               <div class="row wrapper">
                 <div class="col-lg-5">
