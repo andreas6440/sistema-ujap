@@ -7,13 +7,13 @@
                     
                      <div class="card-header d-flex align-items-center">
                       
-                      <h3 class="h4 mx-2 my-2 ">Modificar Firma de documentos</h3>
+                      <h3 class="h4 mx-2 my-2 ">Modificar firma de documentos</h3>
                       </div>
                       
                     
                     
                     <div class="card-body ">
-                        <h5 class="h5 mx-2 my-2 ">Firma Actual: nombre</h5>
+                        <h5 class="h5 mx-2 my-2 ">Firma actual: nombre</h5>
                          <form  class="form-inline ">
                       
                       

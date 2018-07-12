@@ -1,6 +1,6 @@
 
 <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
-    <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos Humanos/ Información del usuario</h5>
+    <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Información del usuario</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
@@ -9,7 +9,7 @@
                       <div class="container-fluid">
                         <div class="row">
                           <div class="col-lg-5 col-sm-12  ">
-                      <h3 class="h4 mx-2 my-2 ">Perfil del Trabajador</h3>
+                      <h3 class="h4 mx-2 my-2 ">Perfil del trabajador</h3>
                       </div>
                       <div class="col-lg-7 col-sm-12 ">
                          <form  class="form-inline ">
@@ -110,7 +110,7 @@
                   <div class="card ">
                     
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Restaurar Contraseña </h3>
+                      <h3 class="h4">Restaurar contraseña </h3>
 
                     </div>
                     <div class="card-body ">
@@ -124,7 +124,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Nueva Contraseña
+                                                            Nueva contraseña
                                                         </label>
 
                                                     </div>
@@ -138,7 +138,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Repetir Contraseña
+                                                            Repetir contraseña
                                                         </label>
                                                     </div>
                                                 </div>
@@ -173,10 +173,10 @@
                         <select id="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
-                          <option value="2">Bono Alimenticio</option>
-                          <option value="3">Contancia Simple</option>
-                          <option value="4">Constancia de Trayectoria</option>
-                          <option value="5">Recibo de Pago</option>
+                          <option value="2">Bono alimenticio</option>
+                          <option value="3">Contancia simple</option>
+                          <option value="4">Constancia de trayectoria</option>
+                          <option value="5">Recibo de pago</option>
 
                         </select>
                       </div>
@@ -199,7 +199,7 @@
       <tr class="h5 text-center">
         
                               <th scope="col">#</th>
-                              <th scope="col">Nº de Documento
+                              <th scope="col">Nº de documento
                               </th>
                               <th scope="col">Fecha de emisión</th>
                               

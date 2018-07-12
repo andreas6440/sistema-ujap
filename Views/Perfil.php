@@ -5,7 +5,7 @@
                   <div class="card ">
                     
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4 mx-2">Perfil del Usuario</h3>
+                      <h3 class="h4 mx-2">Perfil del usuario</h3>
 
                     </div>
                     <div class="card-body ">
@@ -94,7 +94,7 @@
                   <div class="card ">
                     
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Cambiar Contraseña</h3>
+                      <h3 class="h4">Cambiar contraseña</h3>
 
                     </div>
                     <div class="card-body ">
@@ -106,7 +106,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Contraseña Actual
+                                                            Contraseña actual
                                                         </label>
 
                                                     </div>
@@ -120,7 +120,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Nueva Contraseña
+                                                            Nueva contraseña
                                                         </label>
 
                                                     </div>
@@ -134,7 +134,7 @@
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Repetir Contraseña
+                                                            Repetir contraseña
                                                         </label>
                                                     </div>
                                                 </div>

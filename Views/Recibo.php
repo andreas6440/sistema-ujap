@@ -1,29 +1,13 @@
 <div id="recibo" class="container-fluid my-5">
-   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Usuario/ Recibo de Pago</h5>
+   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Usuario/ Recibo de pago</h5>
               <div class="row">
                 <div class="col-12">
                   <div class="card">
                     
                     <div class="card-header d-flex align-items-center">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg-6 col-sm-12  ">
-                      <h3 class="h4 mx-2 py-2 ">Tabla de Recibos de Pago</h3>
-                      </div>
-                      <div class="col-lg-6 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto">
-                        <select id="sele" name="slct" id="slct">
-                          <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
-                        </select>
-                      </div>
-                    </div >
-                    </div>
-                    </div>
+                      
+                      <h3 class="h4 mx-2 py-2 ">Tabla de recibos de pago</h3>
+                      
                     </div>
                     <?php 
 
