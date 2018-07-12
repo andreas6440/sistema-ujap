@@ -196,7 +196,7 @@
                       <h3 class="h4 mx-2 py-2 ">Documentos del usuario</h3>
                       </div>
                       <div class="col-lg-8 col-sm-12 ">
-                         <form  class="form-inline ">
+                         <form  class="form-inline" method="post" target="_blank">
                       <div class="select ml-auto ">
                         <select id="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
@@ -216,6 +216,33 @@
              </div>                                    
                                                 
     </form>
+                   <?php
+                          
+                          if(isset($_REQUEST['Burecibo'])){
+                              if($_POST['slct']==1){
+                                  
+                                  
+                                  
+                              }elseif($_POST['slct']==2){
+                                  
+                                  
+                                  
+                              }elseif($_POST['slct']==3){
+                                  
+                                  seleccionarDoc(3);
+                                  
+                              }elseif($_POST['slct']==4){
+                                  
+                                  seleccionarDoc(4);
+                                  
+                              }elseif($_POST['slct']==5){
+                                  
+                                  
+                                  
+                              }
+                          }
+                          
+                          ?>
                     </div >
                     </div>
                     </div>
@@ -226,11 +253,13 @@
     <thead>
       <tr class="h5 text-center">
         
-                              <th scope="col">#</th>
-                              <th scope="col">Nº de documento
+                             <th scope="col">#</th>
+                              <th scope="col">Nº de Documento
                               </th>
-                              <th scope="col">Fecha de emisión</th>
-                              
+                              <th scope="col">Asunto</th>
+                              <th scope="col">Estado</th>
+                              <th scope="col">Recibido</th>
+                              <th scope="col">Revisado</th>
                               <th scope="col">Seleccionar</th>
                             
       </tr>

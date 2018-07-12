@@ -77,7 +77,7 @@ $('#NumDocumento').remove();
     
     $('#Burecibo').remove();
 /*=====================
-  select de infousuario
+  select de infousuario... sape gato con esta vaina
   =====================*/
   
   $('select#sele').on('change',function(){
@@ -86,7 +86,7 @@ $('#NumDocumento').remove();
    if (valor==2 || valor==5) {
     if (!$('.activo').length) {
     $( "#documentos" ).append( "<input class='form-control activo' type='search' name='NumDocumento' id='NumDocumento'placeholder='Nº Documento' >");
-     $( "#documentos" ).append( "  <input type='submit' id='Burecibo' name='Burecibo' class='btn color-azul activo btn-submit btn-lg' value='Buscar'>" );
+    $( "#documentos" ).append( '<input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg activo" value="Buscar">'); 
    }
    }else{  
     $('#NumDocumento').remove();
