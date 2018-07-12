@@ -94,7 +94,6 @@
           while($cont1<=$cont){
             
             if (isset($_REQUEST['2'.$cont1])) {
-                echo'asd';
                 seleccionarDoc(2,$cont);
 
             }

@@ -1,6 +1,6 @@
 <?php
 
-function ActualizarPerfil(){
+function ActualizarPerfil($user){
     
     require_once("Models/ActualizarUser_model.php");
     
@@ -52,7 +52,7 @@ function ActualizarPerfil(){
             
         }
         
-        $reg  = $update_model->Perfil($data);
+        $reg  = $update_model->Perfil($data,$user);
         
     }
     
@@ -75,6 +75,28 @@ function ActualizarPassword(){
             $data = array("passa" => $passa, "pass1" => $pass1,);
             
             $reg  = $update_model->Password($data);
+            
+        }
+        
+    }
+    
+}
+
+function ActualizarPassword2($user){
+    
+    require_once("Models/ActualizarUser_model.php");
+    
+    $update_model = new ActualizarUser;
+    
+    if (isset($_REQUEST['actualizarpass'])) {
+        
+        if($_POST['pass1']==$_POST['pass2']){
+            
+            $pass1 = md5($_POST['pass1']);
+            
+            $data = array("pass1" => $pass1,);
+            
+            $reg  = $update_model->Password2($data,$user);
             
         }
         

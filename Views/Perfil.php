@@ -83,7 +83,7 @@
                                                 <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
-                                                ActualizarPerfil(); ?>
+                                                ActualizarPerfil($_SESSION['user']); ?>
                                             </div>
                                         </div>
                                     </form>

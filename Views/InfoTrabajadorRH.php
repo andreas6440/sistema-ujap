@@ -17,16 +17,25 @@
                       
              <div class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" placeholder="Nº de Cédula" name="cedula">
+      <input class="form-control" type="search" placeholder="Nº de Cédula" name="scedula">
       <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
              </div>                                    
                                                 
     </form>
                    <?php
                           
+                          require_once("Controllers/InfoBasica_control.php");
                           if (isset($_REQUEST["BuCedula"])) {
-                              
-                           
+                              $info = buscarinfo();
+                              echo"<br>";
+                              echo"<h2>";
+                               while($row = pg_fetch_array($info)){
+                                   echo $row["nombre"];
+                                   echo " ";
+                                   echo $row["apellido"];
+                                   $_SESSION['username'] = $row["usuario"];
+                               }
+                              echo"</h2>";
 
                             }
                           
@@ -108,7 +117,12 @@
                                     <div class="row">
                                             <div class="col-md-4 ">
                                                 <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                               
+                                               <?php
+                                                require_once("Controllers/ActualizarUser_control.php");
+                                                if(isset($_SESSION['username'])){
+                                                    ActualizarPerfil($_SESSION['username']);
+                                                }
+                                                 ?>
                                             </div>
                                         </div>
                                     </form>
@@ -155,7 +169,12 @@
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
                                                   <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                                
+                                                <?php
+                                                    require_once("Controllers/ActualizarUser_control.php");
+                                                    if(isset($_SESSION['username'])){
+                                                        ActualizarPassword2($_SESSION['username']);
+                                                    }
+                                                 ?>
                                                 </div>
                                                 
                                             </div>
