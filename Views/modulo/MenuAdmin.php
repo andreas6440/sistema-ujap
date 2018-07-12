@@ -12,16 +12,7 @@
     <div class="navbar-header ml-auto">
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
-                
-                <a href="#" class=" brand-big  d-inline mx-2 ">
-
-<form class="form-inline d-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Trabajador.." aria-label="Search">
-      <i id="search" class="fa fa-search"></i>
-     </form>
-                    
-                    
-                </a>
+            
                 <a href="#" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
@@ -55,10 +46,11 @@
                         </span>
                         <span class="user-role">Administrator</span>
                         
+                       
                     </div>
                 </div>
                 <!-- sidebar-header  -->
-                <div class="sidebar-search baba">
+                <div class="sidebar-search baba buscador">
                     <nav class="navbar sidebar-search">
   
    <form class="form-inline">
@@ -78,23 +70,25 @@
                     <ul>  
                         <li class="header-menu">
                             <span>General</span>
-                        </li>                      
+                        </li>
                         <li>
+                            <a href="?p=Configuraciones">
+                                <i class="fa fa-cogs" ></i>
+                                <span>Configuración</span>
+                            </a>
+                        </li>
+
+                         <li>
                             <a href="?p=FideicomisoRH">
                                 <i class="fa fa-handshake-o" ></i>
                                 <span>Fideicomiso</span>
                             </a>
-                        </li>
+                        </li>                     
+                        
                         <li>
                             <a href="?p=InfoTrabajadorRH">
                                 <i class="fa fa-address-book" ></i>
                                 <span>Información del Usuario</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="?p=InfoTrabajadorRH">
-                                <i class="fa fa-address-book" ></i>
-                                <span>Nuevo Trabajador RH</span>
                             </a>
                         </li>
                         <li>

@@ -84,8 +84,10 @@ $('#NumDocumento').remove();
    /* var valor = $('#sele option:selected').html();*/
    var valor=$(this).val();
    if (valor==2 || valor==5) {
-    $( "#documentos" ).append( "<input class='form-control' type='search' name='NumDocumento' id='NumDocumento'placeholder='Nº Documento' >");
-     $( "#documentos" ).append( "  <input type='submit' id='Burecibo' name='Burecibo' class='btn color-azul btn-submit btn-lg' value='Buscar'>" );
+    if (!$('.activo').length) {
+    $( "#documentos" ).append( "<input class='form-control activo' type='search' name='NumDocumento' id='NumDocumento'placeholder='Nº Documento' >");
+     $( "#documentos" ).append( "  <input type='submit' id='Burecibo' name='Burecibo' class='btn color-azul activo btn-submit btn-lg' value='Buscar'>" );
+   }
    }else{  
     $('#NumDocumento').remove();
     

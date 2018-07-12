@@ -12,16 +12,7 @@
     <div class="navbar-header ml-auto">
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
-             <!--   
-                <a href="#"  class=" brand-big  d-inline mx-2 buscador">
-
-<form class="form-inline d-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Trabajador.." aria-label="Search">
-      <i id="search" class="fa fa-search"></i>
-     </form>
-                    
-                    
-                </a>-->
+            
                 <a href="#" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
@@ -55,6 +46,7 @@
                         </span>
                         <span class="user-role">Administrator</span>
                         
+                       
                     </div>
                 </div>
                 <!-- sidebar-header  -->

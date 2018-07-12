@@ -8,10 +8,10 @@
                      <div class="card-header d-flex align-items-center">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-lg-6 col-sm-12  ">
+                          <div class="col-lg-5 col-sm-12  ">
                       <h3 class="h4 mx-2 my-2 ">Perfil del Trabajador</h3>
                       </div>
-                      <div class="col-lg-6 col-sm-12 ">
+                      <div class="col-lg-7 col-sm-12 ">
                          <form  class="form-inline ">
                       
                       
@@ -183,8 +183,8 @@
                       
              <div id="documentos" class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" name="NumDocumento" id="NumDocumento" placeholder="Nº Documento" >
-      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+      <input class="form-control activo" type="search" name="NumDocumento" id="NumDocumento" placeholder="Nº Documento" >
+      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg activo" value="Buscar">
              </div>                                    
                                                 
     </form>
