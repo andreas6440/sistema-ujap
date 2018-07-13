@@ -94,4 +94,14 @@ $('#NumDocumento').remove();
     $('#Burecibo').remove();
    }
 });
+
+  $('#OlClave').click(function() {
+   var closable = alertify.alert().setting('closable');
+
+alertify.alert()
+  .setting({
+    'label':'Ok',
+    'message': '<div class="gru-minuscula">En caso de haber olvidado su contraseña, favor dirigirse a la oficina de recursos humanos para su posterior reestablecimiento.<div>' ,
+    'onok': function(){ alertify.success('excelente');}
+  }).show().setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');; });
 });

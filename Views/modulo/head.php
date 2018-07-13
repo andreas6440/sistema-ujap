@@ -9,13 +9,14 @@
                 UJAP
             </title>
             <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-            <!--logo de la pagina-->
+            
             <link href="Views/Assets/img/logo.ico" rel="icon">
+            <!-- otro css-->
                <link href="Views/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
                   <link rel="stylesheet" type="text/css" href="Views/Assets/font-awesome/css/font-awesome.min.css">
-                  <!--CSS de Login-->
-
-
+                  <link href="Views/Assets/css/alertify.min.css" rel="stylesheet" type="text/css">
+                  <link href="Views/Assets/css/default.min.css" rel="stylesheet" type="text/css">
+                  <!-- fuente de google-->
                 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
                 
 
@@ -23,8 +24,7 @@
                <!-- Css de toda la pagina por ahora-->
 
                      <link rel="stylesheet" type="text/css" href="Views/Assets/css/sidebar.css">
-                   <!-- <link rel="stylesheet" type="text/css" href="Views/Assets/css/style.default.css">-->
-
+                   
 
     </head>
     <body>

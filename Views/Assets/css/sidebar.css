@@ -56,6 +56,9 @@ display:none;
   a,a:hover{
     color:#ffffff;
   }
+  #OlClave{
+    color: black;
+  }
 a, i, span {
     display: inline-block;
     text-decoration: none;
@@ -139,8 +142,8 @@ h6,
   flex-grow: 1;
 }
 .gru-minuscula {
- /*font-family: "Poppins", sans-serif;
- font-weight: bold;*/
+ font-family: "Poppins", sans-serif;
+ /*font-weight: bold;*/
   font-size: 1.0rem;
   /*font-weight: 400;
   line-height: 1.5;

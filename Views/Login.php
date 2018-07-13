@@ -49,7 +49,7 @@ if (isset($_POST['registrar'])) {
                                             <input id="password" name="password" required="required" type="password"/>
                                         </div>
                                         <div class="form-group">
-                                            <a class="form-recovery" href="#">
+                                            <a id="OlClave" class="form-recovery" href="#">
                                                 ¿Olvidaste tu contraseña?
                                             </a>
                                         </div>
