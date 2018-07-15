@@ -36,43 +36,9 @@ $(".sidebar-dropdown > a").click(function() {
   }
 });
 var $alto=$( '.card-body' ).height();
-
 if ($alto<200) {
   $("footer").css({"position":"fixed"});
- }/*
-if ($('#banner').length) {
-   $("html").css({"overflow":"hidden"});
-/*==================================
-            abrir panel dos
-      ==================================*/
-    var panelOne = $('.form-panel.two').height(),
-        panelTwo = $('.form-panel.two')[0].scrollHeight;
-    $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
-        e.preventDefault();
-        $('.form-toggle').addClass('visible');
-        $('.form-panel.one').addClass('hidden');
-        $('.form-panel.two').addClass('active');
-        $('.form').animate({
-            'height': panelTwo
-        }, 200);
-    });
-
-    
-    /*==================================
-            activar panel
-      ==================================*/
-    $('.form-toggle').on('click', function(e) {
-        e.preventDefault();
-        $(this).removeClass('visible');
-        $('.form-panel.one').removeClass('hidden');
-        $('.form-panel.two').removeClass('active');
-        $('.form').animate({
-            'height': panelOne
-        }, 200);
-    });
-}else{
- $("html").css({"overflow":"auto"});
-}*/
+ }
 /*
 if ($('#InfoTrabajador').length) {
 $('#NumDocumento').remove();
@@ -80,8 +46,8 @@ $('#NumDocumento').remove();
     $('#Burecibo').remove();
 
   
-  $('select.sele').on('change',function(){*/
-   /* var valor = $('#sele option:selected').html();*//*
+  $('select.sele').on('change',function(){
+   var valor = $('#sele option:selected').html();
    var valor=$(this).val();
    if (valor==2 || valor==5) {
     if (!$('.activo').length) {
