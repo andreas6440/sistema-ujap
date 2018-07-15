@@ -13,6 +13,12 @@ function SRecibosO($inicio,$registros){
 return $row;
 }
 
+function SRecibosM($num){
+    $drow = new bdoc;
+    $row = $drow->recibosM($num);
+return $row;
+}
+
 function SARC(){
     $drow = new bdoc;
     $row = $drow->ARC();
@@ -22,6 +28,12 @@ return $row;
 function SARCO($inicio,$registros){
     $drow = new bdoc;
     $row = $drow->ARCO($inicio,$registros);
+return $row;
+}
+
+function SARCM($num){
+    $drow = new bdoc;
+    $row = $drow->ARCM($num);
 return $row;
 }
 

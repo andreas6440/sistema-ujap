@@ -77,7 +77,7 @@
               echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
               echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
               ?>
-              <form target="_blank" method="post">
+              <form method="post">
               <?php
               echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
               echo '<td data-title="Info" >
