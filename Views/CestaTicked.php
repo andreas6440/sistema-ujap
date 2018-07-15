@@ -4,10 +4,58 @@
                 <div class="col-12">
                   <div class="card">
                     
-                    <div class="card-header d-flex align-items-center">
-                      
-                      <h3 class="h4 mx-2 py-2 ">Tabla de bono Alimenticio</h3>
-                      
+                     <div class="card-header d-flex align-items-center">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class=" col-sm-12  ">
+                      <h3 class="h4 mx-2 py-2 ">Tabla de bono alimenticio</h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto ">
+                        <select class="sele" name="slct" id="slct">
+                          <option>Seleccione el año</option>
+                          <option value="1">2018</option>
+                          <option value="2">2017</option>
+                          <option value="3">2016</option>
+                          <option value="3">2015</option>
+                          <option value="3">2014</option>
+                        </select>
+                      </div>
+                    </div >
+                      <div class="col-lg-3 col-sm-12  ">
+                      <div class="select ml-auto  ">
+                        <select class="sele" name="slctI" id="slctI">
+                          <option>Mes Inicio</option>
+                          <option value="1">enero</option>
+                          <option value="2">blah</option>
+                          <option value="3">blah</option>
+                          <option value="3">blah</option>
+                          <option value="3">blah</option>
+                        </select>
+                      </div>
+                    </div >
+                    <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto  ">
+                        <select class="sele" name="slctF" id="slctF">
+                          <option>Mes Fin</option>
+                          <option value="1">enero</option>
+                          <option value="2">blah</option>
+                          <option value="3">blah</option>
+                          <option value="3">blah</option>
+                          <option value="3">blah</option>
+                        </select>
+                      </div>
+                    </div >
+                    <div class="col-lg-3 col-sm-12   ">                  
+      
+      
+      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg" value="Buscar">
+             </div>
+
+                    </div>
+                    </div>
                     </div>
                     <div class="card-body">
                       <table class="responsive-table table-hover">
