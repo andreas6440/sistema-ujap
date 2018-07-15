@@ -81,7 +81,7 @@
                       </div>
                     </div>
 <div class="col-lg-6 ">
-      <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg mx-2 " value="Modificar firma">
+      <input type="submit" name="burango" class="btn color-azul btn-submit btn-lg mx-2 " value="Modificar rango">
     </div>   
                                              
                                                
@@ -195,6 +195,23 @@
                                                         </label>
                                             </div>
                                         </div>
+                                        <div class="col-md-3">
+                                                    <div class="group">
+                                                        
+                                         <select class = "form-control input2" id = "rango" name = "rango">
+                                                  <option value = "Cedula"> RRHH </option>
+                                                  <option value = "Rif"> trabajador </option>
+                                                  <option value = "Pasaporte"> Admin </option>
+                                                </select>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Rango
+                                                        </label>
+
+                                                    </div>
+                                                </div>
                                     </div>
 
                                     
