@@ -73,16 +73,15 @@ if ($('#banner').length) {
 }else{
  $("html").css({"overflow":"auto"});
 }
+/*
 if ($('#InfoTrabajador').length) {
 $('#NumDocumento').remove();
     
     $('#Burecibo').remove();
-/*=====================
-  select de infousuario... sape gato con esta vaina
-  =====================*/
+
   
-  $('select.sele').on('change',function(){
-   /* var valor = $('#sele option:selected').html();*/
+  $('select.sele').on('change',function(){*/
+   /* var valor = $('#sele option:selected').html();*//*
    var valor=$(this).val();
    if (valor==2 || valor==5) {
     if (!$('.activo').length) {
@@ -95,7 +94,7 @@ $('#NumDocumento').remove();
     $('#Burecibo').remove();
    }
 });
-}
+}*/
 
   $('#OlClave').click(function() {
    var closable = alertify.alert().setting('closable');

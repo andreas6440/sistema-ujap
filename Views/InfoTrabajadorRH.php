@@ -155,7 +155,7 @@
                       <div class="col-lg-8 col-sm-12 ">
                          <form  class="form-inline" method="post" target="_blank">
                       <div class="select ml-auto ">
-                        <select id="sele" name="slct" id="slct">
+                        <select class="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
                           <option value="2">Bono alimenticio</option>
