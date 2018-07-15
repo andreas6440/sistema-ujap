@@ -49,7 +49,7 @@ if (isset($_POST['registrar'])) {
                                             </a>
                                         </div>
                                         <div class="form-group">
-                                            <input class="boton-azul" type="submit" name="submit" value="Entrar">
+                                            <input class="boton-azul" type="submit" name="submit" id="submit" value="Entrar">
                                         </div>
                                     </form>
                                 </div>
