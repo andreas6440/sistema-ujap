@@ -12,8 +12,8 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-2 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto">
+                      <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto ">
                         <select class="sele" name="slct" id="slct">
                           <option>Seleccione el año</option>
                           <option value="1">2018</option>
@@ -24,8 +24,8 @@
                         </select>
                       </div>
                     </div >
-                      <div class="col-lg-2 col-sm-12 mx-4 mx-md-4 ">
-                      <div class="select ml-auto mr-sm-auto">
+                      <div class="col-lg-3 col-sm-12  ">
+                      <div class="select ml-auto  ">
                         <select class="sele" name="slctI" id="slctI">
                           <option>Mes Inicio</option>
                           <option value="1">enero</option>
@@ -36,8 +36,8 @@
                         </select>
                       </div>
                     </div >
-                    <div class="col-lg-2 col-sm-12  mx-md-4  ">
-                      <div class="select ml-auto mr-sm-auto">
+                    <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto  ">
                         <select class="sele" name="slctF" id="slctF">
                           <option>Mes Fin</option>
                           <option value="1">enero</option>
@@ -48,7 +48,7 @@
                         </select>
                       </div>
                     </div >
-                    <div class="col-lg-4 col-sm-12  mx-4 ms-md-4 ">                      
+                    <div class="col-lg-3 col-sm-12   ">                  
       
       
       <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg" value="Buscar">
