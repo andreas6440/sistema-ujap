@@ -30,6 +30,17 @@ class bdoc{
         
     }
     
+    public function recibosM($num){
+        
+        require('conexion.php');
+        
+        $query = "SELECT * FROM public.".'"Recibos"'." where id_recibo = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($num));
+        return $prepared;
+        
+    }
+    
     public function ARC(){
         
         require('conexion.php');
@@ -52,6 +63,19 @@ class bdoc{
         $query = "SELECT * FROM public.".'"ARC"'." where id_user = $1 ORDER BY id_arc ASC LIMIT $registros OFFSET $inicio;";
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
+    public function ARCM($num){
+        
+        require('conexion.php');
+        
+        $select = $this->id();
+        
+        $query = "SELECT * FROM public.".'"ARC"'." where id_arc = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($num));
         return $prepared;
         
     }

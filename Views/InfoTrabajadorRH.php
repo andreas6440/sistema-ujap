@@ -2,7 +2,7 @@
 <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Información del usuario</h5>
               <div class="row wrapper">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                   <div class="card ">
                     
                      <div class="card-header d-flex align-items-center">
@@ -88,7 +88,7 @@
 
 
                                         
-                                        <div class="col-md-4">
+                                        <div class="col-md-5">
                                                 <div class="group">
                                                 <input class="input2" name="email" id="correo" type="text"/>
 
@@ -107,17 +107,6 @@
                                                         </span>
                                                         <label class="label2">
                                                             Teléfono
-                                                        </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                                <div class="group">
-                                                <input class="input2" name="Nusuario" id="Nusuario" type="text"/>
-
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Nombre de usuario
                                                         </label>
                                             </div>
                                         </div>
@@ -140,7 +129,61 @@
   </div>
 </div>
 </div>
+<div class="col-lg-4 col-md-12">
+                  <div class="card ">
+                    
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Restaurar contraseña </h3>
 
+                    </div>
+                    <div class="card-body ">
+                      <form method="post">
+                                            
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="group">
+                                                        <input class="input2" name="pass1" id="claveNueva" type=password required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nueva contraseña
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                <div class="col-12">
+                                                    <div class="group">
+                                                        <input class="input2" name="pass2" id="claveRepetida" type=password required="required" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Repetir contraseña
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                <div class="col-md-2 mx-2">
+                                                  <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                <?php
+                                                    require_once("Controllers/ActualizarUser_control.php");
+                                                    if(isset($_SESSION['username'])){
+                                                        ActualizarPassword2($_SESSION['username']);
+                                                    }
+                                                 ?>
+                                                </div>
+                                                
+                                            </div>
+
+                      
+                  </form>
+                    </div>
+                  </div>
+</div>
 </div>
 <div class="row wrapper">
                 <div class="col-12">
@@ -153,9 +196,9 @@
                       <h3 class="h4 mx-2 py-2 ">Documentos del usuario</h3>
                       </div>
                       <div class="col-lg-8 col-sm-12 ">
-                         <form  class="form-inline" method="post" target="_blank">
+                         <form  class="form-inline" method="post">
                       <div class="select ml-auto ">
-                        <select class="sele" name="slct" id="slct">
+                        <select id="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
                           <option value="2">Bono alimenticio</option>
@@ -168,17 +211,20 @@
                       
              <div id="documentos" class="mr-auto mx-2">     
       
-      <input class="form-control activo" type="search" name="NumDocumento" id="NumDocumento" placeholder="Nº Documento" >
-      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg activo" value="Buscar">
+      <input class="form-control activo"  type="number" name="NumDocumento"  placeholder="Nº Documento">
+      <input type="submit" name="Burecibo" class="btn color-azul btn-submit btn-lg activo" value="Buscar">
              </div>                                    
                                                 
     </form>
                    <?php
                           
+                        require_once("Controllers/ContadorPDF_control.php");
+                        require_once("Controllers/SeleccionarDoc_control.php");
+                          
                           if(isset($_REQUEST['Burecibo'])){
                               if($_POST['slct']==1){
                                   
-                                  
+                                  $row = SARCM($_POST['NumDocumento']);
                                   
                               }elseif($_POST['slct']==2){
                                   
@@ -186,15 +232,15 @@
                                   
                               }elseif($_POST['slct']==3){
                                   
-                                  seleccionarDoc(3);
+                                  seleccionarDoc(3,0);
                                   
                               }elseif($_POST['slct']==4){
                                   
-                                  seleccionarDoc(4);
+                                  seleccionarDoc(4,0);
                                   
                               }elseif($_POST['slct']==5){
                                   
-                                  
+                                  $row = SRecibosM($_POST['NumDocumento']);
                                   
                               }
                           }
@@ -224,17 +270,88 @@
    
     <tbody>
       
-      <tr>
-        <th scope="row">1</th>
-        <td data-title="Fecha">15-1-2018</td>
-        <td data-title="Nº de ARC">Universal</td>
+      <?php
         
-        <td data-title="Info" ><button class="button type1">
-                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ver
-                                </button></td>
-     
-    
-    </tr>
+        $cont=1;
+          if(isset($row)){
+              
+              while($row2 = pg_fetch_array($row)){
+              
+                  setlocale(LC_TIME, "es_VE");
+                  $date = strftime("%B",strtotime($row2["fecha_c"]));
+
+                  echo '<tr>';
+                  if($row2==null){
+                      echo 'Documento No Encontrado';
+                  }
+                  echo '<th scope="row">'.$cont.'</th>';
+                  if($_POST['slct']==5){
+                      echo '<td data-title="N de Recibo">'.$row2["id_recibo"].'</td>';
+                  }elseif($_POST['slct']==1){
+                      echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+                  }elseif($_POST['slct']==2){
+                      echo '<td data-title="N de Bono">'.$row2["id_arc"].'</td>';
+                  }
+                  echo '<td data-title="Asunto">'.$date.'</td>';
+                  if($row2["fecha_v"]!=null){
+                      echo '<td data-title="Estado">Revisado</td>';
+                  }else{
+                      echo '<td data-title="Estado">Sin Revisar</td>';
+                  }
+                  echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
+                  echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
+
+            ?>
+            <form method="post">
+             <?php
+                  if($_POST['slct']==5){
+              echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
+              echo '<td data-title="Info" >
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        <input type="submit" value="Ver" name="1'.$cont.'" class="button type1">
+                    </td>';
+                  }elseif($_POST['slct']==1){
+                      echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+              echo '<td data-title="Info" >
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                    </td>';
+                  }elseif($_POST['slct']==2){
+                      echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+              echo '<td data-title="Info" >
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        <input type="submit" value="Ver" name="5'.$cont.'" class="button type1">
+                    </td>';
+                  }
+              echo '</tr>';
+              $cont = $cont + 1;
+          }
+        }
+        
+        
+        $cont1 = 1;
+        
+        while($cont1<=$cont){
+            
+            if (isset($_REQUEST['1'.$cont1])) {
+            
+                seleccionarDoc(1,$cont);
+
+            }elseif(isset($_REQUEST['2'.$cont1])) {
+                
+                seleccionarDoc(2,$cont);
+
+            }elseif(isset($_REQUEST['5'.$cont1])) {
+                
+                seleccionarDoc(5,$cont);
+
+            }
+            
+            $cont1 = $cont1 + 1;
+            
+        }
+          
+          ?>
 
      
      
