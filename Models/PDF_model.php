@@ -51,7 +51,7 @@ class dpdf{
         
         $query = "SELECT cedula FROM public.".'"UsuariosWeb"'." where usuario = $1;";
         $prepared = pg_prepare($dbcon, "", $query);
-        $prepared = pg_execute($dbcon, "", array($_SESSION['user']));
+        $prepared = pg_execute($dbcon, "", array($_SESSION['user_d']));
         $query = "SELECT * FROM public.".'"Personal"'." where ci = $1;";
         $select = pg_prepare($dbcon, "", $query);
         $select = pg_execute($dbcon, "", array(pg_fetch_assoc($prepared)['cedula']));

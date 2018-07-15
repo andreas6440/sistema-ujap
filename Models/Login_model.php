@@ -5,7 +5,7 @@ class Login_model{
     public function logueo($datos){
         
         require"conexion.php";
-        $query = "SELECT usuario, password FROM public.".'"UsuariosWeb"'." where usuario = $1 and password = $2 ;";
+        $query = "SELECT usuario, password, nivel FROM public.".'"UsuariosWeb"'." where usuario = $1 and password = $2 ;";
 
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(

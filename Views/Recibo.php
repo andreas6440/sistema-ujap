@@ -48,7 +48,7 @@
                         </select>
                       </div>
                     </div >
-                    <div class="col-lg-3 col-sm-12   ">                  
+                     <div class="col-lg-3 col-sm-12   ">                      
       
       
       <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg" value="Buscar">
@@ -94,9 +94,9 @@
           
           $cont=1;
           
-          $resultados = SRecibos();
+          $resultados = SRecibos($_SESSION['user']);
           $total_registros = pg_num_rows($resultados);
-          $row = SRecibosO($inicio,$registros);
+          $row = SRecibosO($inicio,$registros,$_SESSION['user']);
           $total_paginas = ceil($total_registros / $registros);
         
         if ($total_registros) {
@@ -129,7 +129,7 @@
             
             if (isset($_REQUEST['1'.$cont1])) {
             
-                seleccionarDoc(1,$cont);
+                seleccionarDoc(1,$cont,0);
 
             }
             

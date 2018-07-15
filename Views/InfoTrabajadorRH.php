@@ -34,6 +34,7 @@
                                    echo " ";
                                    echo $row["apellido"];
                                    $_SESSION['username'] = $row["usuario"];
+                                   $_SESSION['user_d']=$_SESSION['username'];
                                }
                               echo"</h2>";
 
@@ -119,7 +120,7 @@
                                                 <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
-                                                if(isset($_SESSION['username'])){
+                                                if(isset($_REQUEST['actualizarperfil'])){
                                                     ActualizarPerfil($_SESSION['username']);
                                                 }
                                                  ?>
@@ -171,7 +172,7 @@
                                                   <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                     require_once("Controllers/ActualizarUser_control.php");
-                                                    if(isset($_SESSION['username'])){
+                                                    if(isset($_REQUEST['actualizarpass'])){
                                                         ActualizarPassword2($_SESSION['username']);
                                                     }
                                                  ?>
@@ -221,10 +222,11 @@
                         require_once("Controllers/ContadorPDF_control.php");
                         require_once("Controllers/SeleccionarDoc_control.php");
                           
-                          if(isset($_REQUEST['Burecibo'])){
+                          if((isset($_REQUEST['Burecibo']))and(isset($_SESSION['user_d']))){
+                              
                               if($_POST['slct']==1){
                                   
-                                  $row = SARCM($_POST['NumDocumento']);
+                                  $row = SARCM($_POST['NumDocumento'], $_SESSION['user_d']);
                                   
                               }elseif($_POST['slct']==2){
                                   
@@ -232,15 +234,15 @@
                                   
                               }elseif($_POST['slct']==3){
                                   
-                                  seleccionarDoc(3,0);
+                                  seleccionarDoc(3,0,1);
                                   
                               }elseif($_POST['slct']==4){
                                   
-                                  seleccionarDoc(4,0);
+                                  seleccionarDoc(4,0,1);
                                   
                               }elseif($_POST['slct']==5){
-                                  
-                                  $row = SRecibosM($_POST['NumDocumento']);
+
+                                  $row = SRecibosM($_POST['NumDocumento'], $_SESSION['user_d']);
                                   
                               }
                           }
@@ -273,7 +275,7 @@
       <?php
         
         $cont=1;
-          if(isset($row)){
+          if((isset($row))){
               
               while($row2 = pg_fetch_array($row)){
               
@@ -281,9 +283,6 @@
                   $date = strftime("%B",strtotime($row2["fecha_c"]));
 
                   echo '<tr>';
-                  if($row2==null){
-                      echo 'Documento No Encontrado';
-                  }
                   echo '<th scope="row">'.$cont.'</th>';
                   if($_POST['slct']==5){
                       echo '<td data-title="N de Recibo">'.$row2["id_recibo"].'</td>';
@@ -335,15 +334,15 @@
             
             if (isset($_REQUEST['1'.$cont1])) {
             
-                seleccionarDoc(1,$cont);
+                seleccionarDoc(1,$cont,1);
 
             }elseif(isset($_REQUEST['2'.$cont1])) {
                 
-                seleccionarDoc(2,$cont);
+                seleccionarDoc(2,$cont,1);
 
             }elseif(isset($_REQUEST['5'.$cont1])) {
                 
-                seleccionarDoc(5,$cont);
+                seleccionarDoc(5,$cont,1);
 
             }
             

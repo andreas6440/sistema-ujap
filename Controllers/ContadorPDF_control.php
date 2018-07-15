@@ -1,39 +1,39 @@
 <?php
 require_once("Models/ContadorPDF_model.php");
 
-function SRecibos(){
+function SRecibos($user){
     $drow = new bdoc;
-    $row = $drow->recibos();
+    $row = $drow->recibos($user);
 return $row;
 }
 
-function SRecibosO($inicio,$registros){
+function SRecibosO($inicio,$registros,$user){
     $drow = new bdoc;
-    $row = $drow->recibosO($inicio,$registros);
+    $row = $drow->recibosO($inicio,$registros,$user);
 return $row;
 }
 
-function SRecibosM($num){
+function SRecibosM($num,$user){
     $drow = new bdoc;
-    $row = $drow->recibosM($num);
+    $row = $drow->recibosM($num,$user);
 return $row;
 }
 
-function SARC(){
+function SARC($user){
     $drow = new bdoc;
-    $row = $drow->ARC();
+    $row = $drow->ARC($user);
 return $row;
 }
 
-function SARCO($inicio,$registros){
+function SARCO($inicio,$registros,$user){
     $drow = new bdoc;
-    $row = $drow->ARCO($inicio,$registros);
+    $row = $drow->ARCO($inicio,$registros,$user);
 return $row;
 }
 
-function SARCM($num){
+function SARCM($num,$user){
     $drow = new bdoc;
-    $row = $drow->ARCM($num);
+    $row = $drow->ARCM($num,$user);
 return $row;
 }
 

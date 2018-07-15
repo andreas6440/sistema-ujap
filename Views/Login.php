@@ -1,6 +1,6 @@
 <?php 
 require_once "Controllers/Login_control.php";
-require_once "Controllers/Validaciones.php";
+require_once "Controllers/Validaciones_control.php";
         $login = new Login_control;
         $val= new  Validacion;
 if (isset($_POST['registrar'])) {

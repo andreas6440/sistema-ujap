@@ -3,6 +3,7 @@
               <div class="row wrapper">
                 <div class="col-12">
                   <div class="card ">
+                    
                     <div class="card-header d-flex align-items-center">
                       <div class="container-fluid">
                         <div class="row">
@@ -63,9 +64,9 @@
           
           $cont=1;
           
-          $resultados = SARC();
+          $resultados = SARC($_SESSION['user']);
           $total_registros = pg_num_rows($resultados);
-          $row = SARCO($inicio,$registros);
+          $row = SARCO($inicio,$registros,$_SESSION['user']);
           $total_paginas = ceil($total_registros / $registros);
         
         if ($total_registros) {
@@ -104,7 +105,7 @@
           while($cont1<=$cont){
             
             if (isset($_REQUEST['2'.$cont1])) {
-                seleccionarDoc(2,$cont);
+                seleccionarDoc(2,$cont,0);
 
             }
             
