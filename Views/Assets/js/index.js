@@ -73,6 +73,7 @@ if ($('#banner').length) {
 }else{
  $("html").css({"overflow":"auto"});
 }
+if ($('#InfoTrabajador').length) {
 $('#NumDocumento').remove();
     
     $('#Burecibo').remove();
@@ -80,7 +81,7 @@ $('#NumDocumento').remove();
   select de infousuario... sape gato con esta vaina
   =====================*/
   
-  $('select#sele').on('change',function(){
+  $('select.sele').on('change',function(){
    /* var valor = $('#sele option:selected').html();*/
    var valor=$(this).val();
    if (valor==2 || valor==5) {
@@ -94,6 +95,7 @@ $('#NumDocumento').remove();
     $('#Burecibo').remove();
    }
 });
+}
 
   $('#OlClave').click(function() {
    var closable = alertify.alert().setting('closable');

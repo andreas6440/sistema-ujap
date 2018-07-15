@@ -13,10 +13,10 @@
                 <div id="opciones" class="navbar-brand gru-minuscula ">
                           
             
-                <a href="#" class="brand-big  d-inline mx-2 ">
+                <a href="?p=Perfil" class="brand-big  d-inline mx-2 ">
                     <span> Perfil <i class="fa fa-user-o"></i> </span>
                 </a>
-                <a href="#" class="brand-big  d-inline mx-2 ">
+                <a href="?p=Salir" class="brand-big  d-inline mx-2 ">
                     <span> Cerrar Sesión <i class="fa fa-sign-out"></i> </span>
                 </a>
             
@@ -72,9 +72,15 @@
                             <span>General</span>
                         </li>
                         <li>
-                            <a href="?p=Configuraciones">
-                                <i class="fa fa-cogs" ></i>
-                                <span>Configuración</span>
+                            <a href="?p=RepoReciboRH">
+                                <i class="fa fa-file-text"></i>
+                                <span> Reporte Recibo de Pago</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?p=RepoAlimenticioRH">
+                                <i class="fa fa-cutlery" ></i>
+                                <span>Reporte Bono alimenticio</span>
                             </a>
                         </li>
 
@@ -91,16 +97,12 @@
                                 <span>Información del Usuario</span>
                             </a>
                         </li>
+                        
+                        
                         <li>
-                            <a href="?p=RepoAlimenticioRH">
-                                <i class="fa fa-cutlery" ></i>
-                                <span>Reporte Bono alimenticio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="?p=RepoReciboRH">
-                                <i class="fa fa-file-text"></i>
-                                <span> Reporte Recibo de Pago</span>
+                            <a href="?p=Configuraciones">
+                                <i class="fa fa-cogs" ></i>
+                                <span>Configuración</span>
                             </a>
                         </li>
                     </ul>

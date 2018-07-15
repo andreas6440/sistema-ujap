@@ -52,7 +52,7 @@
 
 
                                         
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                                 <div class="group">
                                                 <input class="input2" name="email" id="correo" type="text"/>
 
@@ -75,8 +75,19 @@
                                             </div>
                                         </div>
 
+<div class="col-md-4">
+                                                <div class="group">
+                                                <input class="input2" name="Nusuario" id="Nusuario" type="text"/>
 
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nombre de usuario
+                                                        </label>
+                                            </div>
+                                        </div>
                                     </div>
+
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">

@@ -2,7 +2,7 @@
 <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Información del usuario</h5>
               <div class="row wrapper">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                   <div class="card ">
                     
                      <div class="card-header d-flex align-items-center">
@@ -88,7 +88,7 @@
 
 
                                         
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                                 <div class="group">
                                                 <input class="input2" name="email" id="correo" type="text"/>
 
@@ -107,6 +107,17 @@
                                                         </span>
                                                         <label class="label2">
                                                             Teléfono
+                                                        </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="group">
+                                                <input class="input2" name="Nusuario" id="Nusuario" type="text"/>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nombre de usuario
                                                         </label>
                                             </div>
                                         </div>
@@ -129,61 +140,7 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-12">
-                  <div class="card ">
-                    
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Restaurar contraseña </h3>
 
-                    </div>
-                    <div class="card-body ">
-                      <form method="post">
-                                            
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="group">
-                                                        <input class="input2" name="pass1" id="claveNueva" type=password required="required" type="text"/>
-
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Nueva contraseña
-                                                        </label>
-
-                                                    </div>
-                                                </div>
-                                                </div>
-                                                <div class="row">
-                                                <div class="col-12">
-                                                    <div class="group">
-                                                        <input class="input2" name="pass2" id="claveRepetida" type=password required="required" type="text"/>
-
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Repetir contraseña
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                <div class="row">
-                                                <div class="col-md-2 mx-2">
-                                                  <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                                <?php
-                                                    require_once("Controllers/ActualizarUser_control.php");
-                                                    if(isset($_SESSION['username'])){
-                                                        ActualizarPassword2($_SESSION['username']);
-                                                    }
-                                                 ?>
-                                                </div>
-                                                
-                                            </div>
-
-                      
-                  </form>
-                    </div>
-                  </div>
-</div>
 </div>
 <div class="row wrapper">
                 <div class="col-12">

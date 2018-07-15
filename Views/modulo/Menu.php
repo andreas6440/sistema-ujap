@@ -60,13 +60,19 @@
                         <li class="header-menu">
                             <span>General</span>
                         </li>
-                        
                         <li>
-                            <a href="?p=ARC">
-                                <i class="fa fa-bar-chart" ></i>
-                                <span>ARC</span>
+                            <a href="?p=Recibo">
+                                <i class="fa fa-file-text"></i>
+                                <span>Recibo de Pago</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="?p=CestaTicked">
+                                <i class="fa fa-cutlery" ></i>
+                                <span>Bono alimenticio</span>
+                            </a>
+                        </li>
+                        
                        
                         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,18 +107,13 @@
               ?>
         </div>
       </li>
-       <li>
-                            <a href="?p=CestaTicked">
-                                <i class="fa fa-cutlery" ></i>
-                                <span>Bono alimenticio</span>
+                     <li>
+                            <a href="?p=ARC">
+                                <i class="fa fa-bar-chart" ></i>
+                                <span>ARC</span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="?p=Recibo">
-                                <i class="fa fa-file-text"></i>
-                                <span>Recibo de Pago</span>
-                            </a>
-                        </li>
+                        </li>    
+                        
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->
