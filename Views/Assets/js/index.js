@@ -39,7 +39,7 @@ var $alto=$( '.card-body' ).height();
 
 if ($alto<200) {
   $("footer").css({"position":"fixed"});
- }
+ }/*
 if ($('#banner').length) {
    $("html").css({"overflow":"hidden"});
 /*==================================
@@ -72,7 +72,7 @@ if ($('#banner').length) {
     });
 }else{
  $("html").css({"overflow":"auto"});
-}
+}*/
 /*
 if ($('#InfoTrabajador').length) {
 $('#NumDocumento').remove();
@@ -102,7 +102,7 @@ $('#NumDocumento').remove();
 alertify.alert()
   .setting({
     'label':'Ok',
-    'message': '<div class="gru-minuscula">En caso de haber olvidado su contraseña, favor dirigirse a la oficina de recursos humanos para su posterior reestablecimiento.<div>' ,
+    'message': '<div class="gru-minuscula">En caso de haber olvidado su contraseña, favor dirigirse a la oficina de redes para su posterior reestablecimiento.<div>' ,
     'onok': function(){ alertify.success('excelente');}
   }).show().setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');; });
 });

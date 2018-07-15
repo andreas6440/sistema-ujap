@@ -62,7 +62,16 @@
                       
              <div class="mr-auto mx-2">     
         
-      <input class="form-control" type="search" placeholder="Nº de Cédula" >
+      <div class="select ml-auto ">
+                        <select class="sele" name="slct" id="slct">
+                          <option>Seleccione el año</option>
+                          <option value="1">2018</option>
+                          <option value="2">2017</option>
+                          <option value="3">2016</option>
+                          <option value="3">2015</option>
+                          <option value="3">2014</option>
+                        </select>
+                      </div>
       <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
              </div>                                    
                                                 

@@ -1,23 +1,18 @@
 <?php 
 require_once "Controllers/Login_control.php";
-
+require_once "Controllers/Validaciones.php";
         $login = new Login_control;
+        $val= new  Validacion;
 if (isset($_POST['registrar'])) {
     $login->registrar();
 }elseif (isset($_POST['submit'])) {
-    $login->loguear();
+  $re= $val->Login_val();
+  if ($re==true) {
+     $login->loguear();
+  }
+    
 }
 
-    $login = new Login_control;
-    
-    if (isset($_POST['registrar'])) {
-        $login->registrar();
-    }
-
-    if (isset($_POST['submit'])) {
-        $login->loguear();
-    }
-    
 
  ?>
         <section id="banner" >
@@ -40,13 +35,13 @@ if (isset($_POST['registrar'])) {
                                             <label for="username">
                                                 Nombre de Usuario
                                             </label>
-                                            <input  id="username" name="username" required="required" type="text"/>
+                                            <input  id="username" name="username" autocomplete="of" required autofocus  type="text"/>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">
                                                 Contraseña
                                             </label>
-                                            <input id="password" name="password" required="required" type="password"/>
+                                            <input id="password" name="password" autocomplete="of" required type="password"/>
                                         </div>
                                         <div class="form-group">
                                             <a id="OlClave" class="form-recovery" href="#">
