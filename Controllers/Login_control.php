@@ -25,11 +25,15 @@ class Login_control
             if(isset($log)){
                 while ($row = pg_fetch_assoc($log)) {
                     $_SESSION['user'] = $row['usuario'];
-                    if($row['nivel']==1){
-                        $_SESSION['user_d']=$row['usuario'];
-                    }
                     if(isset($_SESSION['user'])){
-                        $_SESSION['rut']='Perfil';
+                        $_SESSION['nivel']=$row['nivel'];
+                        if($row['nivel']==1){
+                            $_SESSION['rut']='Perfil';
+                            $_SESSION['opcion']=1;
+                        }else{
+                            $_SESSION['rut']='Acceso';
+                            $_SESSION['opcion']=0;
+                        }
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                     }
                 }
