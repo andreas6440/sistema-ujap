@@ -36,6 +36,7 @@ if (isset($_POST['registrar'])) {
                                                 Nombre de Usuario
                                             </label>
                                             <input  id="username" name="username" autocomplete="of" required autofocus  type="text"/>
+                                            <div id="mensaje1" class="errores">Campo requerido</div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">
