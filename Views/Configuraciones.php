@@ -3,7 +3,9 @@
 
 require_once "Controllers/Validaciones_control.php";
 require_once "Controllers/Login_control.php";
+require_once "Controllers/NivelDePaso_control.php";
 
+nivel2();
 $login = new Login_control;
 if (isset($_POST['registrar'])) {
     $login->registrar();
@@ -113,7 +115,7 @@ if (isset($_POST['registrar'])) {
                   <div class="card ">
                     
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4 mx-2">Nuevo usuario RRHH</h3>
+                      <h3 class="h4 mx-2">Nuevo usuario</h3>
 
                     </div>
                     <div class="card-body ">
@@ -210,9 +212,9 @@ if (isset($_POST['registrar'])) {
                                                     <div class="group">
                                                         
                                          <select class = "form-control input2" id = "rango" name = "nivel">
-                                                  <option value = "2"> RRHH </option>
                                                   <option value = "1"> Trabajador </option>
-                                                  <option value = "0"> Admin </option>
+                                                  <option value = "2"> RRHH </option>
+                                                  <option value = "3"> Admin </option>
                                                 </select>
 
                                                         <span class="bar">

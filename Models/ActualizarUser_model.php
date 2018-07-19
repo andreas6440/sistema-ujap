@@ -36,6 +36,12 @@ class ActualizarUser{
             $prepared = pg_execute($dbcon, "", array($datos["email"]));
         }
         
+        if (isset($datos["nivel"])){
+            $query = "UPDATE public.".'"UsuariosWeb"'." SET nivel = $1 WHERE usuario='".$user."';";
+            $prepared = pg_prepare($dbcon, "", $query);
+            $prepared = pg_execute($dbcon, "", array($datos["nivel"]));
+        }
+        
         return $prepared;
         
     }

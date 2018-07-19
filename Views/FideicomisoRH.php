@@ -1,4 +1,13 @@
-<div id="Fideicomiso" class="container-fluid my-5 punto  ">
+<?php
+
+require_once "Controllers/NivelDePaso_control.php";
+
+nivel1();
+
+?>
+  
+
+  <div id="Fideicomiso" class="container-fluid my-5 punto  ">
    <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Fideicomiso</h5>
               <div class="row wrapper">
                 <div class="col-12">

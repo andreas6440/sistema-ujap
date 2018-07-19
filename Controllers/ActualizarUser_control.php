@@ -8,11 +8,6 @@ function ActualizarPerfil($user){
 
         $update_model = new ActualizarUser;
         
-        if ($_POST["cedula"]!=""){
-            $cedula  = $_POST['cedula'];
-            $data = array("cedula" => $cedula);
-        }
-        
         if ($_POST["nombre"]!=""){
             $nombre = $_POST['nombre'];
             if(!isset($data)){
@@ -48,6 +43,16 @@ function ActualizarPerfil($user){
                  $data = array("email" => $email);
             }else{
                  $data = array("email" => $email)+$data;
+            }
+            
+        }
+        
+        if ($_POST["nivel"]!=""){
+            $nivel = $_POST['nivel'];
+            if(!isset($data)){
+                 $data = array("nivel" => $nivel);
+            }else{
+                 $data = array("nivel" => $nivel)+$data;
             }
             
         }

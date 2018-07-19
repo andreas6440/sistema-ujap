@@ -1,5 +1,12 @@
 
-<div id="InfoTrabajador" class="container-fluid my-5 punto  ">
+<?php
+
+require_once('Controllers/NivelDePaso_control.php');
+
+nivel1();
+
+?>
+   <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Información del usuario</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
@@ -53,17 +60,6 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="cedula" id="cedula" type="text"/>
-                                                        <span class="bar">
-                                                        </span>
-                                                        <label class="label2">
-                                                            Cédula
-                                                        </label>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="group">
                                                         <input class="input2" name="nombre" id="nombre" type="text"/>
 
                                                         <span class="bar">
@@ -85,7 +81,25 @@
                                                         </label>
                                                     </div>
                                                 </div>
+        
+                                                <div class="col-md-3">
+                                                    <div class="group">
+                                                    <select class = "form-control input2" id = "rango" name = "nivel">
+                                                      <option value = "1"> Trabajador </option>
+                                                      <option value = "2"> RRHH </option>
+                                                      <option value = "3"> Admin </option>
+                                                    </select>
+
+                                                        <span class="bar">
+                                                        </span>
+                                                        <label class="label2">
+                                                            Nivel
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                           
                                             </div>
+                                            
                                         
 
                                     <div class="row">
@@ -114,6 +128,7 @@
                                                         </label>
                                             </div>
                                         </div>
+                                        
 
 
                                     </div>
@@ -202,7 +217,7 @@
                       <div class="col-lg-8 col-sm-12 ">
                          <form  class="form-inline" method="post">
                       <div class="select ml-auto ">
-                        <select id="sele" name="slct" id="slct">
+                        <select class="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
                           <option value="2">Bono alimenticio</option>

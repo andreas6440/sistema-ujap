@@ -1,4 +1,11 @@
-        <section id="banner" >
+     <?php
+
+require_once "Controllers/NivelDePaso_control.php";
+
+nivel1();
+
+?>
+               <section id="banner" >
 
             <div class="bg-color ">
                 <div class="container-fluid">
