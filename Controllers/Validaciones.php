@@ -15,6 +15,14 @@ class Validacion
 				return true;
 			}
 	}
+	function Actualizar(){
+		if (empty($_POST["email"])) {
+    		$emailErr = "Correo Electronico requerido";
+       	} else {
+    		$email = test_input($_POST["email"]);
+    		echo $email;
+  		}
+	}
 }
 
  ?>
