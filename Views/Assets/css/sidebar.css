@@ -1648,12 +1648,12 @@ padding: 10px;
 position: absolute;
 
 */
-background-color: #c9a;
+background-color: #FE2E2E;
   border-radius: 3px;
   bottom: 100%;
   color: white;
   content: attr(data-title);
-  font-size: 12px;
+  font-size: 11px;
   left: 100%;
   padding: .5em 1em;
   white-space: nowrap;
