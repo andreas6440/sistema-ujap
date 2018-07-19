@@ -1633,21 +1633,7 @@ información de la cuenta - perfil
 caja de errores
 =================*/
 .errores{
-  /*
-  -webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);
-  -moz-box-shadow:0 0 10px rgba(0,0,0,0.3);
--o-box-shadow:0 0 10px rgba(0,0,0,0.3);
-background: red;
-box-shadow: 0 0 10px rgba(0,0,0,0.3);
-color: #fff;
-display:none;
-font-size: 14px;
-margin-top: -10px;
-margin-left: 100px;
-padding: 10px;
-position: absolute;
-
-*/
+ 
 background-color: #c9a;
   border-radius: 3px;
   bottom: 100%;
@@ -1658,4 +1644,10 @@ background-color: #c9a;
   padding: .5em 1em;
   white-space: nowrap;
   display: none;
+}
+.errores2{
+  display: none;
+  color: #FE2E2E;
+  font-size: 11px;
+  
 }

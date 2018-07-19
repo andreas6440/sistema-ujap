@@ -19,6 +19,7 @@
                                                         <label class="label2">
                                                             Cédula
                                                         </label>
+                                                        <div id="mensaje1" class="errores2 ">Completar Campo</div> 
 
                                                     </div>
                                                 </div>
@@ -31,6 +32,7 @@
                                                         <label class="label2">
                                                             Nombre
                                                         </label>
+                                                        <div id="mensaje2" class="errores2 ">Completar Campo</div>
 
                                                     </div>
                                                 </div>
@@ -43,6 +45,7 @@
                                                         <label class="label2">
                                                             Apellido
                                                         </label>
+                                                        <div id="mensaje3" class="errores2 ">Completar Campo</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -61,6 +64,8 @@
                                                         <label class="label2">
                                                             Correo electronico
                                                         </label>
+                                                        <div id="mensaje4" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje7" class="errores2 ">Correo Invalido</div>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -72,6 +77,7 @@
                                                         <label class="label2">
                                                             Teléfono
                                                         </label>
+                                                        <div id="mensaje5" class="errores2 ">Completar Campo</div>
                                             </div>
                                         </div>
 
@@ -84,6 +90,7 @@
                                                         <label class="label2">
                                                             Nombre de usuario
                                                         </label>
+                                                        <div id="mensaje6" class="errores2 ">Completar Campo</div>
                                             </div>
                                         </div>
                                     </div>
