@@ -71,18 +71,6 @@
                         <li class="header-menu">
                             <span>General</span>
                         </li>
-                        <li>
-                            <a href="?p=RepoReciboRH">
-                                <i class="fa fa-file-text"></i>
-                                <span> Reporte Recibo de Pago</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="?p=RepoAlimenticioRH">
-                                <i class="fa fa-cutlery" ></i>
-                                <span>Reporte Bono alimenticio</span>
-                            </a>
-                        </li>
 
                          <li>
                             <a href="?p=FideicomisoRH">
@@ -92,7 +80,7 @@
                         </li>                     
                         
                         <li>
-                            <a href="?p=InfoTrabajadorRH">
+                            <a href="?p=InfoTrabajador">
                                 <i class="fa fa-address-book" ></i>
                                 <span>Información del Usuario</span>
                             </a>

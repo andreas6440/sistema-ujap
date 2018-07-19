@@ -1,5 +1,16 @@
 
-<div id="Configuraciones" class="container-fluid my-5 punto  ">
+<?php 
+
+require_once "Controllers/Validaciones_control.php";
+require_once "Controllers/Login_control.php";
+
+$login = new Login_control;
+if (isset($_POST['registrar'])) {
+    $login->registrar();
+}   
+
+ ?>
+   <div id="Configuraciones" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Administrador/ Configuración</h5>
               <div class="row wrapper">
                 <div class="col-lg-5">
@@ -175,7 +186,7 @@
 
 <div class="col-md-3">
                                                 <div class="group">
-                                                <input class="input2" name="Nusuario" id="Nusuario" type="text"/>
+                                                <input class="input2" name="username-r" id="Nusuario" type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -186,7 +197,7 @@
                                         </div>
                                         <div class="col-md-3">
                                                 <div class="group">
-                                                <input class="input2" name="clave" id="clave" type="text"/>
+                                                <input class="input2" name="password-r" id="clave" type="password"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -198,16 +209,16 @@
                                         <div class="col-md-3">
                                                     <div class="group">
                                                         
-                                         <select class = "form-control input2" id = "rango" name = "rango">
-                                                  <option value = "Cedula"> RRHH </option>
-                                                  <option value = "Rif"> trabajador </option>
-                                                  <option value = "Pasaporte"> Admin </option>
+                                         <select class = "form-control input2" id = "rango" name = "nivel">
+                                                  <option value = "2"> RRHH </option>
+                                                  <option value = "1"> Trabajador </option>
+                                                  <option value = "0"> Admin </option>
                                                 </select>
 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
-                                                            Rango
+                                                            Nivel
                                                         </label>
 
                                                     </div>
@@ -217,10 +228,7 @@
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">
-                                                <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Registrar">
-                                                <?php
-                                                require_once("Controllers/ActualizarUser_control.php");
-                                                ActualizarPerfil($_SESSION['user']); ?>
+                                                <input type="submit" name="registrar" class="btn color-azul btn-submit btn-lg" value="Registrar">
                                             </div>
                                         </div>
                                     </form>

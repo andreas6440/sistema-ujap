@@ -18,7 +18,6 @@ class Login_model{
     public function registrar($datos){
         
         require"conexion.php";
-        $nivel=1;
         $query = "INSERT INTO public.".'"UsuariosWeb"'."(cedula, usuario, password, nombre, apellido, telefono, email, nivel) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);";
         $prepared = pg_prepare($dbcon, "", $query);
         $prepared = pg_execute($dbcon, "", array(
@@ -29,7 +28,7 @@ class Login_model{
             $datos["apellido"],
             $datos["telefono"],
             $datos["email"],
-            $nivel));
+            $datos["nivel"]));
         return $prepared;
         
 
