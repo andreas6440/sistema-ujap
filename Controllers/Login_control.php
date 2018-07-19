@@ -22,6 +22,7 @@ class Login_control
             $password = md5($_POST['password']);
             $data     = array("usuario" => $usuario, "password" => $password);
             $log      = $login_model->logueo($data);
+
             if(isset($log)){
                 while ($row = pg_fetch_assoc($log)) {
                     $_SESSION['user'] = $row['usuario'];
@@ -36,10 +37,11 @@ class Login_control
                             $_SESSION['opcion']=0;
                         }
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
+
                     }
                 }
             }
-        }
+            }
             
     }
     
