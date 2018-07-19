@@ -11,16 +11,17 @@
                       <h3 class="h4 mx-2 py-2 ">Tabla de Recibos de Pago</h3>
                       </div>
                     </div>
+                    <form method="get">
                     <div class="row">
                       <div class="col-lg-3 col-sm-12 ">
                       <div class="select ml-auto ">
                         <select class="sele" name="slct" id="slct">
                           <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
+                          <option value=<?php echo date('Y');?>><?php echo date('Y');?></option>
+                          <option value=<?php echo date('Y')-1;?>><?php echo date('Y')-1;?></option>
+                          <option value=<?php echo date('Y')-2;?>><?php echo date('Y')-2;?></option>
+                          <option value=<?php echo date('Y')-3;?>><?php echo date('Y')-3;?></option>
+                          <option value=<?php echo date('Y')-4;?>><?php echo date('Y')-4;?></option>
                         </select>
                       </div>
                     </div >
@@ -28,11 +29,18 @@
                       <div class="select ml-auto  ">
                         <select class="sele" name="slctI" id="slctI">
                           <option>Mes Inicio</option>
-                          <option value="1">enero</option>
-                          <option value="2">blah</option>
-                          <option value="3">blah</option>
-                          <option value="3">blah</option>
-                          <option value="3">blah</option>
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
                         </select>
                       </div>
                     </div >
@@ -40,11 +48,18 @@
                       <div class="select ml-auto  ">
                         <select class="sele" name="slctF" id="slctF">
                           <option>Mes Fin</option>
-                          <option value="1">enero</option>
-                          <option value="2">blah</option>
-                          <option value="3">blah</option>
-                          <option value="3">blah</option>
-                          <option value="3">blah</option>
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
                         </select>
                       </div>
                     </div >
@@ -55,6 +70,7 @@
              </div>
 
                     </div>
+                    </form>
                     </div>
                     </div>
                     <?php 
@@ -100,27 +116,59 @@
           $total_paginas = ceil($total_registros / $registros);
         
         if ($total_registros) {
+            
           while($row2 = pg_fetch_array($row)){
               
-              setlocale(LC_TIME, "es_VE");
-              $date = strftime("%B",strtotime($row2["fecha_c"]));
-              
-              echo '<tr>';
-              echo '<th scope="row">'.$cont.'</th>';
-              echo '<td data-title="N de Recibo">'.$row2["id_recibo"].'</td>';
-             
-              echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
-             
-        ?>
-        <form method="post">
-        <?php
-              echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
-              echo '<td data-title="Info" >
-                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="1'.$cont.'" class="button type1">
-                    </td>';
-              echo '</tr>';
-              $cont = $cont + 1;
+              $fechac=$row2["fecha_c"];
+              if(isset($_REQUEST['Burecibo'])){
+                  if(($_GET['slct']==substr($fechac, 0, 4))and($_GET['slctI']<=substr($fechac, 5, 2))and($_GET['slctF']>=substr($fechac, 5, 2))){
+
+
+                  setlocale(LC_TIME, "es_VE");
+                  $date = strftime("%B",strtotime($row2["fecha_c"]));
+
+                  echo '<tr>';
+                  echo '<th scope="row">'.$cont.'</th>';
+                  echo '<td data-title="N de Recibo">'.$row2["id_recibo"].'</td>';
+
+                  echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
+
+            ?>
+            <form method="post">
+            <?php
+                  echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
+                  echo '<td data-title="Info" >
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            <input type="submit" value="Ver" name="1'.$cont.'" class="button type1">
+                        </td>';
+                  echo '</tr>';
+                  $cont = $cont + 1;
+                      
+                      
+              }
+              }else{
+                  
+                  setlocale(LC_TIME, "es_VE");
+                  $date = strftime("%B",strtotime($row2["fecha_c"]));
+
+                  echo '<tr>';
+                  echo '<th scope="row">'.$cont.'</th>';
+                  echo '<td data-title="N de Recibo">'.$row2["id_recibo"].'</td>';
+
+                  echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
+
+            ?>
+            <form method="post">
+            <?php
+                  echo '<input type="text" value="'.$row2["id_recibo"].'" name="r'.$cont.'" hidden>';
+                  echo '<td data-title="Info" >
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            <input type="submit" value="Ver" name="1'.$cont.'" class="button type1">
+                        </td>';
+                  echo '</tr>';
+                  $cont = $cont + 1;
+                  
+              }
           }
         }
         $cont1 = 1;

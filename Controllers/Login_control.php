@@ -30,6 +30,7 @@ class Login_control
                         if($row['nivel']==1){
                             $_SESSION['rut']='Perfil';
                             $_SESSION['opcion']=1;
+                            $_SESSION['user_d']=$_SESSION['user'];
                         }else{
                             $_SESSION['rut']='Acceso';
                             $_SESSION['opcion']=0;

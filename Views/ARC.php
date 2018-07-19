@@ -7,22 +7,70 @@
                     <div class="card-header d-flex align-items-center">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-lg-6 col-sm-12  ">
-                      <h3 class="h4 mx-2 py-2 ">Tabla de ARC</h3>
+                          <div class=" col-sm-12  ">
+                      <h3 class="h4 mx-2 py-2 ">Tabla de Recibos de Pago</h3>
                       </div>
-                      <div class="col-lg-6 col-sm-12 ">
-                      <div class="select ml-auto mr-sm-auto">
+                    </div>
+                    <form method="get">
+                    <div class="row">
+                      <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto ">
                         <select class="sele" name="slct" id="slct">
                           <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
+                          <option value=<?php echo date('Y');?>><?php echo date('Y');?></option>
+                          <option value=<?php echo date('Y')-1;?>><?php echo date('Y')-1;?></option>
+                          <option value=<?php echo date('Y')-2;?>><?php echo date('Y')-2;?></option>
+                          <option value=<?php echo date('Y')-3;?>><?php echo date('Y')-3;?></option>
+                          <option value=<?php echo date('Y')-4;?>><?php echo date('Y')-4;?></option>
                         </select>
                       </div>
                     </div >
+                      <div class="col-lg-3 col-sm-12  ">
+                      <div class="select ml-auto  ">
+                        <select class="sele" name="slctI" id="slctI">
+                          <option>Mes Inicio</option>
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
+                        </select>
+                      </div>
+                    </div >
+                    <div class="col-lg-3 col-sm-12 ">
+                      <div class="select ml-auto  ">
+                        <select class="sele" name="slctF" id="slctF">
+                          <option>Mes Fin</option>
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
+                        </select>
+                      </div>
+                    </div >
+                     <div class="col-lg-3 col-sm-12   ">                      
+      
+      
+      <input type="submit" id="Burecibo" name="Burecibo" class="btn color-azul btn-submit btn-lg" value="Buscar">
+             </div>
+
                     </div>
+                    </form>
                     </div>
                     </div>
                     <?php 
@@ -73,30 +121,61 @@
           
           while($row2 = pg_fetch_array($row)){
               
-              setlocale(LC_TIME, "es_VE");
-              $date = strftime("%B",strtotime($row2["fecha_c"]));
-              
-              echo '<tr>';
-              echo '<th scope="row">'.$cont.'</th>';
-              echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
-              echo '<td data-title="Asunto">'.$date.'</td>';
-              if($row2["fecha_v"]!=null){
-                  echo '<td data-title="Estado">Revisado</td>';
-              }else{
-                  echo '<td data-title="Estado">Sin Revisar</td>';
+              $fechac=$row2["fecha_c"];
+              if(isset($_REQUEST['Burecibo'])){
+                  if(($_GET['slct']==substr($fechac, 0, 4))and($_GET['slctI']<=substr($fechac, 5, 2))and($_GET['slctF']>=substr($fechac, 5, 2))){
+
+                  setlocale(LC_TIME, "es_VE");
+                  $date = strftime("%B",strtotime($row2["fecha_c"]));
+
+                  echo '<tr>';
+                  echo '<th scope="row">'.$cont.'</th>';
+                  echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+                  echo '<td data-title="Asunto">'.$date.'</td>';
+                  if($row2["fecha_v"]!=null){
+                      echo '<td data-title="Estado">Revisado</td>';
+                  }else{
+                      echo '<td data-title="Estado">Sin Revisar</td>';
+                  }
+                  echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
+                  echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
+                  ?>
+                  <form method="post">
+                  <?php
+                  echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+                  echo '<td data-title="Info" >
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                        </td>';
+                  echo '</tr>';
+                  $cont = $cont + 1;
               }
-              echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
-              echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
-              ?>
-              <form method="post">
-              <?php
-              echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
-              echo '<td data-title="Info" >
-                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
-                    </td>';
-              echo '</tr>';
-              $cont = $cont + 1;
+              }else{
+                  setlocale(LC_TIME, "es_VE");
+                  $date = strftime("%B",strtotime($row2["fecha_c"]));
+
+                  echo '<tr>';
+                  echo '<th scope="row">'.$cont.'</th>';
+                  echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+                  echo '<td data-title="Asunto">'.$date.'</td>';
+                  if($row2["fecha_v"]!=null){
+                      echo '<td data-title="Estado">Revisado</td>';
+                  }else{
+                      echo '<td data-title="Estado">Sin Revisar</td>';
+                  }
+                  echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
+                  echo '<td data-title="Fecha de revisado">'.$row2["fecha_v"].'</td>';
+                  ?>
+                  <form method="post">
+                  <?php
+                  echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+                  echo '<td data-title="Info" >
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                        </td>';
+                  echo '</tr>';
+                  $cont = $cont + 1;
+              }
           }
         }
         

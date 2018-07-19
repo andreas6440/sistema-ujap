@@ -18,6 +18,7 @@ function rutear($rut){
             if (is_readable($ruta)) {
                 if($_SESSION['opcion']==1){
                     require_once ('Views/modulo/Menu.php');
+                    $_SESSION['user_d'] = $_SESSION['user'];
                 }elseif($_SESSION['opcion']==2){
                     require_once ('Views/modulo/MenuRH.php');
                 }elseif($_SESSION['opcion']==3){
