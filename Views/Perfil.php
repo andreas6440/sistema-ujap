@@ -98,7 +98,7 @@
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">
-                                                <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
                                                 ActualizarPerfil($_SESSION['user']); ?>
@@ -120,26 +120,29 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="passa" id="claveActual" type=password required="required" type="text"/>
+                                                        <input class="input2" name="passa" id="claveActual" type=password  type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
                                                             Contraseña actual
                                                         </label>
-
+                                                        <div id="mensaje11" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje8" class="errores2 ">Se necesita minimo 8 caracteres</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass1" id="claveNueva" type=password required="required" type="text"/>
+                                                        <input class="input2" name="pass1" id="claveNueva" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
                                                             Nueva contraseña
                                                         </label>
+                                                        <div id="mensaje12" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje9" class="errores2 ">Se necesita minimo 8 caracteres</div>
 
                                                     </div>
                                                 </div>
@@ -147,19 +150,21 @@
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass2" id="claveRepetida" type=password required="required" type="text"/>
+                                                        <input class="input2" name="pass2" id="claveRepetida" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
                                                             Repetir contraseña
                                                         </label>
+                                                        <div id="mensaje12" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje10" class="errores2 ">Se necesita minimo 8 caracteres</div>
                                                     </div>
                                                 </div>
                                             </div>
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
-                                                  <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                  <input type="submit" name="actualizarpass" id="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
                                                 ActualizarPassword(); ?>
