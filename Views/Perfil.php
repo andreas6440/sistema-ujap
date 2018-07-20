@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 <div id="perfil" class="container-fluid my-5 punto  ">
+=======
+<?php
+
+require_once("Controllers/InfoBasica_control.php");
+
+$row = mostrarinfo();
+ while($row2 = pg_fetch_array($row)){
+
+?>
+   <div id="perfil" class="container-fluid my-5 punto  ">
+>>>>>>> 72f0ed08df66cce6b939e3c9f7eb6cf9338cbc95
     <h5 class="pestaña"><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
@@ -14,7 +26,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="cedula" id="cedula" type="text"/>
+                                                        <input class="input2" name="cedula" id="cedula" type="text" placeholder=<?php echo $row2["cedula"]; ?> />
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -26,7 +38,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="nombre" id="nombre" type="text"/>
+                                                        <input class="input2" name="nombre" id="nombre" type="text" placeholder=<?php echo $row2["nombre"]; ?> />
 
                                                         <span class="bar">
                                                         </span>
@@ -39,7 +51,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="apellido" id="apellido" type="text"/>
+                                                        <input class="input2" name="apellido" id="apellido" type="text" placeholder=<?php echo $row2["apellido"]; ?> />
 
                                                         <span class="bar">
                                                         </span>
@@ -58,7 +70,7 @@
                                         
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="email" id="correo" type="text"/>
+                                                <input class="input2" name="email" id="correo" type="text" placeholder=<?php echo $row2["email"]; ?> />
 
                                                         <span class="bar">
                                                         </span>
@@ -71,7 +83,7 @@
                                         </div>
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="telefono" id="telefono" type="text"/>
+                                                <input class="input2" name="telefono" id="telefono" type="text" placeholder=<?php echo $row2["telefono"]; ?> />
 
                                                         <span class="bar">
                                                         </span>
@@ -84,7 +96,7 @@
 
 <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="Nusuario" id="Nusuario" type="text"/>
+                                                <input class="input2" name="Nusuario" id="Nusuario" type="text" placeholder=<?php echo $row2["usuario"]; }?> />
 
                                                         <span class="bar">
                                                         </span>
