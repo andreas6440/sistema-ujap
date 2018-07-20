@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 
 <div id="perfil" class="container-fluid my-5 punto  ">
-=======
+
 <?php
 
 require_once("Controllers/InfoBasica_control.php");
@@ -11,7 +11,7 @@ $row = mostrarinfo();
 
 ?>
    <div id="perfil" class="container-fluid my-5 punto  ">
->>>>>>> 72f0ed08df66cce6b939e3c9f7eb6cf9338cbc95
+
     <h5 class="pestaña"><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
