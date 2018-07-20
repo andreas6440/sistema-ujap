@@ -47,17 +47,22 @@ function ActualizarPerfil($user){
             
         }
         
-        if ($_POST["nivel"]!=""){
-            $nivel = $_POST['nivel'];
-            if(!isset($data)){
-                 $data = array("nivel" => $nivel);
-            }else{
-                 $data = array("nivel" => $nivel)+$data;
+        if(isset($_POST["nivel"])){
+            if ($_POST["nivel"]!=""){
+                $nivel = $_POST['nivel'];
+                if(!isset($data)){
+                     $data = array("nivel" => $nivel);
+                }else{
+                     $data = array("nivel" => $nivel)+$data;
+                }
+
             }
-            
         }
         
-        $reg  = $update_model->Perfil($data,$user);
+        
+       if(isset($data)){
+          $reg  = $update_model->Perfil($data,$user); 
+       } 
         
     }
     

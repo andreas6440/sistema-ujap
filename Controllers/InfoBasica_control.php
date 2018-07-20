@@ -11,4 +11,11 @@ function buscarinfo(){
     
 }
 
+function mostrarinfo(){
+    
+    $datos = mostrar();
+    return $datos;
+    
+}
+
 ?>
