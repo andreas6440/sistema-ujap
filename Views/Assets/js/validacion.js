@@ -1,5 +1,9 @@
 
 $(document).ready(function() {
+   /* $('html').bind("cut copy paste",function(e) {
+      e.preventDefault();
+    });
+*/
     function soloNumeros(tecla,nombre,numero) {
         if((tecla.charCode < 48 || tecla.charCode > 57) ||(nombre.length>numero)){            
             return false;
@@ -189,6 +193,22 @@ $('#claveRepetida').keypress(function(tecla) {
          $('#mensaje7').fadeIn();
         return false;
     }
+var resul=false;
+  alertify.confirm("¿Esta seguro de realizar cambios?", function(e){
+        if (e) {
+            $("#category-form").submit();
+            alertify.success("Realizando cambios...")
+            resul=true;
+        } else {
+            alertify.error("Cancelado");
+            resul=false;
+        }
+    }).setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');
+    
+    if (resul==false;) {
+        return false;
+    }
+
     
 });
 }

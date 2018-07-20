@@ -1,3 +1,4 @@
+
 <div id="perfil" class="container-fluid my-5 punto  ">
     <h5 class="pestaña"><i class="fa fa-filter" ></i> Usuario/ Perfil</h5>
               <div class="row wrapper">
@@ -99,7 +100,7 @@
                                     <div class="row">
                                             <div class="col-md-4 ">
                                                 <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                                <?php
+                                                <?php 
                                                 require_once("Controllers/ActualizarUser_control.php");
                                                 ActualizarPerfil($_SESSION['user']); ?>
                                             </div>

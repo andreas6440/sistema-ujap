@@ -12,7 +12,7 @@ class Validacion
 			}elseif (empty($_POST['username'])|| empty($_POST['password'])) {
 				return false;
 			}else{
-				return true;
+				return true
 			}
 	}
 }
