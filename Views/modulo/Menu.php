@@ -42,10 +42,10 @@
                         <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/bootstrap4/assets/img/user.jpg" alt="User picture">
                     </div>
                     <div class="user-info">
-                        <span class="user-name">Jhon
-                            <strong>Smith</strong>
+                        <span class="user-name">
+                            <strong><?php echo $_SESSION['user']; ?></strong>
                         </span>
-                        <span class="user-role">Administrator</span>
+                        <span class="user-role">General</span>
                         
                     </div>
                 </div>

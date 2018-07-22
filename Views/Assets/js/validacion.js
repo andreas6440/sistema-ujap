@@ -205,9 +205,7 @@ var resul=false;
         }
     }).setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');
     
-    if (resul==false;) {
-        return false;
-    }
+    
 
     
 });
@@ -233,6 +231,8 @@ var re=  limitar(nombre,25,tecla);
     });
 
 $('#submit').click(function(){
+    alert("aui");
+
     var nombre=$('#username').val();
     var password=$('#password').val();
     if (nombre=="" && password=="") {
