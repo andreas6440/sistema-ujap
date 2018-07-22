@@ -193,6 +193,7 @@ $('#claveRepetida').keypress(function(tecla) {
          $('#mensaje7').fadeIn();
         return false;
     }
+    /*
 var resul=false;
   alertify.confirm("¿Esta seguro de realizar cambios?", function(e){
         if (e) {
@@ -206,32 +207,32 @@ var resul=false;
     }).setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');
     
     
-
+*/
     
 });
 }
 
 if ($('#banner').length) {
 $('#username').keypress(function(tecla) {
-    var nombre=$('#username').val().length;   
+    var nombre=$('#username').val();   
      var re= validarusuario(tecla,nombre,15);
         if (re==false) {
             return false;
         }
-        $('#mensaje1').fadeout();
+        $('#mensaje1').fadeOut();
     });
 $('#password').keypress(function(tecla) {
-    var password=$('#password').val().length;
-var re=  limitar(nombre,25,tecla);
+    var password=$('#password').val();
+var re=  limitar(password,25,tecla);
         if (re==false) {
             return false;
         }
-        $('#mensaje21,#mensaje2').fadeout()
+        $('#mensaje2').fadeOut()
 
     });
 
 $('#submit').click(function(){
-    alert("aui");
+    
 
     var nombre=$('#username').val();
     var password=$('#password').val();
@@ -239,10 +240,12 @@ $('#submit').click(function(){
         $('#mensaje1').fadeIn();
         $('#mensaje2').fadeIn();
         return false;
-    }else if (nombre==" ") {
+    }
+     if (nombre=="") {
         $('#mensaje1').fadeIn();
         return false;
-    }else if (password=="") {
+    }
+     if (password=="") {
         $('#mensaje2').fadeIn();
         return false;
     }

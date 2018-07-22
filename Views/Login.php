@@ -5,7 +5,8 @@ require_once "Controllers/Validaciones_control.php";
         $val= new  Validacion;
 if (isset($_POST['registrar'])) {
     $login->registrar();
-}elseif (isset($_POST['submit'])) {
+}
+if (isset($_POST['submit'])) {
   $re= $val->Login_val();
   if ($re==true) {
      $login->loguear();
@@ -43,6 +44,7 @@ if (isset($_POST['registrar'])) {
                                                 Contraseña
                                             </label>
                                             <input id="password" name="password" autocomplete="of"  type="password"/>
+                                            <div id="mensaje2" class="errores">Campo requerido</div>
                                         </div>
                                         <div class="form-group">
                                             <a id="OlClave" class="form-recovery" href="#">
