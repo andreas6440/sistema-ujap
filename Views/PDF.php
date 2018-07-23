@@ -12,5 +12,7 @@ if($_SESSION['doc'] == 1){
     generarconstanciad();
 }elseif($_SESSION['doc'] == 5){
     generarfideicomiso();
+}elseif($_SESSION['doc'] == 6){
+    generarbono();
 }
 ?>

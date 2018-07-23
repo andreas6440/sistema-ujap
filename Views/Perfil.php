@@ -1,7 +1,4 @@
 
-
-<div id="perfil" class="container-fluid my-5 punto  ">
-
 <?php
 
 require_once("Controllers/InfoBasica_control.php");
@@ -26,7 +23,9 @@ $row = mostrarinfo();
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="cedula" id="cedula"autocomplete="of" type="text" placeholder=<?php echo $row2["cedula"]; ?> />
+                                                       <?php
+                                                        echo'<input class="input2" name="cedula" id="cedula" autocomplete="of" type="text" placeholder='.$row2["cedula"].' />';
+                                                        ?> 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -38,7 +37,9 @@ $row = mostrarinfo();
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="nombre" id="nombre" autocomplete="of" type="text" placeholder=<?php echo $row2["nombre"]; ?> />
+                                                       <?php
+                                                        echo '<input class="input2" name="nombre" id="nombre" autocomplete="of" type="text" placeholder='. $row2["nombre"].' />';
+                                                        ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -51,8 +52,9 @@ $row = mostrarinfo();
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="apellido" id="apellido" autocomplete="of" type="text" placeholder=<?php echo $row2["apellido"]; ?> />
-
+                                                       <?php
+                                                        echo '<input class="input2" name="apellido" id="apellido" autocomplete="of" type="text" placeholder='. $row2["apellido"].'  />';
+                                                        ?>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -70,7 +72,9 @@ $row = mostrarinfo();
                                         
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="email" id="correo" autocomplete="of" type="text" placeholder=<?php echo $row2["email"]; ?> />
+                                                <?php
+                                                echo '<input class="input2" name="email" id="correo" type="text" autocomplete="of" placeholder='. $row2["email"].' />';
+                                                    ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -83,7 +87,9 @@ $row = mostrarinfo();
                                         </div>
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="telefono" id="telefono" autocomplete="of" type="text" placeholder=<?php echo $row2["telefono"]; ?> />
+                                                <?php
+                                                echo '<input class="input2" name="telefono" id="telefono" type="text" autocomplete="of" placeholder='.$row2["telefono"].' />';
+                                                ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -96,7 +102,9 @@ $row = mostrarinfo();
 
 <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="Nusuario" id="Nusuario" autocomplete="of" type="text" placeholder=<?php echo $row2["usuario"]; }?> />
+                                                <?php
+                                                echo '<input class="input2" name="Nusuario" id="Nusuario" type="text" autocomplete="of" placeholder='.$row2["usuario"].' />';
+                                                    }?> 
 
                                                         <span class="bar">
                                                         </span>
@@ -133,7 +141,7 @@ $row = mostrarinfo();
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="passa" id="claveActual" autocomplete="of" type=password  type="text"/>
+                                                        <input class="input2" name="passa" id="claveActual" type=password  type="text"/>
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
@@ -147,7 +155,7 @@ $row = mostrarinfo();
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass1" id="claveNueva" autocomplete="of" type=password  type="text"/>
+                                                        <input class="input2" name="pass1" id="claveNueva" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -163,7 +171,7 @@ $row = mostrarinfo();
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass2" id="claveRepetida" autocomplete="of" type=password  type="text"/>
+                                                        <input class="input2" name="pass2" id="claveRepetida" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
@@ -177,7 +185,7 @@ $row = mostrarinfo();
                                             </div>
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
-                                                  <input type="submit" name="actualizarpass" id="actualizarpass" autocomplete="of" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                  <input type="submit" name="actualizarpass" id="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
                                                 ActualizarPassword(); ?>

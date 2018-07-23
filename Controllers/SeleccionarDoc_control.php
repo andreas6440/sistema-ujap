@@ -78,7 +78,24 @@ function seleccionarDoc($doc,$max,$est){
         
     }elseif($doc==6){
         
+        $cont = 1;
         
+        while($cont<=$max){
+            
+            if (isset($_REQUEST['6'.$cont])) {
+                
+                if($est==0){
+                    $update = new ActualizarUser();
+                    $update -> FechaVisto(array('fecha_v'=>date('Y-m-d')),$_POST['r'.$cont],6);
+                }
+                echo '<script>window.open("Views/PDF.php")</script>';
+                //echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';
+
+            }
+            
+            $cont = $cont + 1;
+            
+        }
         
     }elseif($doc==7){
         

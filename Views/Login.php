@@ -3,9 +3,6 @@ require_once "Controllers/Login_control.php";
 require_once "Controllers/Validaciones_control.php";
         $login = new Login_control;
         $val= new  Validacion;
-if (isset($_POST['registrar'])) {
-    $login->registrar();
-}
 if (isset($_POST['submit'])) {
   $re= $val->Login_val();
   if ($re==true) {
@@ -36,15 +33,14 @@ if (isset($_POST['submit'])) {
                                             <label for="username">
                                                 Nombre de Usuario
                                             </label>
-                                            <input  id="username" name="username" autocomplete="of" autofocus  type="text"/>
+                                            <input  id="username" name="username" autocomplete="of" required autofocus  type="text"/>
                                             <div id="mensaje1" class="errores">Campo requerido</div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">
                                                 Contraseña
                                             </label>
-                                            <input id="password" name="password" autocomplete="of"  type="password"/>
-                                            <div id="mensaje2" class="errores">Campo requerido</div>
+                                            <input id="password" name="password" autocomplete="of" required type="password"/>
                                         </div>
                                         <div class="form-group">
                                             <a id="OlClave" class="form-recovery" href="#">

@@ -9,7 +9,7 @@ class Validacion
 			
 			if (empty($_POST['username'])&& empty($_POST['password'])) {
 				return false;
-			}else if (empty($_POST['username'])|| empty($_POST['password'])) {
+			}elseif (empty($_POST['username'])|| empty($_POST['password'])) {
 				return false;
 			}else{
 				return true;

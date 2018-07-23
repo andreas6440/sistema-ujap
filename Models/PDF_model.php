@@ -6,14 +6,14 @@ class dpdf{
     
     public function buscarRecibo(){
         
-       require_once('conexion.php');
+       require('conexion.php');
 
         
     } 
     
     public function buscarConstanciab(){
         
-        require_once('conexion.php');
+        require('conexion.php');
         
         $row=$this->perfil();
         
@@ -23,7 +23,7 @@ class dpdf{
     
     public function buscarConstanciad(){
         
-        require_once('conexion.php');
+        require('conexion.php');
         
         $row=$this->perfil();
         
@@ -37,7 +37,17 @@ class dpdf{
     
     public function buscarARC(){
         
-        require_once('conexion.php');
+        require('conexion.php');
+        
+        $row=$this->perfil();
+        
+        return $row;
+        
+    }
+    
+    public function buscarBono(){
+        
+        require('conexion.php');
         
         $row=$this->perfil();
         

@@ -43,6 +43,47 @@ class bdoc{
         
     }
     
+    public function bonos($user){
+
+        
+        require('conexion.php');
+        
+        $select = $this->id($user);
+         
+        $query = "SELECT * FROM public.".'"BonoAlimenticio"'." where id_user = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
+    public function bonosO($inicio,$registros,$user){
+
+        
+        require('conexion.php');
+        
+        $select = $this->id($user);
+         
+        $query = "SELECT * FROM public.".'"BonoAlimenticio"'." where id_user = $1 ORDER BY id_bono ASC LIMIT $registros OFFSET $inicio;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array(pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
+    public function BonosM($num,$user){
+        
+        require('conexion.php');
+        
+        $select = $this->id($user);
+        
+        $query = "SELECT * FROM public.".'"BonoAlimenticio"'." where id_bono = $1 and id_user = $2;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($num,pg_fetch_assoc($select)['id_user']));
+        return $prepared;
+        
+    }
+    
     public function ARC($user){
         
         require('conexion.php');

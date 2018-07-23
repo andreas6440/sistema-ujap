@@ -296,6 +296,69 @@ function generarfideicomiso(){
     
 }
 
+function generarbono(){
+        $drow = new dpdf;
+        $row = $drow->perfil();
+
+        $pdf = new tFPDF;
+
+        $pdf->AddPage('P', 'Letter', '0');
+        $pdf->SetFont('Arial', '', 12);
+        $pdf->SetTitle('Bono Alimenticio', TRUE);
+        $pdf->Image('../Views/Assets/img/bonoalimenticio.jpg', 0, 0, -300);
+
+        //Periodo Hasta
+        $pdf->SetXY(175,63.5);
+        $pdf->Write(5,"Hola mundo");
+
+         //periodo Desde
+        $pdf->SetXY(103,64);
+        $pdf->Write(5,"Hola mundo");
+
+        //num cta
+        $pdf->SetXY(95,71);
+        $pdf->Write(5,"Hola mundo");
+
+        //Nombre
+        $pdf->SetXY(33,78);
+        $pdf->Write(5,$row['nombre']." ".$row['apellido']);
+
+        //Cedula
+        $pdf->SetXY(123,78);
+        $pdf->Write(5,$row['ci']);
+
+        //Ingreso
+        $pdf->SetXY(175,78);
+        $pdf->Write(5,$row['fecha_ingreso']);
+
+        //Departamento
+        $pdf->SetXY(45,84.3);
+        $pdf->Write(5,$row['departamento']);
+
+        //Dedicacion
+        $pdf->SetXY(159,84);
+        $pdf->Write(5,$row['dedicacion']);
+
+        //Cargo
+        $pdf->SetXY(29,92);
+        $pdf->Write(5,$row['cargo']);
+
+        //Categoria
+        $pdf->SetXY(149,92);
+        $pdf->Write(5,$row['categoria_nomina']);
+
+        //total
+        $pdf->SetXY(105,182);
+        $pdf->Write(5,"Hola mundo");
+
+        //total neto
+        $pdf->SetXY(141,198);
+        $pdf->Write(5,"Hola mundo");
+
+        $pdf->output();
+        return $pdf;
+}
+
 
 
 

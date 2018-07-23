@@ -4,7 +4,7 @@ class ActualizarUser{
     
     public function Perfil($datos,$user){
         
-        require_once"conexion.php";
+        require "conexion.php";
         
         if (isset($datos["cedula"])){
             $query = "UPDATE public.".'"UsuariosWeb"'." SET cedula = $1 WHERE usuario='".$user."';";
@@ -48,7 +48,7 @@ class ActualizarUser{
     
     public function Password($datos){
         
-        require_once"conexion.php";
+        require "conexion.php";
         
         $query = "SELECT password FROM public.".'"UsuariosWeb"'." where password = $1;";
         $prepared = pg_prepare($dbcon, "", $query);
@@ -70,7 +70,7 @@ class ActualizarUser{
     
     public function Password2($datos,$user){
         
-        require_once"conexion.php";
+        require "conexion.php";
         
          if (isset($datos["pass1"])){
                 
@@ -85,7 +85,7 @@ class ActualizarUser{
     
     public function FechaVisto($datos,$doc,$tipo){
         
-        require"conexion.php";
+        require "conexion.php";
         
         if($tipo==1){
             pg_update($dbcon, 'Recibos', $datos, array('id_recibo'=>$doc));

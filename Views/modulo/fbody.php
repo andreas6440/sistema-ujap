@@ -13,6 +13,6 @@
 </script>
 <script src="Views/Assets/js/index.js"></script>
 <script src="Views/Assets/js/alertify.min.js"></script>
-<script src="Views/Assets/js/validacion.js"></script>
+<!script src="Views/Assets/js/validacion.js"><!/script>
 </body>
 </html>
