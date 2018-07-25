@@ -4,18 +4,23 @@
 require_once "Controllers/Validaciones_control.php";
 require_once "Controllers/Login_control.php";
 require_once "Controllers/NivelDePaso_control.php";
+require_once "Controllers/ActualizarUser_control.php";
 
 nivel2();
 $login = new Login_control;
-if (isset($_POST['registrar'])) {
+if (isset($_REQUEST['registrar'])) {
     $login->registrar();
-}   
+}
+
+if (isset($_REQUEST['firma'])) {
+    ActualizarFirma();
+}
 
  ?>
    <div id="Configuraciones" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i> Administrador/ Configuración</h5>
               <div class="row wrapper">
-                <div class="col-lg-5">
+                <div class="col-lg-12">
                   <div class="card ">
                     
                      <div class="card-header d-flex align-items-center">
@@ -26,87 +31,40 @@ if (isset($_POST['registrar'])) {
                     
                     
                     <div class="card-body ">
-                        <h5 class="h5 mx-2 my-2 ">Firma actual: nombre</h5>
-                         <form  class="form-inline ">
+                        <h5 class="h5 mx-2 my-2 ">Firma actual: <?php
+                            
+                            require_once "Controllers/Firma_control.php";
+                            
+                            $row = firma();
+                            while($row2 = pg_fetch_array($row)){
+                                echo $row2["nombre"];
+                                echo " ". $row2["apellido"];
+                            }
+                            ?></h5>
+                         <form method="post">
                       
                       
-             <div class="mr-auto mx-2">     
-        
-      <input class="form-control" type="search" placeholder="Nº de Cédula" >
-      <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
-             </div>                                    
-                                                
-    </form>
-                      
-  </div>
-</div>
-</div>
-<div class="col-lg-7 col-md-12">
-                  <div class="card ">
+                         <div class="mr-auto mx-2">    
+                             <div class="row">
+                            <div class="col-lg-3">
+                                <input class="form-control" type="text" name="ci" placeholder="Nº de Cédula" >
+                             </div>
+                             <div class="col-lg-3">
+                                <input class="form-control" type="text" name="nombre" placeholder="Nombre" >
+                             </div>
+                             <div class="col-lg-3">
+                                <input class="form-control" type="text" name="apellido" placeholder="Apellido" >
+                             </div>
+                             <div class="col-lg-3">
+                                <input type="submit" name="firma" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
+                             </div>
+                            </div>
                     
-                     <div class="card-header d-flex align-items-center">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg-5 col-sm-5  ">
-                      <h3 class="h4  py-2 ">Rango de usuario </h3>
-                      </div>
-                      <div class="col-lg-7 col-sm-7 ">
-                         <form  class="form-inline ">
-                     
-                      
-             <div  class="mr-auto ">     
-      
-      <input class="form-control " type="search" name="Numcedula" placeholder="Nº Documento" >
-      <input type="submit"  name="Bucedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
-             </div>                                    
-                                                
-    </form>
-                    </div >
-                    </div>
-                    </div>
-                    </div>
-                      
-                    
-                    
-                    <div class="card-body ">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg-12">
-                     <h5 class="h5 mx-2 my-2 ">Nombre: nombre y apellido</h5>
-                      </div>
-                    </div>
-                    <div class="row">
-                      
-                           <form  class="form-inline ">
-                      
-                      
-                 
-    <div class="col-lg-6 ">
-      <div class="select ml-auto mx-2 ">
-                        <select class="sele" name="slct" id="slct">
-                          <option>Seleccione el año</option>
-                          <option value="1">2018</option>
-                          <option value="2">2017</option>
-                          <option value="3">2016</option>
-                          <option value="3">2015</option>
-                          <option value="3">2014</option>
-                        </select>
-                      </div>
-                    </div>
-<div class="col-lg-6 ">
-      <input type="submit" name="burango" class="btn color-azul btn-submit btn-lg mx-2 " value="Modificar rango">
-    </div>   
-                                             
-                                               
-    </form>
-                   
-                    </div>
-                    </div>
-                        
-                       
-                      
-  </div>
+                         </div>                                    
 
+                </form>
+                      
+  </div>
 </div>
 </div>
 </div>

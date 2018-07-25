@@ -55,6 +55,13 @@ class dpdf{
         
     }
     
+    public function buscarFideicomiso(){
+        
+        require('conexion.php');
+        
+        
+    }
+    
     public function perfil(){
         
         require('conexion.php');

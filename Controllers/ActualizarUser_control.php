@@ -104,7 +104,7 @@ function ActualizarPassword2($user){
             
             $pass1 = md5($_POST['pass1']);
             
-            $data = array("pass1" => $pass1,);
+            $data = array("pass1" => $pass1);
             
             $reg  = $update_model->Password2($data,$user);
             
@@ -112,6 +112,25 @@ function ActualizarPassword2($user){
         
     }
     
+}
+
+function ActualizarFirma(){
+    
+    require_once("Models/Firma_model.php");
+    
+    if (isset($_REQUEST['firma'])) {
+        
+        $nombre = $_POST['nombre'];
+        
+        $apellido = $_POST['apellido'];
+        
+        $cedula = $_POST['ci'];
+            
+        $data = array("nombre" => $nombre, "apellido" => $apellido, "cedula" => $cedula);
+        
+        actualizarFirmam($data);
+        
+    }
 }
 
 ?>

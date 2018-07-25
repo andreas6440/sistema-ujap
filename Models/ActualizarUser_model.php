@@ -88,9 +88,9 @@ class ActualizarUser{
         require "conexion.php";
         
         if($tipo==1){
-            pg_update($dbcon, 'Recibos', $datos, array('id_recibo'=>$doc));
+            pg_update($dbcon, "Recibos", $datos, array('id_recibo'=>$doc));
         }elseif($tipo==2){
-            pg_update($dbcon, 'ARC', $datos, array('id_arc'=>$doc));
+            pg_update($dbcon, "ARC", $datos, array('id_arc'=>$doc));
         }
         
         

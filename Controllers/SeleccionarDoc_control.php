@@ -36,7 +36,7 @@ function seleccionarDoc($doc,$max,$est){
                 
                 if($est==0){
                     $update = new ActualizarUser();
-                    $update -> FechaVisto(array('fecha_v'=>date('Y-m-d')),$_POST['r'.$cont],1);
+                    $update -> FechaVisto(array('fecha_v'=>date('Y-m-d')),$_POST['r'.$cont],2);
                 }
                 echo '<script>window.open("Views/PDF.php")</script>';
                 //echo '<meta http-equiv="Refresh" content="0;URL=Views/PDF.php">';

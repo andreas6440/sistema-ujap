@@ -87,7 +87,12 @@ nivel1();
                                                     <select class = "form-control input2" id = "rango" name = "nivel">
                                                       <option value = "1"> Trabajador </option>
                                                       <option value = "2"> RRHH </option>
-                                                      <option value = "3"> Admin </option>
+                                                      <?php
+                                                        if($_SESSION['nivel']==3){
+                                                            echo '<option value = "3"> Admin </option>';
+                                                        }
+                                                        ?>
+                                                      
                                                     </select>
 
                                                         <span class="bar">
@@ -248,7 +253,7 @@ nivel1();
                                   
                               }elseif($_POST['slct']==2){
                                   
-                                  
+                                  $row = SBonosM($_POST['NumDocumento'], $_SESSION['user_d']);
                                   
                               }elseif($_POST['slct']==3){
                                   
@@ -307,7 +312,7 @@ nivel1();
                   }elseif($_POST['slct']==1){
                       echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
                   }elseif($_POST['slct']==2){
-                      echo '<td data-title="N de Bono">'.$row2["id_arc"].'</td>';
+                      echo '<td data-title="N de Bono">'.$row2["id_bono"].'</td>';
                   }
                   echo '<td data-title="Asunto">'.$date.'</td>';
                   if($row2["fecha_v"]!=null){
@@ -334,10 +339,10 @@ nivel1();
                         <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
                     </td>';
                   }elseif($_POST['slct']==2){
-                      echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+                      echo '<input type="text" value="'.$row2["id_bono"].'" name="r'.$cont.'" hidden>';
               echo '<td data-title="Info" >
                         <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="5'.$cont.'" class="button type1">
+                        <input type="submit" value="Ver" name="6'.$cont.'" class="button type1">
                     </td>';
                   }
               echo '</tr>';
@@ -358,9 +363,9 @@ nivel1();
                 
                 seleccionarDoc(2,$cont,1);
 
-            }elseif(isset($_REQUEST['5'.$cont1])) {
+            }elseif(isset($_REQUEST['6'.$cont1])) {
                 
-                seleccionarDoc(5,$cont,1);
+                seleccionarDoc(6,$cont,1);
 
             }
             
