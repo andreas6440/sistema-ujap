@@ -24,7 +24,7 @@ nivel1();
                       
              <div class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" placeholder="Nº de Cédula" name="scedula">
+      <input class="form-control" type="search" placeholder="Nº de Cédula" name="scedula"><!//validar esto>
       <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
              </div>                                    
                                                 
@@ -38,6 +38,11 @@ nivel1();
                               $info = buscarinfo();
                               
                               $prueba = $info;
+
+                              if(pg_num_rows($prueba)<1){
+                                  echo "Usuario no encontrado";//esto a un alert
+                                  echo "<br>";
+                              }
                                while($row = pg_fetch_array($info)){
                                    $_SESSION['mostrar']=$row["nombre"]." ".$row["apellido"];;
                                    $_SESSION['username'] = $row["usuario"];
@@ -298,7 +303,7 @@ nivel1();
       <?php
         
         $cont=1;
-          if((isset($row))){
+          if($row){
               
               while($row2 = pg_fetch_array($row)){
               
@@ -348,7 +353,9 @@ nivel1();
               echo '</tr>';
               $cont = $cont + 1;
           }
-        }
+        }else{
+              //aqui va la vaina pa que diga que no se encontro el doc
+          }
         
         
         $cont1 = 1;
