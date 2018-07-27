@@ -71,7 +71,7 @@ nivel1();
               echo '<td data-title="N de Fideicomiso">'.$row2["id_fideicomiso"].'</td>';
               echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
               ?>
-              <form target="_blank" method="post">
+              <form target="_blank">
               <?php
               echo '<input type="text" value="'.$row2["id_fideicomiso"].'" name="r'.$cont.'" hidden>';
               echo '<td data-title="Info" >
@@ -88,7 +88,7 @@ nivel1();
           while($cont1<=$cont){
             
             if (isset($_REQUEST['5'.$cont1])) {
-                seleccionarDoc(5,$cont);
+                seleccionarDoc(5,$cont,0);
 
             }
             
