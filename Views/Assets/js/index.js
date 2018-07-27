@@ -62,6 +62,7 @@ $('#NumDocumento').remove();
 });
 }*/
 if ($('#banner').length) {
+  $("html").css({"overflow":"hidden"});
   $('#exampleModal').appendTo("body");
   $('#OlClave').click(function() {
    var closable = alertify.alert().setting('closable');

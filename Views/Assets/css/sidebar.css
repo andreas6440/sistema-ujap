@@ -1060,14 +1060,15 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
      ===================================*/
 
 #banner {
-    background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
+    background-image: url("../img/foto2.jpg");
     background-size: cover;
     min-height: 100vh;
     
 }
-.bg-color {
-    background-color: RGBA(0, 0, 0, 0.61);
-    min-height: 100vh;
+.bg-color {/*
+    background-color: RGBA(0, 0, 0, 0.70);
+    min-height: 90vh;
+    padding-top: 0px;*/
 
 }
 
