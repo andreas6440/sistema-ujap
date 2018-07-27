@@ -199,7 +199,8 @@ function generarconstanciad(){
 function generarARC(){
     
     $drow = new dpdf;
-    $row = $drow->buscarARC();
+    $row = $drow->perfil();
+    $row2 = $drow->buscarARC();
     
     $pdf = new tFPDF;
 
@@ -238,17 +239,62 @@ function generarARC(){
         $pdf->SetY(120);
         $pdf->SetX(164);
         $pdf->MultiCell(36,5,'Impuesto Retenido Acumulado: ',1,'C');
+
+        $cont=1;
+        $total=0;
+        $trem=0;
+        $timp=0;
     
-        $x=0;
-        while($x<12){
-            $pdf->SetX(20);
-            $pdf->Cell(36,6,'fecha',1,0);
-            $pdf->Cell(36,6,'money',1,0);
-            $pdf->Cell(36,6,'money',1,0);
-            $pdf->Cell(36,6,'money',1,0);
-            $pdf->Cell(36,6,'money',1,1); 
-            $x++;
+    while ($row3 = pg_fetch_row($row2)) {
+        $array1 = json_decode($row3[0]);
+        $array2 = json_decode($row3[1]);
+        $array2 = json_decode(json_encode($array2), True);
+    }
+     foreach ($array1 as $mes => $valor) {
+         $pdf->SetX(20);
+            if($cont==1){
+                $pdf->Cell(36,6,'Enero',1,0);
+            }elseif($cont==2){
+                $pdf->Cell(36,6,'Febrero',1,0);
+            }elseif($cont==3){
+                $pdf->Cell(36,6,'Marzo',1,0);
+            }elseif($cont==4){
+                $pdf->Cell(36,6,'Abril',1,0);
+            }elseif($cont==5){
+                $pdf->Cell(36,6,'Mayo',1,0);
+            }elseif($cont==6){
+                $pdf->Cell(36,6,'Junio',1,0);
+            }elseif($cont==7){
+                $pdf->Cell(36,6,'Julio',1,0);
+            }elseif($cont==8){
+                $pdf->Cell(36,6,'Agosto',1,0);
+            }elseif($cont==9){
+                $pdf->Cell(36,6,'Septiembre',1,0);
+            }elseif($cont==10){
+                $pdf->Cell(36,6,'octubre',1,0);
+            }elseif($cont==11){
+                $pdf->Cell(36,6,'Noviembre',1,0);
+            }elseif($cont==12){
+                $pdf->Cell(36,6,'Diciembre',1,0);
+            }
+            $pdf->Cell(36,6,$valor,1,0);
+            $trem=$trem+$valor;
+            $pdf->Cell(36,6,$trem,1,0);
+            $timp=$timp+$valor;
+            $pdf->Cell(36,6,$array2[$mes],1,0);
+            $pdf->Cell(36,6,$timp,1,1);
+            $total=$total+$valor-$array2[$mes];
+            $cont=$cont+1;
         }
+        
+    //total 1
+        $pdf->SetXY(98,226);
+        $pdf->Write(5,$trem);
+    
+    //total 2
+        $pdf->SetXY(170,226);
+        $pdf->Write(5,$timp);
+        
         
     
     $pdf->output();

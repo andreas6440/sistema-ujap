@@ -44,9 +44,12 @@ class dpdf{
         
         require('conexion.php');
         
-        $row=$this->perfil();
+        $iduser = $this->iduser();
+        $query = "SELECT remuneraciones, impuestos FROM public.".'"ARC"'." where id_user = $1 and id_arc = $2;";
+        $conceptos = pg_prepare($dbcon, "", $query);
+        $conceptos = pg_execute($dbcon, "", array($iduser,$_SESSION['id_doc']));
         
-        return $row;
+        return $conceptos;
         
     }
     
