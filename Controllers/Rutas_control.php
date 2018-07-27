@@ -29,7 +29,6 @@ function rutear($rut){
                 
                 require_once $ruta;
                 if (!isset($_SESSION['user'])){
-                    
                     echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                 }
             } else {

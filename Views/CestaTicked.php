@@ -126,20 +126,20 @@
 
                   setlocale(LC_TIME, "es_VE");
                   $date = strftime("%B",strtotime($row2["fecha_c"]));
-
+                  $id = $row2["id_bono"]; 
                   echo '<tr>';
                   echo '<th scope="row">'.$cont.'</th>';
-                  echo '<td data-title="N de Recibo">'.$row2["id_bono"].'</td>';
+                  echo '<td data-title="N de Recibo">'.$id.'</td>';
 
                   echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
 
             ?>
             <form method="post">
             <?php
-                  echo '<input type="text" value="'.$row2["id_bono"].'" name="r'.$cont.'" hidden>';
+                  echo '<input type="text" value="'.$id.'" name="r'.$id.'" hidden>';
                   echo '<td data-title="Info" >
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <input type="submit" value="Ver" name="6'.$cont.'" class="button type1">
+                            <input type="submit" value="Ver" name="6'.$id.'" class="button type1">
                         </td>';
                   echo '</tr>';
                   $cont = $cont + 1;
@@ -150,20 +150,20 @@
                   
                   setlocale(LC_TIME, "es_VE");
                   $date = strftime("%B",strtotime($row2["fecha_c"]));
-
+                  $id = $row2["id_bono"];
                   echo '<tr>';
                   echo '<th scope="row">'.$cont.'</th>';
-                  echo '<td data-title="N de Recibo">'.$row2["id_bono"].'</td>';
+                  echo '<td data-title="N de Recibo">'.$id.'</td>';
 
                   echo '<td data-title="Fecha de entrega">'.$fechac.'</td>';
 
             ?>
             <form method="post">
             <?php
-                  echo '<input type="text" value="'.$row2["id_bono"].'" name="r'.$cont.'" hidden>';
+                  echo '<input type="text" value="'.$id.'" name="r'.$id.'" hidden>';
                   echo '<td data-title="Info" >
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <input type="submit" value="Ver" name="6'.$cont.'" class="button type1">
+                            <input type="submit" value="Ver" name="6'.$id.'" class="button type1">
                         </td>';
                   echo '</tr>';
                   $cont = $cont + 1;
@@ -173,11 +173,11 @@
         }
         $cont1 = 1;
         
-        while($cont1<=$cont){
+        while($cont1<=$id){
             
             if (isset($_REQUEST['6'.$cont1])) {
             
-                seleccionarDoc(6,$cont,0);
+                seleccionarDoc(6,$id,0);
 
             }
             

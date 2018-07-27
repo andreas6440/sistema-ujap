@@ -13,6 +13,7 @@ function seleccionarDoc($doc,$max,$est){
             
             if (isset($_REQUEST['1'.$cont])) {
                 
+                $_SESSION['id_doc']=$cont;
                 if($est==0){
                     $update = new ActualizarUser();
                     $update -> FechaVisto(array('fecha_v'=>date('Y-m-d')),$_POST['r'.$cont],1);
@@ -34,6 +35,7 @@ function seleccionarDoc($doc,$max,$est){
             
             if (isset($_REQUEST['2'.$cont])) {
                 
+                $_SESSION['id_doc']=$cont;
                 if($est==0){
                     $update = new ActualizarUser();
                     $update -> FechaVisto(array('fecha_v'=>date('Y-m-d')),$_POST['r'.$cont],2);
@@ -65,6 +67,7 @@ function seleccionarDoc($doc,$max,$est){
         
         while($cont<=$max){
             
+            $_SESSION['id_doc']=$cont;
             if (isset($_REQUEST['5'.$cont])) {
             
                 echo '<script>window.open("Views/PDF.php")</script>';
@@ -82,6 +85,7 @@ function seleccionarDoc($doc,$max,$est){
         
         while($cont<=$max){
             
+            $_SESSION['id_doc']=$cont;
             if (isset($_REQUEST['6'.$cont])) {
                 
                 if($est==0){
@@ -96,10 +100,6 @@ function seleccionarDoc($doc,$max,$est){
             $cont = $cont + 1;
             
         }
-        
-    }elseif($doc==7){
-        
-        
         
     }
 

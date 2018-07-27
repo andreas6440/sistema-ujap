@@ -127,10 +127,11 @@
 
                   setlocale(LC_TIME, "es_VE");
                   $date = strftime("%B",strtotime($row2["fecha_c"]));
-
+                      
+                  $id = $row2["id_arc"];
                   echo '<tr>';
                   echo '<th scope="row">'.$cont.'</th>';
-                  echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+                  echo '<td data-title="N de ARC">'.$id.'</td>';
                   echo '<td data-title="Asunto">'.$date.'</td>';
                   if($row2["fecha_v"]!=null){
                       echo '<td data-title="Estado">Revisado</td>';
@@ -142,10 +143,10 @@
                   ?>
                   <form method="post">
                   <?php
-                  echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+                  echo '<input type="text" value="'.$id.'" name="r'.$id.'" hidden>';
                   echo '<td data-title="Info" >
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                            <input type="submit" value="Ver" name="2'.$id.'" class="button type1">
                         </td>';
                   echo '</tr>';
                   $cont = $cont + 1;
@@ -154,9 +155,10 @@
                   setlocale(LC_TIME, "es_VE");
                   $date = strftime("%B",strtotime($row2["fecha_c"]));
 
+                  $id = $row2["id_arc"];
                   echo '<tr>';
                   echo '<th scope="row">'.$cont.'</th>';
-                  echo '<td data-title="N de ARC">'.$row2["id_arc"].'</td>';
+                  echo '<td data-title="N de ARC">'.$id.'</td>';
                   echo '<td data-title="Asunto">'.$date.'</td>';
                   if($row2["fecha_v"]!=null){
                       echo '<td data-title="Estado">Revisado</td>';
@@ -168,10 +170,10 @@
                   ?>
                   <form method="post">
                   <?php
-                  echo '<input type="text" value="'.$row2["id_arc"].'" name="r'.$cont.'" hidden>';
+                  echo '<input type="text" value="'.$id.'" name="r'.$id.'" hidden>';
                   echo '<td data-title="Info" >
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <input type="submit" value="Ver" name="2'.$cont.'" class="button type1">
+                            <input type="submit" value="Ver" name="2'.$id.'" class="button type1">
                         </td>';
                   echo '</tr>';
                   $cont = $cont + 1;
@@ -181,10 +183,10 @@
         
         $cont1 = 0;
         
-          while($cont1<=$cont){
+          while($cont1<=$id){
             
             if (isset($_REQUEST['2'.$cont1])) {
-                seleccionarDoc(2,$cont,0);
+                seleccionarDoc(2,$id,0);
 
             }
             

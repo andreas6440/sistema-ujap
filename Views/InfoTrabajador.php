@@ -303,6 +303,7 @@ nivel1();
       <?php
         
         $cont=1;
+        if(isset($row)){
           if($row){
               
               while($row2 = pg_fetch_array($row)){
@@ -356,6 +357,7 @@ nivel1();
         }else{
               //aqui va la vaina pa que diga que no se encontro el doc
           }
+        }
         
         
         $cont1 = 1;

@@ -7,6 +7,7 @@ require_once('../tfpdf.php');
  function generarrecibo(){
         $drow = new dpdf;
         $row = $drow->perfil();
+        $row2 = $drow->buscarRecibo();
 
         $pdf = new tFPDF;
 
@@ -21,11 +22,11 @@ require_once('../tfpdf.php');
 
         //sm
         $pdf->SetXY(142,57.5);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,round($row['sueldo_base']));
 
          //sd
-        $pdf->SetXY(180,57.5);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->SetXY(181,57.5);
+        $pdf->Write(5,round($row['sueldo_base']/30));
 
          //periodo hasta
         $pdf->SetXY(103,64);
@@ -33,15 +34,15 @@ require_once('../tfpdf.php');
 
         //1era q
         $pdf->SetXY(148,64);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,round($row['sueldo_base']/2));
 
-        //num cta
+        //num nomina
         $pdf->SetXY(87,70);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,$_SESSION['id_doc']);
 
         //2da q
         $pdf->SetXY(158,70.5);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,round($row['sueldo_base']/2));
 
         //Nombre
         $pdf->SetXY(33,81);
@@ -57,27 +58,50 @@ require_once('../tfpdf.php');
 
         //Departamento
         $pdf->SetXY(45,87);
-        $pdf->Write(5,$row['departamento']);
+        $pdf->Write(5, $drow->departamento());
 
         //Dedicacion
         $pdf->SetXY(159,87);
         $pdf->Write(5,$row['dedicacion']);
 
         //Cargo
-        $pdf->SetXY(28,95);
+        $pdf->SetXY(29,95);
         $pdf->Write(5,$row['cargo']);
 
         //Categoria
-        $pdf->SetXY(148,94.8);
-        $pdf->Write(5,$row['categoria_nomina']);
+        $pdf->SetXY(149,94.6);
+        $pdf->Write(5,$drow->escalafon());
 
+        //Conceptos
+        $pdf->SetXY(10,110);
+        $conceptos = json_decode($row2,true);
+
+        $total=0;
+        foreach ($conceptos as $concepto => $valor) {
+            
+            $pdf->Cell(68,6,$concepto,0,0,'L');
+            $pdf->Cell(32,6,'',0,0,'C');
+            if(strpos($concepto,'Ret')){
+                $pdf->Cell(34,6,'',0,0,'C');
+                $pdf->Cell(34,6,$valor,0,0,'C');
+                $total=$total-$valor;
+            }else{
+                $pdf->Cell(34,6,$valor,0,0,'C');
+                $pdf->Cell(34,6,'',0,0,'C');
+                $total=$total+$valor;
+            }
+            $pdf->Cell(32,6,'',0,1,'C');
+            
+            
+        }
+     
         //total
-        $pdf->SetXY(130,185);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->SetXY(131,185);
+        $pdf->Write(5,$total);
 
         //total neto
-        $pdf->SetXY(141,198);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->SetXY(142,197.8);
+        $pdf->Write(5,$total);
 
         $pdf->output();
         return $pdf;
@@ -106,9 +130,9 @@ function generarconstanciab(){
         //Contenido
         $pdf->SetXY(35,85);
         if($row['genero']==1){
-            $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que el Sr ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$row['id_escalafon'].", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
+            $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que el Sr ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$drow->escalafon().", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
         }else{
-           $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que la Sra ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$row['id_escalafon'].", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
+           $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que la Sra ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$drow->escalafon().", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
         }
     
         $pdf->output();
@@ -194,7 +218,7 @@ function generarARC(){
         $pdf->Write(5,$row['ci']);
     
     //Cargo
-        $pdf->SetXY(45,104);
+        $pdf->SetXY(46,104);
         $pdf->Write(5,$row['cargo']);
     
         $pdf->SetFont('DejaVu','',11);
@@ -299,6 +323,7 @@ function generarfideicomiso(){
 function generarbono(){
         $drow = new dpdf;
         $row = $drow->perfil();
+        $row2 = $drow->buscarBono();
 
         $pdf = new tFPDF;
 
@@ -308,52 +333,62 @@ function generarbono(){
         $pdf->Image('../Views/Assets/img/bonoalimenticio.jpg', 0, 0, -300);
 
         //Periodo Hasta
-        $pdf->SetXY(175,63.5);
+        $pdf->SetXY(176,63.5);
         $pdf->Write(5,"Hola mundo");
 
          //periodo Desde
-        $pdf->SetXY(103,64);
+        $pdf->SetXY(104,64);
         $pdf->Write(5,"Hola mundo");
 
         //num cta
-        $pdf->SetXY(95,71);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->SetXY(96,71);
+        $pdf->Write(5,$_SESSION['id_doc']);
 
         //Nombre
-        $pdf->SetXY(33,78);
+        $pdf->SetXY(34,78);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);
 
         //Cedula
-        $pdf->SetXY(123,78);
+        $pdf->SetXY(124,78);
         $pdf->Write(5,$row['ci']);
 
         //Ingreso
-        $pdf->SetXY(175,78);
+        $pdf->SetXY(176,78);
         $pdf->Write(5,$row['fecha_ingreso']);
 
         //Departamento
         $pdf->SetXY(45,84.3);
-        $pdf->Write(5,$row['departamento']);
+        $pdf->Write(5,$drow->departamento());
 
         //Dedicacion
         $pdf->SetXY(159,84);
         $pdf->Write(5,$row['dedicacion']);
 
         //Cargo
-        $pdf->SetXY(29,92);
+        $pdf->SetXY(30,92);
         $pdf->Write(5,$row['cargo']);
 
         //Categoria
         $pdf->SetXY(149,92);
-        $pdf->Write(5,$row['categoria_nomina']);
+        $pdf->Write(5,$drow->escalafon());
 
+        $pdf->SetXY(10,110);
+
+            
+            $pdf->Cell(68,6,'Bono Alimenticio',0,0,'L');
+            $pdf->Cell(32,6,'',0,0,'C');
+            $pdf->Cell(34,6,$row2,0,0,'C');
+            $pdf->Cell(34,6,'',0,0,'C');
+            $total=$row2;
+            $pdf->Cell(32,6,'',0,1,'C');
+    
         //total
         $pdf->SetXY(105,182);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,$total);
 
         //total neto
         $pdf->SetXY(141,198);
-        $pdf->Write(5,"Hola mundo");
+        $pdf->Write(5,$total);
 
         $pdf->output();
         return $pdf;
