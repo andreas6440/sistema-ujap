@@ -5,9 +5,9 @@ require_once "Controllers/NivelDePaso_control.php";
 nivel1();
 
 ?>
-               <section id="banner" >
+               <section  >
 
-            <div class="bg-color ">
+            <div class="bg-color" id="nivelacceso">
                 <div class="container-fluid">
                     <div class="materialContainer">
                         <div class="form">
@@ -47,9 +47,11 @@ nivel1();
                                         <?php
                                         
                                             if(isset($_REQUEST['snivel'])){
+                                                
                                                 $_SESSION['opcion']=$_POST['radio'];
                                                 $_SESSION['rut']='Perfil';
                                                 echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
+                                           
                                             }
                                         
                                         

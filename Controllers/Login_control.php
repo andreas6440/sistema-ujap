@@ -24,6 +24,7 @@ class Login_control
             $log      = $login_model->logueo($data);
             if(isset($log)){
                 while ($row = pg_fetch_assoc($log)) {
+
                     $_SESSION['user'] = $row['usuario'];
                     if(isset($_SESSION['user'])){
                         $_SESSION['nivel']=$row['nivel'];
@@ -39,6 +40,11 @@ class Login_control
                     }
                 }
             }
+            else{
+                echo "<h1>aqui voy</h1>";
+                return false;
+            }
+
         }
             
     }

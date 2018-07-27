@@ -1,9 +1,6 @@
 
 $(document).ready(function() {
-   /* $('html').bind("cut copy paste",function(e) {
-      e.preventDefault();
-    });
-*/
+   
     function soloNumeros(tecla,nombre,numero) {
         if((tecla.charCode < 48 || tecla.charCode > 57) ||(nombre.length>numero)){            
             return false;
@@ -249,12 +246,12 @@ $('#submit').click(function(){
         $('#mensaje2').fadeIn();
         return false;
     }
-    
+    /*
     var re=  minimo(password,8);
             if (re==false) {
             $('#mensaje21').fadeIn();
             return false;
-            }
+            }*/
 
 });
 
@@ -266,7 +263,22 @@ function inicioIncorrecto(){
 
 }
 
+if ($('#nivelacceso').length) {
+    
+ $("html").css({"overflow":"hidden"});
+$('#submit').click(function(){
+   var valor= $('input:radio[name=radio]:checked').val();
+
+    if (valor==null) {
+         //using custom CSS
+ // .ajs-message.ajs-custom { color: #31708f;  background-color: #d9edf7;  border-color: #31708f; }
+ alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Seleccione un tipo de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
+    return false;
+    }
+
+});
 
 
+}
 
 });

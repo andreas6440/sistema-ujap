@@ -33,14 +33,14 @@ if (isset($_POST['submit'])) {
                                             <label for="username">
                                                 Nombre de Usuario
                                             </label>
-                                            <input  id="username" name="username" autocomplete="of" required autofocus  type="text"/>
+                                            <input  id="username" name="username" autocomplete="of"  autofocus  type="text"/>
                                             <div id="mensaje1" class="errores">Campo requerido</div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">
                                                 Contraseña
                                             </label>
-                                            <input id="password" name="password" autocomplete="of" required type="password"/>
+                                            <input id="password" name="password" autocomplete="of"  type="password"/>
                                         </div>
                                         <div class="form-group">
                                             <a id="OlClave" class="form-recovery" href="#">

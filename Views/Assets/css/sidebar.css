@@ -1059,7 +1059,7 @@ box-shadow: 0px 2px 5px -1px rgba(79,77,79,1);
         Login y formulario de registro
      ===================================*/
 
-#banner {
+#banner, #nivelacceso {
     background-image: url("../img/foto2.jpg");
     background-size: cover;
     min-height: 100vh;
