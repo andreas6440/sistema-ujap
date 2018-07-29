@@ -307,16 +307,34 @@ function generarARC(){
 function generarfideicomiso(){
     
     $drow = new dpdf;
-    $row = $drow->perfil();
+    $row = $drow->buscarFideicomiso();
+    $row2 = $drow->buscarUserFideicomiso();
     
     $pdf = new tFPDF;
 
         $pdf->AddPage('L', 'Letter', '0');
         $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
-        //$pdf->SetFont('DejaVu','',12);
+        $pdf->SetFont('DejaVu','',12);
         $pdf->SetTitle('Fideicomiso', TRUE);
         $pdf->Image('../Views/Assets/img/fideicomiso.jpg', 0, 0, -300);
+    
+        //banco
+        $pdf->SetXY(108,55);
+        $pdf->Write(5,$row['banco']);
+        
+        //utilidades
+        $pdf->SetXY(260,39);
+        $pdf->Write(5,$row['d_utilidades']);
+    
+        //alicuota
+        $pdf->SetXY(240,45.5);
+        $pdf->Write(5,$row['alicuota']);
+    
+        //periodo
+        $pdf->SetXY(240,52);
+        $pdf->Write(5,$row['periodo']);
 
+    
         $pdf->SetFont('DejaVu','',11);
     
         $pdf->SetY(70);
@@ -355,6 +373,30 @@ function generarfideicomiso(){
         $pdf->SetY(70);
         $pdf->SetX(250);
         $pdf->MultiCell(30,5,'Total '."\n".'Prest ',1,'C');
+        
+        $cont=0;
+        while ($row3 = pg_fetch_array($row2)) {
+            $cont=$cont+1;
+            
+            $pdf->SetX(0);
+            $pdf->Cell(5,5,$cont,1,0);
+            
+            $row4 = $drow->perfil2($row3['id_user']);
+            
+            $pdf->Cell(25,5,$row4['ci'],1,0);
+            $pdf->Cell(40,5,$row4['nombre']." ".$row4['apellido'],1,0);
+            $pdf->Cell(25,5,$row3['sueldo_mensual'],1,0);
+            $pdf->Cell(25,5,$row3['sueldo_normal'],1,0);
+            $pdf->Cell(20,5,$row3['sueldo_diario'],1,0);
+            $pdf->Cell(20,5,$row3['alicuota'],1,0);
+            $pdf->Cell(15,5,$row3['dias'],1,0);
+            $pdf->Cell(30,5,$row3['ant_prest'],1,0);
+            $pdf->Cell(15,5,$row3['dias_ad'],1,0);
+            $pdf->Cell(30,5,$row3['ant_prest_ad'],1,0);
+            $pdf->Cell(30,5,$row3['ant_prest']+$row3['ant_prest_ad'],1,1);
+            
+        }
+        
     
     $pdf->output();
     

@@ -63,20 +63,22 @@ nivel1();
           
           while($row2 = pg_fetch_array($row)){
               
+              $id = $row2["id_fideicomiso"];
+              
               setlocale(LC_TIME, "es_VE");
               $date = strftime("%B",strtotime($row2["fecha_c"]));
               
               echo '<tr>';
               echo '<th scope="row">'.$cont.'</th>';
-              echo '<td data-title="N de Fideicomiso">'.$row2["id_fideicomiso"].'</td>';
+              echo '<td data-title="N de Fideicomiso">'.$id.'</td>';
               echo '<td data-title="Fecha de entrega">'.$row2["fecha_c"].'</td>';
               ?>
-              <form target="_blank">
+              <form method="post">
               <?php
-              echo '<input type="text" value="'.$row2["id_fideicomiso"].'" name="r'.$cont.'" hidden>';
+              echo '<input type="text" value="'.$id.'" name="r'.$id.'" hidden>';
               echo '<td data-title="Info" >
                         <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                        <input type="submit" value="Ver" name="5'.$cont.'" class="button type1">
+                        <input type="submit" value="Ver" name="5'.$id.'" class="button type1">
                     </td>';
               echo '</tr>';
               $cont = $cont + 1;
@@ -85,10 +87,10 @@ nivel1();
         
         $cont1 = 0;
         
-          while($cont1<=$cont){
+          while($cont1<=$id){
             
             if (isset($_REQUEST['5'.$cont1])) {
-                seleccionarDoc(5,$cont,0);
+                seleccionarDoc(5,$id,0);
 
             }
             

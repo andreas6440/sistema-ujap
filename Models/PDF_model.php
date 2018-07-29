@@ -71,6 +71,25 @@ class dpdf{
         
         require('conexion.php');
         
+        $query = "SELECT * FROM public.".'"Fideicomiso"'." where id_fideicomiso = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($_SESSION['id_doc']));
+        
+        return pg_fetch_array($prepared);
+        
+        
+    }
+    
+    public function buscarUserFideicomiso(){
+        
+        require('conexion.php');
+        
+        $query = "SELECT * FROM public.".'"Fideicomiso_Personal"'." where id_fideicomiso = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($_SESSION['id_doc']));
+        
+        return ($prepared);
+        
         
     }
     
@@ -84,8 +103,20 @@ class dpdf{
         $query = "SELECT * FROM public.".'"Personal"'." where ci = $1;";
         $select = pg_prepare($dbcon, "", $query);
         $select = pg_execute($dbcon, "", array(pg_fetch_assoc($prepared)['cedula']));
-        $row=pg_fetch_array($select);
-        return $row;
+        
+        return pg_fetch_array($select);
+        
+    }
+    
+    public function perfil2($id){
+        
+        require('conexion.php');
+        
+        $query = "SELECT ci, nombre, apellido FROM public.".'"Personal"'." where id_user = $1;";
+        $prepared = pg_prepare($dbcon, "", $query);
+        $prepared = pg_execute($dbcon, "", array($id));
+        
+        return pg_fetch_array($prepared);
         
     }
     
