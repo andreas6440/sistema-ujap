@@ -309,93 +309,130 @@ function generarfideicomiso(){
     $drow = new dpdf;
     $row = $drow->buscarFideicomiso();
     $row2 = $drow->buscarUserFideicomiso();
+
     
     $pdf = new tFPDF;
 
-        $pdf->AddPage('L', 'Letter', '0');
         $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
         $pdf->SetFont('DejaVu','',12);
         $pdf->SetTitle('Fideicomiso', TRUE);
-        $pdf->Image('../Views/Assets/img/fideicomiso.jpg', 0, 0, -300);
     
-        //banco
-        $pdf->SetXY(108,55);
-        $pdf->Write(5,$row['banco']);
+        $band = 0;
+        $cont = 0;
+        $cont3 = 0;
         
-        //utilidades
-        $pdf->SetXY(260,39);
-        $pdf->Write(5,$row['d_utilidades']);
-    
-        //alicuota
-        $pdf->SetXY(240,45.5);
-        $pdf->Write(5,$row['alicuota']);
-    
-        //periodo
-        $pdf->SetXY(240,52);
-        $pdf->Write(5,$row['periodo']);
-
-    
-        $pdf->SetFont('DejaVu','',11);
-    
-        $pdf->SetY(70);
-        $pdf->SetX(0);
-        $pdf->MultiCell(5,5,'N'. "\n ",1,'C');
-        $pdf->SetY(70);
-        $pdf->SetX(5);
-        $pdf->MultiCell(25,5,'Cedula '. "\n ",1,'C');
-        $pdf->SetY(70);
-        $pdf->SetX(30);
-        $pdf->MultiCell(40,5,'Nombre '. "\n ",1,'C');
-        $pdf->SetY(70);
-        $pdf->SetX(70);
-        $pdf->MultiCell(25,5,'Sueldo '."\n".'Mensual ',1,'C');
-        $pdf->SetY(70);
-        $pdf->SetX(95);
-        $pdf->MultiCell(25,5,'Sueldo '."\n".'Normal ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(120);
-        $pdf->MultiCell(20,5,'Sueldo '."\n".'Diario ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(140);
-        $pdf->MultiCell(20,5,'Alicuota '."\n".'B. Vac ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(160);
-        $pdf->MultiCell(15,5,'Dias '."\n".' ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(175);
-        $pdf->MultiCell(30,5,'Antig '."\n".'Prest ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(205);
-        $pdf->MultiCell(15,5,'Dias '."\n".'Adic',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(220);
-        $pdf->MultiCell(30,5,'Antig '."\n".'Prest. Adic ',1,'C'); 
-        $pdf->SetY(70);
-        $pdf->SetX(250);
-        $pdf->MultiCell(30,5,'Total '."\n".'Prest ',1,'C');
-        
-        $cont=0;
         while ($row3 = pg_fetch_array($row2)) {
-            $cont=$cont+1;
-            
-            $pdf->SetX(0);
-            $pdf->Cell(5,5,$cont,1,0);
-            
-            $row4 = $drow->perfil2($row3['id_user']);
-            
-            $pdf->Cell(25,5,$row4['ci'],1,0);
-            $pdf->Cell(40,5,$row4['nombre']." ".$row4['apellido'],1,0);
-            $pdf->Cell(25,5,$row3['sueldo_mensual'],1,0);
-            $pdf->Cell(25,5,$row3['sueldo_normal'],1,0);
-            $pdf->Cell(20,5,$row3['sueldo_diario'],1,0);
-            $pdf->Cell(20,5,$row3['alicuota'],1,0);
-            $pdf->Cell(15,5,$row3['dias'],1,0);
-            $pdf->Cell(30,5,$row3['ant_prest'],1,0);
-            $pdf->Cell(15,5,$row3['dias_ad'],1,0);
-            $pdf->Cell(30,5,$row3['ant_prest_ad'],1,0);
-            $pdf->Cell(30,5,$row3['ant_prest']+$row3['ant_prest_ad'],1,1);
-            
+            $cont3=$cont3+1;
         }
+    
+        //$cont3=40;//ejemplo
+    
+        while ($band == 0){
+            
+            $row2 = $drow->buscarUserFideicomiso();
+            
+            $pdf->AddPage('L', 'Letter', '0');
+            $pdf->Image('../Views/Assets/img/fideicomiso.jpg', 0, 0, -300);
+
+            //banco
+            $pdf->SetXY(108,55);
+            $pdf->Write(5,$row['banco']);
+
+            //utilidades
+            $pdf->SetXY(260,39);
+            $pdf->Write(5,$row['d_utilidades']);
+
+            //alicuota
+            $pdf->SetXY(240,45.5);
+            $pdf->Write(5,$row['alicuota']);
+
+            //periodo
+            $pdf->SetXY(240,52);
+            $pdf->Write(5,$row['periodo']);
+
+
+            $pdf->SetFont('DejaVu','',11);
+
+            $pdf->SetY(70);
+            $pdf->SetX(0);
+            $pdf->MultiCell(6,5,'N'. "\n ",1,'C');
+            $pdf->SetY(70);
+            $pdf->SetX(6);
+            $pdf->MultiCell(25,5,'Cedula '. "\n ",1,'C');
+            $pdf->SetY(70);
+            $pdf->SetX(31);
+            $pdf->MultiCell(39,5,'Nombre '. "\n ",1,'C');
+            $pdf->SetY(70);
+            $pdf->SetX(70);
+            $pdf->MultiCell(25,5,'Sueldo '."\n".'Mensual ',1,'C');
+            $pdf->SetY(70);
+            $pdf->SetX(95);
+            $pdf->MultiCell(25,5,'Sueldo '."\n".'Normal ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(120);
+            $pdf->MultiCell(20,5,'Sueldo '."\n".'Diario ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(140);
+            $pdf->MultiCell(20,5,'Alicuota '."\n".'B. Vac ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(160);
+            $pdf->MultiCell(15,5,'Dias '."\n".' ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(175);
+            $pdf->MultiCell(30,5,'Antig '."\n".'Prest ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(205);
+            $pdf->MultiCell(15,5,'Dias '."\n".'Adic',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(220);
+            $pdf->MultiCell(30,5,'Antig '."\n".'Prest. Adic ',1,'C'); 
+            $pdf->SetY(70);
+            $pdf->SetX(250);
+            $pdf->MultiCell(30,5,'Total '."\n".'Prest ',1,'C');
+
+            $pdf->SetFont('DejaVu','',10);            
+            $cont2 = 0;
+            $cont4 = 0;
+
+            while ($row3 = pg_fetch_array($row2)) {
+                
+                //while($cont4<40){
+                if(($cont2<20)and($cont==$cont4)){
+                    $cont = $cont + 1;
+                    $cont2 = $cont2 + 1;
+
+                    $pdf->SetX(0);
+                    $pdf->Cell(6,5,$cont,1,0);
+
+                    $row4 = $drow->perfil2($row3['id_user']);
+
+                    $pdf->Cell(25,5,$row4['ci'],1,0);
+                    $pdf->Cell(39,5,$row4['nombre']." ".$row4['apellido'],1,0);
+                    $pdf->Cell(25,5,$row3['sueldo_mensual'],1,0);
+                    $pdf->Cell(25,5,$row3['sueldo_normal'],1,0);
+                    $pdf->Cell(20,5,$row3['sueldo_diario'],1,0);
+                    $pdf->Cell(20,5,$row3['alicuota'],1,0);
+                    $pdf->Cell(15,5,$row3['dias'],1,0);
+                    $pdf->Cell(30,5,$row3['ant_prest'],1,0);
+                    $pdf->Cell(15,5,$row3['dias_ad'],1,0);
+                    $pdf->Cell(30,5,$row3['ant_prest_ad'],1,0);
+                    $pdf->Cell(30,5,$row3['ant_prest']+$row3['ant_prest_ad'],1,1);
+
+                }
+                
+                $cont4 = $cont4 + 1;
+                    
+                //}
+                
+                
+            }
+    
+            
+            if($cont>=$cont3){
+                $band = 1;
+            }
+        }
+        
         
     
     $pdf->output();
