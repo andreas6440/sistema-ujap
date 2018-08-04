@@ -17,16 +17,20 @@ class Login_control
 
         $login_model = new Login_model;
 
-        if (isset($_REQUEST['submit'])) {
+        if (isset($_REQUEST['submit'])&& isset($_POST['submit'])) {
             $usuario  = $_POST['username'];
             $password = md5($_POST['password']);
             $data     = array("usuario" => $usuario, "password" => $password);
             $log      = $login_model->logueo($data);
+
+            
             if(isset($log)){
+                
                 while ($row = pg_fetch_assoc($log)) {
 
                     $_SESSION['user'] = $row['usuario'];
                     if(isset($_SESSION['user'])){
+                        
                         $_SESSION['nivel']=$row['nivel'];
                         if($row['nivel']==1){
                             $_SESSION['rut']='Perfil';
@@ -36,13 +40,24 @@ class Login_control
                             $_SESSION['rut']='Acceso';
                             $_SESSION['opcion']=0;
                         }
+
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
+                    }else{
+
                     }
                 }
-            }
-            else{
-                echo "<h1>aqui voy</h1>";
-                return false;
+                $row = pg_fetch_assoc($log);
+                if ($row==false) {
+                    echo '<div class=" my-2">
+                          <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
+                          <div>';
+                    return false;
+                }
+                
+                   
+                   
+                
+                
             }
 
         }

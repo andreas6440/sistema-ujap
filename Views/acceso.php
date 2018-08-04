@@ -42,7 +42,15 @@ nivel1();
 
 
                                         <div class="form-group">
-                                            <input class="boton-azul" type="submit" name="snivel" id="submit" value="Entrar">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-6"><input class="boton-azul" type="submit" name="snivel" id="submit" value="Entrar"></div>
+                                                    <div class="col-6"><input  class="boton-rojo" type="submit" name="cancel" id="submit" value="Cancelar"></div>
+                                                </div>
+
+                                            </div>
+                                            
+                                            
                                         </div>
                                         <?php
                                         
@@ -52,6 +60,10 @@ nivel1();
                                                 $_SESSION['rut']='Perfil';
                                                 echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                                            
+                                            }
+                                             if (isset($_REQUEST['cancel'])) {
+                                               $_SESSION['rut']='Salir';
+                                                echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                                             }
                                         
                                         

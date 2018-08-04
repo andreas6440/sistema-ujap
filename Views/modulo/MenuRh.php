@@ -48,23 +48,7 @@
                        
                     </div>
                 </div>
-                <!-- sidebar-header  -->
-                <div class="sidebar-search baba buscador">
-                    <nav class="navbar sidebar-search">
-  
-   <form class="form-inline">
-    <div class="input-group">
-      
-      <input type="text" class="form-control" placeholder="Buscar Trabajador..." aria-label="search" aria-describedby="basic-addon1">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" ></i></span>
-      </div>
-    </div>
-  </form>
-</nav>
-
-                </div>
-                <!-- sidebar-search  -->
+               
                 <div class="sidebar-menu">
                     <ul>  
                         <li class="header-menu">

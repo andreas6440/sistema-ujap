@@ -3,13 +3,7 @@ require_once "Controllers/Login_control.php";
 require_once "Controllers/Validaciones_control.php";
         $login = new Login_control;
         $val= new  Validacion;
-if (isset($_POST['submit'])) {
-  $re= $val->Login_val();
-  if ($re==true) {
-     $login->loguear();
-  }
-    
-}
+
 
 
  ?>
@@ -55,6 +49,14 @@ if (isset($_POST['submit'])) {
 <!-- Modal -->
 
                                     </form>
+                                    <?php 
+                                    if (isset($_POST['submit'])) {
+                                        $re= $val->Login_val();
+                                       if ($re==true) {
+                                        $login->loguear();
+                                        }
+    
+                                    } ?>
 
                                 </div>
                             </div>

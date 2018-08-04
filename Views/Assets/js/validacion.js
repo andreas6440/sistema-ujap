@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
-   
+  
+    
     function soloNumeros(tecla,nombre,numero) {
         if((tecla.charCode < 48 || tecla.charCode > 57) ||(nombre.length>numero)){            
             return false;
@@ -210,6 +211,7 @@ var resul=false;
 }
 
 if ($('#banner').length) {
+
 $('#username').keypress(function(tecla) {
     var nombre=$('#username').val();   
      var re= validarusuario(tecla,nombre,15);
