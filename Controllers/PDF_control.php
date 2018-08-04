@@ -62,7 +62,8 @@ require_once('../tfpdf.php');
 
         //Dedicacion
         $pdf->SetXY(159,87);
-        $pdf->Write(5,$row['dedicacion']);
+        //$pdf->Write(5,$row['dedicacion']);
+        $pdf->Write(5,'Tiempo Completo');
 
         //Cargo
         $pdf->SetXY(29,95);
