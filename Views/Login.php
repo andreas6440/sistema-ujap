@@ -29,12 +29,14 @@ require_once "Controllers/Validaciones_control.php";
                                             </label>
                                             <input  id="username" name="username" autocomplete="of"  autofocus  type="text"/>
                                             <div id="mensaje1" class="errores">Campo requerido</div>
-                                        </div>
+                                            </div>
                                         <div class="form-group">
                                             <label for="password">
                                                 Contraseña
                                             </label>
                                             <input id="password" name="password" autocomplete="of"  type="password"/>
+                                             <div id="mensaje2" class="errores">Campo requerido</div>
+                                       
                                         </div>
                                         <div class="form-group">
                                             <a id="OlClave" class="form-recovery" href="#">
@@ -45,9 +47,6 @@ require_once "Controllers/Validaciones_control.php";
                                             <input class="boton-azul" type="submit" name="submit" id="submit" value="Entrar">
                                         </div>
                                     
-
-<!-- Modal -->
-
                                     </form>
                                     <?php 
                                     if (isset($_POST['submit'])) {
