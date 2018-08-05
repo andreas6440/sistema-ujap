@@ -1,8 +1,9 @@
 <?php
 
 session_start();
-require_once('../Models/PDF_model.php');//recordar quitar el ../
+require_once('../Models/PDF_model.php');
 require_once('../tfpdf.php');
+require_once('phpqrcode/qrlib.php');
 
  function generarrecibo(){
         $drow = new dpdf;
@@ -15,6 +16,9 @@ require_once('../tfpdf.php');
         $pdf->SetFont('Arial', '', 12);
         $pdf->SetTitle('Recibo', TRUE);
         $pdf->Image('../Views/Assets/img/recibo.jpg', 0, 0, -300);
+        
+        $pdf->Image($_SESSION['qr'], 27, 54, 0);
+     
 
         //Periodo Desde
         $pdf->SetXY(103,57.5);

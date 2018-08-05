@@ -4,8 +4,6 @@ require_once "Controllers/Validaciones_control.php";
         $login = new Login_control;
         $val= new  Validacion;
 
-
-
  ?>
         <section id="banner" >
 
