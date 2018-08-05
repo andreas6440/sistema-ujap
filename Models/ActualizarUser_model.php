@@ -62,10 +62,20 @@ class ActualizarUser{
                 $prepared = pg_prepare($dbcon, "", $query);
                 $prepared = pg_execute($dbcon, "", array($datos["pass1"]));
                 
-            }
-            
+            } 
+
+        }else{
+            /*alcides revisa aqui*/
+             echo '<div class=" my-2">
+                          <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Contraseña actual incorrecta</label>
+                          <div>';
+                    return false;
         }
+          
+
+
         
+       
     }
     
     public function Password2($datos,$user){

@@ -1,6 +1,20 @@
 
 $(document).ready(function() {
-  
+   function GuardarCambios(){
+
+  alertify.confirm("¿Esta seguro de realizar cambios?", function(e){
+        if (e) {
+            $("#category-form").submit();
+            alertify.success("Realizando cambios...")
+            return true;
+        } else {
+            alertify.error("Cancelado");
+            return false;
+        }
+    }).setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');
+
+
+   }
     
     function soloNumeros(tecla,nombre,numero) {
         if((tecla.charCode < 48 || tecla.charCode > 57) ||(nombre.length>numero)){            
@@ -28,6 +42,13 @@ $(document).ready(function() {
         if (nombre.length<numero||tecla.charCode ==32) {
             return false;
         }
+        return true
+    }
+    function minimoC(nombre,numero){
+        if (nombre.length<numero) {
+            return false;
+        }
+        return true
     }
   function soloLetras(tecla,nombre,numero){
     if(!(tecla.charCode < 33 || tecla.charCode > 64)||((nombre.length>numero)||(tecla.charCode ==32)) ){  
@@ -101,7 +122,7 @@ $('#NclaveActual').keypress(function(tecla) {
         if (re==false) {
             return false;
         }
-        $('#mensaje8,#mensaje11').fadeout();
+        $('#mensaje8,#mensaje11').fadeOut();
     });
 $('#claveNueva').keypress(function(tecla) {
         var nombre=$('#claveNueva').val();    
@@ -109,7 +130,7 @@ $('#claveNueva').keypress(function(tecla) {
         if (re==false) {
             return false;
         }
-        $('#mensaje9,#mensaje12').fadeout();
+        $('#mensaje9,#mensaje12,#mensaje14,#mensaje15').fadeOut();
     });
 $('#claveRepetida').keypress(function(tecla) {
         var nombre=$('#claveRepetida').val();    
@@ -117,44 +138,55 @@ $('#claveRepetida').keypress(function(tecla) {
         if (re==false) {
             return false;
         }
-        $('#mensaje10,#mensaje13').fadeout();
+        $('#mensaje10,#mensaje13,#mensaje15,#mensaje14').fadeOut();
     });
     $('#actualizarpass').click(function(){
         var conActual=$('#claveActual').val();
         var conNueva=$('#claveNueva').val();
         var conRepe=$('#claveRepetida').val();
-        if (conActual=="") {
-        $('#mensaje11').fadeIn();
-        return false;
+        var resul=1;
+
+        if (conActual=="") {              
+            $('#mensaje11').fadeIn(); 
+            resul=2; 
         }else{
-            var re=  minimo(nombre,8);
+            var re=  minimoC(conActual,3);
             if (re==false) {
             $('#mensaje8').fadeIn();
-            return false;
+            resul=2; 
             }
-            
         }
         if (conNueva=="") {
-        $('#mensaje12').fadeIn();
-        return false;
+            $('#mensaje12').fadeIn();
+            resul=2; 
         }else{
-            var re=  minimo(nombre,8);
+             var re=  minimoC(conNueva,8);
             if (re==false) {
             $('#mensaje9').fadeIn();
-            return false;
+            resul=2;
             }
-           
         }
         if (conRepe=="") {
-        $('#mensaje13').fadeIn();
-        return false;
+            $('#mensaje13').fadeIn();
+            resul=2; 
         }else{
-            var re=  minimo(nombre,8);
+            var re=  minimoC(conRepe,8);
             if (re==false) {
             $('#mensaje10').fadeIn();
-            return false;
+            resul=2;
             }
-            
+        }
+       if (resul==2) {
+         return false;
+       }
+       
+       if (conRepe!=conNueva) {
+        $('#mensaje14,#mensaje15').fadeIn();
+        return false;
+       }
+       
+        if ( GuardarCambios()!=true) {
+             return false;
         }
 
     });
@@ -165,47 +197,37 @@ $('#claveRepetida').keypress(function(tecla) {
     var nombre=$('#nombre').val();
     var telefono=$('#telefono').val();
     var cedula=$('#cedula').val();
-     if (cedula=="") {
-        $('#mensaje1').fadeIn();
-        return false;
-    }else if (nombre=="") {
-        $('#mensaje2').fadeIn();
-        return false;
-    }else if (apellido=="") {
-        $('#mensaje3').fadeIn();
-        return false;
-    }else if (correo=="") {
-        $('#mensaje4').fadeIn();
-        return false;
-    }else if (telefono=="") {
-        $('#mensaje5').fadeIn();
-        return false;
-    }else if (usuario=="") {
-        $('#mensaje6').fadeIn();
-        return false;
+     if (cedula=="" && nombre=="") {
+        if (apellido=="" && correo=="") {
+            if (telefono=="" && usuario=="") {
+
+                 $('#mensaje1').fadeIn();
+                  $('#mensaje2').fadeIn();
+                  $('#mensaje3').fadeIn();
+                  $('#mensaje4').fadeIn();
+                  $('#mensaje5').fadeIn();
+                  $('#mensaje6').fadeIn();
+                    return false;
+            }
+        }
     }
-    var regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+    if (correo!="") {
+      var regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
 
     if (!regex.test($('#correo').val().trim())) {
         
          $('#mensaje7').fadeIn();
         return false;
+    }  
     }
-    /*
-var resul=false;
-  alertify.confirm("¿Esta seguro de realizar cambios?", function(e){
-        if (e) {
-            $("#category-form").submit();
-            alertify.success("Realizando cambios...")
-            resul=true;
-        } else {
-            alertify.error("Cancelado");
-            resul=false;
-        }
-    }).setHeader('<div class="brand-text brand-big "><span>Universidad José Antonio Páez </span></div>');
     
-    
-*/
+        
+    if ( GuardarCambios()==true) {
+        
+    }else{
+        return false;
+    }
+
     
 });
 }

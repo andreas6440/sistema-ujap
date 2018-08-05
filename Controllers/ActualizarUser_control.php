@@ -83,12 +83,15 @@ function ActualizarPassword(){
             $pass1 = md5($_POST['pass1']);
             
             $data = array("passa" => $passa, "pass1" => $pass1,);
-            
-            $reg  = $update_model->Password($data);
+
+            $reg  = $update_model->Password($data);            
             
         }
+
         
     }
+     
+
     
 }
 

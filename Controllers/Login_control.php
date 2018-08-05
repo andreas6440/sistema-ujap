@@ -9,8 +9,6 @@ class Login_control
         require_once "Views/Login.php";
     }
 
-/*Alcides estuvo aqui*/
-
     public function loguear(){
 
         require_once "Models/Login_model.php";
