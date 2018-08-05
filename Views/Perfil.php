@@ -122,7 +122,7 @@ $row = mostrarinfo();
                                                 <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php 
                                                 require_once("Controllers/ActualizarUser_control.php");
-                                                ActualizarPerfil($_SESSION['user']); ?>
+                                               ActualizarPerfil($_SESSION['user']);?>
                                             </div>
                                         </div>
                                     </form>
@@ -147,8 +147,13 @@ $row = mostrarinfo();
                                                         <label class="label2">
                                                             Contraseña actual
                                                         </label>
-                                                        <div id="mensaje11" class="errores2 ">Completar Campo</div>
+                                                        
+                                                        <label id="mensaje11" class="errores2 ">  Completar Campo</label>
                                                         <div id="mensaje8" class="errores2 ">Se necesita minimo 8 caracteres</div>
+                                                         <?php
+                                                require_once("Controllers/ActualizarUser_control.php");
+                                                ActualizarPassword(); ?>
+                    
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,6 +169,7 @@ $row = mostrarinfo();
                                                         </label>
                                                         <div id="mensaje12" class="errores2 ">Completar Campo</div>
                                                         <div id="mensaje9" class="errores2 ">Se necesita minimo 8 caracteres</div>
+                                                        <div id="mensaje14" class="errores2 ">Contraseñas no coinciden </div>
 
                                                     </div>
                                                 </div>
@@ -178,17 +184,16 @@ $row = mostrarinfo();
                                                         <label class="label2">
                                                             Repetir contraseña
                                                         </label>
-                                                        <div id="mensaje12" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje13" class="errores2 ">Completar Campo</div>
                                                         <div id="mensaje10" class="errores2 ">Se necesita minimo 8 caracteres</div>
+                                                        <div id="mensaje15" class="errores2 ">Contraseñas no coinciden </div>
                                                     </div>
                                                 </div>
                                             </div>
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
                                                   <input type="submit" name="actualizarpass" id="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                                <?php
-                                                require_once("Controllers/ActualizarUser_control.php");
-                                                ActualizarPassword(); ?>
+                                               
                                                 </div>
                                                 
                                             </div>
