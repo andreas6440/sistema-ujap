@@ -25,13 +25,7 @@ class Login_control
 
             
             if(isset($log)){
-                $row = pg_fetch_assoc($log);
-                if ($row==false) {
-                    echo '<div class=" my-2">
-                          <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
-                          <div>';
-                    return false;
-                }
+                
                 while ($row = pg_fetch_assoc($log)) {
 
                     $_SESSION['user'] = $row['usuario'];
@@ -48,16 +42,15 @@ class Login_control
                         }
 
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
-                    }else{
-
                     }
-                }
-                
-                
-                   
-                   
-                
-                
+                } 
+                $row = pg_fetch_assoc($log);
+                if ($row==false) {
+                    echo '<div class=" my-2">
+                          <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
+                          <div>';
+                    return false;
+                }    
             }
 
         }
