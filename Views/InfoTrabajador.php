@@ -7,7 +7,7 @@ nivel1();
 
 ?>
    <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
-    <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Información del usuario</h5>
+    <h5 class=" pestaña"><i class="fa fa-filter" ></i>  Información del usuario</h5>
               <div class="row wrapper">
                 <div class="col-lg-8">
                   <div class="card ">
@@ -24,36 +24,39 @@ nivel1();
                       
              <div class="mr-auto mx-2">     
       
-      <input class="form-control" type="search" placeholder="Nº de Cédula" name="scedula"><!//validar esto>
-      <input type="submit" name="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
-             </div>                                    
+      <input class="form-control" type="search" placeholder="Nº de Cédula" id="scedula" name="scedula">
+      <input type="submit" name="BuCedula" id="BuCedula" class="btn color-azul btn-submit btn-lg " value="Buscar">
+       <div id="mensaje1" class="errores2 ">Completar Campo</div> 
+      </div> 
+      
                                                 
     </form>
                    <?php
                           
                           require_once("Controllers/InfoBasica_control.php");
-                          echo"<br>";
-                          echo"<h2>";
+                          
                           if (isset($_REQUEST["BuCedula"])) {
                               $info = buscarinfo();
                               
                               $prueba = $info;
 
                               if(pg_num_rows($prueba)<1){
-                                  echo "Usuario no encontrado";//esto a un alert
-                                  echo "<br>";
+                                   echo '<div class=" my-2">
+                                    <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
+                                        <div>';
                               }
                                while($row = pg_fetch_array($info)){
                                    $_SESSION['mostrar']=$row["nombre"]." ".$row["apellido"];;
                                    $_SESSION['username'] = $row["usuario"];
                                    $_SESSION['user_d']=$_SESSION['username'];
                                }
+                              echo '<div id="voldi"></div>';
 
                             }
                           if(isset($_SESSION['mostrar'])){
                               echo $_SESSION['mostrar'];
                           }
-                          echo"</h2>";
+                          
                           
                           ?>
                     </div >
@@ -72,6 +75,7 @@ nivel1();
                                                         <label class="label2">
                                                             Nombre
                                                         </label>
+                                                        <div id="mensaje2" class="errores2 ">Completar Campo</div>
 
                                                     </div>
                                                 </div>
@@ -84,6 +88,7 @@ nivel1();
                                                         <label class="label2">
                                                             Apellido
                                                         </label>
+                                                        <div id="mensaje3" class="errores2 ">Completar Campo</div>
                                                     </div>
                                                 </div>
         
@@ -125,6 +130,8 @@ nivel1();
                                                         <label class="label2">
                                                             Correo electronico
                                                         </label>
+                                                        <div id="mensaje4" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje7" class="errores2 ">Correo Invalido</div>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -136,6 +143,7 @@ nivel1();
                                                         <label class="label2">
                                                             Teléfono
                                                         </label>
+                                                        <div id="mensaje5" class="errores2 ">Completar Campo</div>
                                             </div>
                                         </div>
                                         
@@ -145,7 +153,7 @@ nivel1();
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">
-                                                <input type="submit" name="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                <?php
                                                 require_once("Controllers/ActualizarUser_control.php");
                                                 if(isset($_REQUEST['actualizarperfil'])){
@@ -171,13 +179,16 @@ nivel1();
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass1" id="claveNueva" type=password required="required" type="text"/>
+                                                        <input class="input2" name="pass1" id="claveNueva" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
                                                             Nueva contraseña
                                                         </label>
+                                                        <div id="mensaje12" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje9" class="errores2 ">Se necesita minimo 8 caracteres</div>
+                                                        <div id="mensaje14" class="errores2 ">Contraseñas no coinciden </div>
 
                                                     </div>
                                                 </div>
@@ -185,19 +196,22 @@ nivel1();
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <div class="group">
-                                                        <input class="input2" name="pass2" id="claveRepetida" type=password required="required" type="text"/>
+                                                        <input class="input2" name="pass2" id="claveRepetida" type=password  type="text"/>
 
                                                         <span class="bar">
                                                         </span>
                                                         <label class="label2">
                                                             Repetir contraseña
                                                         </label>
+                                                        <div id="mensaje13" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje10" class="errores2 ">Se necesita minimo 8 caracteres</div>
+                                                        <div id="mensaje15" class="errores2 ">Contraseñas no coinciden </div>
                                                     </div>
                                                 </div>
                                             </div>
                                                 <div class="row">
                                                 <div class="col-md-2 mx-2">
-                                                  <input type="submit" name="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
+                                                  <input type="submit" name="actualizarpass" id="actualizarpass" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
                                                 <?php
                                                     require_once("Controllers/ActualizarUser_control.php");
                                                     if(isset($_REQUEST['actualizarpass'])){
@@ -238,12 +252,15 @@ nivel1();
                         </select>
                       </div>
                       
-             <div id="documentos" class="mr-auto mx-2">     
+             <div id="documentos" class="mx-2">     
       
-      <input class="form-control activo"  type="number" name="NumDocumento"  placeholder="Nº Documento">
-      <input type="submit" name="Burecibo" class="btn color-azul btn-submit btn-lg activo" value="Buscar">
-             </div>                                    
-                                                
+      <input class="form-control activo"  type="search" name="NumDocumento"  id="NumDocumento" placeholder="Nº Documento">
+      
+      </div>  
+      <div class=" mr-auto ">
+      <input type="submit" name="Burecibo" id="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+      </div>                                  
+      <div id="mensaje11" class="errores2 ">Completar Campo</div>                                          
     </form>
                    <?php
                           
