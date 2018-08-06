@@ -47,7 +47,7 @@ $('#NumDocumento').remove();
 
   
   $('select.sele').on('change',function(){
-   var valor = $('#sele option:selected').html();
+   var valor = $('#slct option:selected').html();
    var valor=$(this).val();
    if (valor==2 || valor==5) {
     if (!$('.activo').length) {

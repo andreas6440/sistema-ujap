@@ -8,7 +8,7 @@ nivel1();
   
 
   <div id="Fideicomiso" class="container-fluid my-5 punto  ">
-   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Recursos humanos/ Fideicomiso</h5>
+   <h5 class=" pestaña"><i class="fa fa-filter" ></i> Fideicomiso</h5>
               <div class="row wrapper">
                 <div class="col-12">
                   <div class="card ">
