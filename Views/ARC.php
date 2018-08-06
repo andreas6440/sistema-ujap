@@ -183,15 +183,18 @@
         
         $cont1 = 0;
         
-          while($cont1<=$id){
-            
-            if (isset($_REQUEST['2'.$cont1])) {
-                seleccionarDoc(2,$id,0);
+        if(isset($id)){
+        
+              while($cont1<=$id){
+
+                if (isset($_REQUEST['2'.$cont1])) {
+                    seleccionarDoc(2,$id,0);
+
+                }
+
+                $cont1 = $cont1 + 1;
 
             }
-            
-            $cont1 = $cont1 + 1;
-            
         }
           ?>
       </form>

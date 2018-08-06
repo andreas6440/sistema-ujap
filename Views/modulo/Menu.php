@@ -92,9 +92,22 @@
                 }
               
               ?>
-          <form target="_blank" method="post">
-              <input type="submit" class="dropdown-item" value="Trayectoria" name="constanciad">
-          </form>
+        <?php
+        
+            require_once('Models/InfoBasica_model.php');
+            
+            $cargo = cargo();
+            
+            if($cargo=='Docente'){
+                echo  '
+                    <form target="_blank" method="post">
+                        <input type="submit" class="dropdown-item" value="Trayectoria" name="constanciad">
+                    </form>
+                ';
+            }
+            
+        ?>
+          
           <?php 
               
               if (isset($_REQUEST['constanciad'])) {

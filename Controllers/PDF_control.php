@@ -2,90 +2,143 @@
 
 session_start();
 require_once('../Models/PDF_model.php');
+require_once('tcpdf.php');
 require_once('../tfpdf.php');
-require_once('phpqrcode/qrlib.php');
 
  function generarrecibo(){
         $drow = new dpdf;
         $row = $drow->perfil();
         $row2 = $drow->buscarRecibo();
+        $row3 = $drow->firma();
 
-        $pdf = new tFPDF;
+        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
         $pdf->AddPage('P', 'Letter', '0');
-        $pdf->SetFont('Arial', '', 12);
+        $pdf->SetFont('times', '', 11);
+        $pdf->SetAuthor('Universidad Jose Antonio Paez');
         $pdf->SetTitle('Recibo', TRUE);
-        $pdf->Image('../Views/Assets/img/recibo.jpg', 0, 0, -300);
+        $pdf->SetSubject('Recibo de Pago');
+     
+        //$border = array('LRTB' => array('width' => 0.1, 'cap' => 'square', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
+        $pdf->SetAutoPageBreak(false, 0);
+
+        $pdf->Image('../Views/Assets/img/recibo2.jpg', 0, 0, 210, 297);
+     
+        //$pdf->Image('../Views/Assets/img/recibo.jpg', 0, 0, 0);
+     
+/* set certificate file
+$certificate = 'file://data/cert/tcpdf.crt';
+
+// set additional information
+$info = array(
+    'Name' => 'TCPDF',
+    'Location' => 'Office',
+    'Reason' => 'Testing TCPDF',
+    'ContactInfo' => 'http://www.tcpdf.org',
+    );
+
+// set document signature
+$pdf->setSignature($certificate, $certificate, 'tcpdfdemo', '', 2, $info);
+*/
         
-        $pdf->Image($_SESSION['qr'], 27, 54, 0);
+        //$pdf->Image($_SESSION['qr'], 27, 54, 0);
      
 
         //Periodo Desde
-        $pdf->SetXY(103,57.5);
+        $pdf->SetXY(97,61);
         $pdf->Write(5,"Hola mundo");
 
         //sm
-        $pdf->SetXY(142,57.5);
+        $pdf->SetXY(138,61);
         $pdf->Write(5,round($row['sueldo_base']));
 
          //sd
-        $pdf->SetXY(181,57.5);
+        $pdf->SetXY(176,61);
         $pdf->Write(5,round($row['sueldo_base']/30));
 
          //periodo hasta
-        $pdf->SetXY(103,64);
+        $pdf->SetXY(97,68);
         $pdf->Write(5,"Hola mundo");
 
         //1era q
-        $pdf->SetXY(148,64);
+        $pdf->SetXY(144,68);
         $pdf->Write(5,round($row['sueldo_base']/2));
 
         //num nomina
-        $pdf->SetXY(87,70);
+        $pdf->SetXY(85,74.5);
         $pdf->Write(5,$_SESSION['id_doc']);
 
         //2da q
-        $pdf->SetXY(158,70.5);
+        $pdf->SetXY(153,75);
         $pdf->Write(5,round($row['sueldo_base']/2));
+     
+        //QR
+     
+        $style = array(
+        'border' => false,
+        'vpadding' => 'auto',
+        'hpadding' => 'auto',
+        'fgcolor' => array(0,0,0),
+        'bgcolor' => false, //array(255,255,255)
+        'module_width' => 1, // width of a single module in points
+        'module_height' => 1 // height of a single module in points
+        );
+
+        // write QR
+
+        $code = "Numero de documento: ".$_SESSION['id_doc'].", Nombre: ".$row['nombre'].", Apellido: ".$row['apellido'];
+        $pdf->write2DBarcode($code, 'QRCODE,M', 25, 55, 30, 30, $style, 'N');
+     
+     
+        //FIN QR
 
         //Nombre
-        $pdf->SetXY(33,81);
+        $pdf->SetXY(31,86);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);
 
         //Cedula
-        $pdf->SetXY(123,81);
+        $pdf->SetXY(120,86);
         $pdf->Write(5,$row['ci']);
 
         //Ingreso
-        $pdf->SetXY(175,80.5);
+        $pdf->SetXY(169,86);
         $pdf->Write(5,$row['fecha_ingreso']);
 
         //Departamento
-        $pdf->SetXY(45,87);
+        $pdf->SetXY(41,92.5);
         $pdf->Write(5, $drow->departamento());
+     
+        //
+        $row4 = $drow->escalafon();
+        //
 
         //Dedicacion
-        $pdf->SetXY(159,87);
-        //$pdf->Write(5,$row['dedicacion']);
-        $pdf->Write(5,'Tiempo Completo');
+        $pdf->SetXY(154,92.5);
+        if($row4['tiempo_convencional'] != null){
+            $pdf->Write(5,'Tiempo Convencional');
+        }elseif($row4['medio_tiempo'] != null){
+            $pdf->Write(5,'Medio Tiempo');
+        }else{
+            $pdf->Write(5,'Tiempo Completo');
+        }
 
         //Cargo
-        $pdf->SetXY(29,95);
+        $pdf->SetXY(27,101);
         $pdf->Write(5,$row['cargo']);
 
         //Categoria
-        $pdf->SetXY(149,94.6);
-        $pdf->Write(5,$drow->escalafon());
+        $pdf->SetXY(143,101);
+        $pdf->Write(5,$row4['nombre']);
 
         //Conceptos
-        $pdf->SetXY(10,110);
+        $pdf->SetXY(10,120);
         $conceptos = json_decode($row2,true);
 
         $total=0;
         foreach ($conceptos as $concepto => $valor) {
             
-            $pdf->Cell(68,6,$concepto,0,0,'L');
-            $pdf->Cell(32,6,'',0,0,'C');
+            $pdf->Cell(65,6,$concepto,0,0,'L');
+            $pdf->Cell(30,6,'1',0,0,'C');
             if(strpos($concepto,'Ret')){
                 $pdf->Cell(34,6,'',0,0,'C');
                 $pdf->Cell(34,6,$valor,0,0,'C');
@@ -95,18 +148,28 @@ require_once('phpqrcode/qrlib.php');
                 $pdf->Cell(34,6,'',0,0,'C');
                 $total=$total+$valor;
             }
-            $pdf->Cell(32,6,'',0,1,'C');
+            $pdf->Cell(32,6,$total,0,1,'C');
             
             
         }
      
         //total
-        $pdf->SetXY(131,185);
-        $pdf->Write(5,$total);
+        //$pdf->SetXY(128,196.4);
+        //$pdf->Write(5,$total);
 
         //total neto
-        $pdf->SetXY(142,197.8);
+        $pdf->SetXY(136,210.5);
         $pdf->Write(5,$total);
+     
+        $pdf->SetFont('times', '', 12);
+     
+        //nfirma
+        $pdf->SetXY(88,263);
+        $pdf->Cell(40,5,$row3['nombre']." ".$row3['apellido'],0,0,'C');   
+     
+        //cfirma
+        $pdf->SetXY(88,268);
+        $pdf->Cell(40,5,$row3['cedula'],0,0,'C');
 
         $pdf->output();
         return $pdf;
@@ -207,27 +270,31 @@ function generarARC(){
     $row = $drow->perfil();
     $row2 = $drow->buscarARC();
     
-    $pdf = new tFPDF;
+    $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
         $pdf->AddPage('P', 'Letter', '0');
-        $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
-        $pdf->SetFont('DejaVu','',12);
+        $pdf->SetFont('times', '', 12);
+        $pdf->SetAuthor('Universidad Jose Antonio Paez');
         $pdf->SetTitle('ARC', TRUE);
-        $pdf->Image('../Views/Assets/img/ARC.jpg', 0, 0, -300);
+        $pdf->SetSubject('ARC');
+    
+    $pdf->SetAutoPageBreak(false, 0);
+
+    $pdf->Image('../Views/Assets/img/ARC2.jpg', 0, 0, 210, 297);
     
     //Nombre
-        $pdf->SetXY(50,91);
+        $pdf->SetXY(49,97);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);
 
     //Cedula
-        $pdf->SetXY(48,97.5);
+        $pdf->SetXY(47,103.5);
         $pdf->Write(5,$row['ci']);
     
     //Cargo
-        $pdf->SetXY(46,104);
+        $pdf->SetXY(45,110);
         $pdf->Write(5,$row['cargo']);
     
-        $pdf->SetFont('DejaVu','',11);
+        $pdf->SetFont('times', '', 11);
     
         $pdf->SetY(120);
         $pdf->SetX(20);
@@ -293,11 +360,11 @@ function generarARC(){
         }
         
     //total 1
-        $pdf->SetXY(98,226);
+        $pdf->SetXY(98,241);
         $pdf->Write(5,$trem);
     
     //total 2
-        $pdf->SetXY(170,226);
+        $pdf->SetXY(170,241);
         $pdf->Write(5,$timp);
         
         
@@ -452,69 +519,86 @@ function generarbono(){
         $row = $drow->perfil();
         $row2 = $drow->buscarBono();
 
-        $pdf = new tFPDF;
+       $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
         $pdf->AddPage('P', 'Letter', '0');
-        $pdf->SetFont('Arial', '', 12);
-        $pdf->SetTitle('Bono Alimenticio', TRUE);
-        $pdf->Image('../Views/Assets/img/bonoalimenticio.jpg', 0, 0, -300);
+        $pdf->SetFont('times', '', 11);
+        $pdf->SetAuthor('Universidad Jose Antonio Paez');
+        $pdf->SetTitle('Recibo', TRUE);
+        $pdf->SetSubject('Recibo de Pago');
+     
+        //$border = array('LRTB' => array('width' => 0.1, 'cap' => 'square', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
+        $pdf->SetAutoPageBreak(false, 0);
+
+        $pdf->Image('../Views/Assets/img/bonoalimenticio2.jpg', 0, 0, 210, 297);
 
         //Periodo Hasta
-        $pdf->SetXY(176,63.5);
+        $pdf->SetXY(168,67.5);
         $pdf->Write(5,"Hola mundo");
 
          //periodo Desde
-        $pdf->SetXY(104,64);
+        $pdf->SetXY(98,68);
         $pdf->Write(5,"Hola mundo");
 
         //num cta
-        $pdf->SetXY(96,71);
+        $pdf->SetXY(93,75.5);
         $pdf->Write(5,$_SESSION['id_doc']);
 
+        
         //Nombre
-        $pdf->SetXY(34,78);
+        $pdf->SetXY(31,83);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);
 
         //Cedula
-        $pdf->SetXY(124,78);
+        $pdf->SetXY(121,83);
         $pdf->Write(5,$row['ci']);
 
         //Ingreso
-        $pdf->SetXY(176,78);
+        $pdf->SetXY(170,83);
         $pdf->Write(5,$row['fecha_ingreso']);
 
         //Departamento
-        $pdf->SetXY(45,84.3);
-        $pdf->Write(5,$drow->departamento());
+        $pdf->SetXY(42,90);
+        $pdf->Write(5, $drow->departamento());
+     
+        //
+        $row4 = $drow->escalafon();
+        //
 
         //Dedicacion
-        $pdf->SetXY(159,84);
-        $pdf->Write(5,$row['dedicacion']);
+        $pdf->SetXY(155,90);
+        if($row4['tiempo_convencional'] != null){
+            $pdf->Write(5,'Tiempo Convencional');
+        }elseif($row4['medio_tiempo'] != null){
+            $pdf->Write(5,'Medio Tiempo');
+        }else{
+            $pdf->Write(5,'Tiempo Completo');
+        }
 
         //Cargo
-        $pdf->SetXY(30,92);
+        $pdf->SetXY(28,98);
         $pdf->Write(5,$row['cargo']);
 
         //Categoria
-        $pdf->SetXY(149,92);
-        $pdf->Write(5,$drow->escalafon());
+        $pdf->SetXY(144,98);
+        $pdf->Write(5,$row4['nombre']);
 
-        $pdf->SetXY(10,110);
+        $pdf->SetXY(10,115);
 
             
-            $pdf->Cell(68,6,'Bono Alimenticio',0,0,'L');
-            $pdf->Cell(32,6,'',0,0,'C');
+            $pdf->Cell(65,6,'Bono Alimenticio',0,0,'L');
+            $pdf->Cell(30,6,'',0,0,'C');
             $pdf->Cell(34,6,$row2,0,0,'C');
             $pdf->Cell(34,6,'',0,0,'C');
             $total=$row2;
             $pdf->Cell(32,6,'',0,1,'C');
     
         //total
-        $pdf->SetXY(105,182);
-        $pdf->Write(5,$total);
+        //$pdf->SetXY(105,182);
+        //$pdf->Write(5,$total);
 
         //total neto
-        $pdf->SetXY(141,198);
+        $pdf->SetXY(136,210.5);
         $pdf->Write(5,$total);
 
         $pdf->output();

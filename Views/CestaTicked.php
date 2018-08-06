@@ -172,18 +172,22 @@
           }
         }
         $cont1 = 1;
-        
-        while($cont1<=$id){
+        if(isset($id)){
             
-            if (isset($_REQUEST['6'.$cont1])) {
+            while($cont1<=$id){
             
-                seleccionarDoc(6,$id,0);
+                if (isset($_REQUEST['6'.$cont1])) {
+
+                    seleccionarDoc(6,$id,0);
+
+                }
+
+                $cont1 = $cont1 + 1;
 
             }
             
-            $cont1 = $cont1 + 1;
-            
         }
+        
           
           ?>
       </form>

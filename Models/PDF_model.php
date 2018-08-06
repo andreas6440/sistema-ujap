@@ -143,11 +143,23 @@ class dpdf{
         
         $row=$this->perfil();
         
-        $query = "SELECT nombre FROM public.".'"Escalafon"'." where id = $1;";
+        $query = "SELECT * FROM public.".'"Escalafon"'." where id = $1;";
         $select = pg_prepare($dbcon, "", $query);
         $select = pg_execute($dbcon, "", array($row['id_escalafon']));
         
-        return pg_fetch_assoc($select)['nombre'];
+        return pg_fetch_assoc($select);
+    }
+    
+    public function firma(){
+        
+        require('conexion.php');
+        
+        $query = "SELECT * FROM public.".'"Firma"'." where id = $1;";
+        $select = pg_prepare($dbcon, "", $query);
+        $select = pg_execute($dbcon, "", array(1));
+        
+        return pg_fetch_array($select);
+               
     }
     
     public function iduser(){
