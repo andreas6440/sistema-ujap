@@ -195,12 +195,14 @@ function generarconstanciab(){
         $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
         $pdf->SetFont('DejaVu','',12);
     
+        $row4 = $drow->escalafon();
+    
         //Contenido
         $pdf->SetXY(35,85);
         if($row['genero']==1){
-            $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que el Sr ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$drow->escalafon().", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
+            $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que el Sr ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$row4['nombre'].", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
         }else{
-           $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que la Sra ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$drow->escalafon().", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
+           $pdf->MultiCell(150,10,"Por medio de la presente se hace constar que la Sra ".$row['nombre']." ".$row['apellido'].", Titular de la cédula de identidad Nro ".$row['ci']." trabajó en la institución como ".$row['cargo'].", en su escalafon ".$row4['nombre'].", desde ".$row['fecha_ingreso']." hasta ".$row['fecha_salida']. ". \n \nConstancia que se expide a la solicitud de la parte en San Diego, a los veinte dias de ".date('Y-m-d'));
         }
     
         $pdf->output();
