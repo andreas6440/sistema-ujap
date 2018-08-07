@@ -307,7 +307,6 @@ $('#submit').click(function(){
 
 if ($('#InfoTrabajador').length) {
   
-
   $('#scedula').keypress(function(tecla) {
         var nombre=$('#scedula').val();
         var re=soloNumeros(tecla,nombre,8);
@@ -315,6 +314,15 @@ if ($('#InfoTrabajador').length) {
             return false;
         }
          $('#mensaje1').fadeOut();
+      
+    });
+  $('#NumDocumento').keypress(function(tecla) {
+        var nombre=$('#NumDocumento').val();
+        var re=soloNumeros(tecla,nombre,8);
+        if (re==false) {
+            return false;
+        }
+         $('#mensaje20').fadeOut();
       
     });
   $('#BuCedula').click(function(){
@@ -326,12 +334,7 @@ if ($('#InfoTrabajador').length) {
  
   
   });
-
- 
-}
-if ($('#voldi').length) {
-       
- $('#telefono').keypress(function(tecla) {
+  $('#telefono').keypress(function(tecla) {
         var nombre=$('#telefono').val();
         var re=soloNumeros(tecla,nombre,15);
         if (re==false) {
@@ -367,9 +370,62 @@ if ($('#voldi').length) {
         $('#mensaje7').fadeOut();
         $('#mensaje5,#mensaje4,#mensaje3,#mensaje2').fadeOut();
     });
+    $('#claveNueva').keypress(function(tecla) {
+        var nombre=$('#claveNueva').val();    
+        var re=  limitar(nombre,25,tecla);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje9,#mensaje12,#mensaje14,#mensaje15').fadeOut();
+    });
+    $('#claveRepetida').keypress(function(tecla) {
+        var nombre=$('#claveRepetida').val();    
+        var re=  limitar(nombre,25,tecla);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje10,#mensaje13,#mensaje15,#mensaje14').fadeOut();
+    });
+ $('#NumDocumento').keypress(function(tecla) {
+        var nombre=$('#NumDocumento').val();
+        var re=soloNumeros(tecla,nombre,8);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje20').fadeOut();
+    });
+$('#Burecibo').click(function(){
+    if ($('#voldi').length) {
+        var valor = $('#slct option:selected').html();
+        var valor=$(this).val();
+        console.log(valor);
+        
+        /*if (valor>0 && valor<6){
 
-$('#actualizarperfil').click(function(){
-    
+        console.log(valor);
+        }else{
+          alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Seleccionar tipo de documento.</h6>', 'custom', 2, function(){console.log('dismissed');});
+          return false;
+         }*/
+         
+         if ($('.activo').length) {
+            var docu=$('#NumDocumento').val();
+            if (docu=="") {
+                $('#mensaje20').fadeIn();
+                return false;
+            }
+         }
+
+        
+        
+
+    }else{
+        alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Primero se debe hacer la busqueda de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
+        return false;
+    }
+});
+ $('#actualizarperfil').click(function(){
+    if ($('#voldi').length) {
     var correo=$('#correo').val();
     var apellido=$('#apellido').val();
     var nombre=$('#nombre').val();
@@ -403,27 +459,15 @@ $('#actualizarperfil').click(function(){
     if ( GuardarCambios()!=true) {
         return false;
     }
-
+    }else{
+     alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Primero se debe hacer la busqueda de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
+     return false;
+    }
     
 });
 
-$('#claveNueva').keypress(function(tecla) {
-        var nombre=$('#claveNueva').val();    
-        var re=  limitar(nombre,25,tecla);
-        if (re==false) {
-            return false;
-        }
-        $('#mensaje9,#mensaje12,#mensaje14,#mensaje15').fadeOut();
-    });
-$('#claveRepetida').keypress(function(tecla) {
-        var nombre=$('#claveRepetida').val();    
-        var re=  limitar(nombre,25,tecla);
-        if (re==false) {
-            return false;
-        }
-        $('#mensaje10,#mensaje13,#mensaje15,#mensaje14').fadeOut();
-    });
- $('#actualizarpass').click(function(){        
+$('#actualizarpass').click(function(){   
+    if ($('#voldi').length) {     
         var conNueva=$('#claveNueva').val();
         var conRepe=$('#claveRepetida').val();
         var resul=1;
@@ -461,22 +505,24 @@ $('#claveRepetida').keypress(function(tecla) {
         if ( GuardarCambios()!=true) {
              return false;
         }
-
+        }else{
+     alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Primero se debe hacer la busqueda de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
+     return false;
+    }
     });
 
- $('#NumDocumento').remove();
-    
-   
+$('#NumDocumento').remove();
 
-  
-  $('select.sele').on('change',function(){
+$('select.sele').on('change',function(){
    var valor = $('#slct option:selected').html();
    var valor=$(this).val();
+  
+     
    if ((valor==2 || valor==5)||valor==1) {
 
     if (!$('.activo').length) {
 
-    $( "#documentos" ).append( "<input class='form-control activo' type='search' name='NumDocumento' id='NumDocumento'placeholder='Nº Documento' >");
+    $( "#documentos" ).append( "<input class='form-control activo' type='search' name='NumDocumento' id='NumDocumento' placeholder='Nº Documento' >");
    }
    }else{  
     $('#NumDocumento').remove();
@@ -485,28 +531,8 @@ $('#claveRepetida').keypress(function(tecla) {
    }
    });
 
-  $('#NumDocumento').keypress(function(tecla) {
-        var nombre=$('#NumDocumento').val();
-        var re=soloNumeros(tecla,nombre,8);
-        if (re==false) {
-            return false;
-        }
-         $('#mensaje11').fadeOut();
-      
-    });
+}
 
-  
-
-    }else{
-        $('#actualizarperfil').click(function(){
-            alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. No se ha realizado la busqueda de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
-           return false;
-        }
-        $('#actualizarpass').click(function(){ 
-             alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. No se ha realizado la busqueda de usuario.</h6>', 'custom', 2, function(){console.log('dismissed');});
-           return false;
-        }
-    }
     
 
 });

@@ -239,8 +239,9 @@ nivel1();
                       <h3 class="h4 mx-2 py-2 ">Documentos del usuario</h3>
                       </div>
                       <div class="col-lg-8 col-sm-12 ">
-                         <form  class="form-inline" method="post">
-                      <div class="select ml-auto ">
+
+                         <form  class="form-inline" method="post">                          
+                      <div class="select ml-auto ">  
                         <select class="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
@@ -251,14 +252,15 @@ nivel1();
 
                         </select>
                       </div>
+
                       
              <div id="documentos" class="mx-2">     
       
       <input class="form-control activo"  type="search" name="NumDocumento"  id="NumDocumento" placeholder="Nº Documento">
-      
+      <div id="mensaje20" class="errores2 ">Completar Campo</div>
       </div>  
       <div class=" mr-auto ">
-      <input type="submit" name="Burecibo" id="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+      <input type="submit" name="Burecibo" id="Burecibo" id="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
       </div>                                  
       <div id="mensaje11" class="errores2 ">Completar Campo</div>                                          
     </form>
