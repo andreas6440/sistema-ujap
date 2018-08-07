@@ -2,6 +2,22 @@
 <?php
 
 require_once("Controllers/InfoBasica_control.php");
+require_once("Controllers/ActualizarUser_control.php");
+
+if(isset($_POST['actualizarperfil'])){
+    
+    ActualizarPerfil($_SESSION['user']);
+    
+}
+
+
+if(isset($_POST['actualizarpass'])){
+    
+    ActualizarPassword();
+    
+}
+ 
+
 
 $row = mostrarinfo();
  while($row2 = pg_fetch_array($row)){
@@ -120,9 +136,6 @@ $row = mostrarinfo();
                                     <div class="row">
                                             <div class="col-md-4 ">
                                                 <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
-                                                <?php 
-                                                require_once("Controllers/ActualizarUser_control.php");
-                                               ActualizarPerfil($_SESSION['user']);?>
                                             </div>
                                         </div>
                                     </form>
@@ -150,9 +163,6 @@ $row = mostrarinfo();
                                                         
                                                         <label id="mensaje11" class="errores2 ">  Completar Campo</label>
                                                         <div id="mensaje8" class="errores2 ">Se necesita minimo 8 caracteres</div>
-                                                         <?php
-                                                require_once("Controllers/ActualizarUser_control.php");
-                                                ActualizarPassword(); ?>
                     
                                                     </div>
                                                 </div>
