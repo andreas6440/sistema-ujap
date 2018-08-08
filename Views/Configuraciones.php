@@ -90,6 +90,7 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Cédula
                                                         </label>
+                                                        <div id="mensaje4" class="errores2 ">Completar Campo</div>
 
                                                     </div>
                                                 </div>
@@ -102,6 +103,7 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Nombre
                                                         </label>
+                                                        <div id="mensaje5" class="errores2 ">Completar Campo</div>
 
                                                     </div>
                                                 </div>
@@ -114,6 +116,7 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Apellido
                                                         </label>
+                                                        <div id="mensaje6" class="errores2 ">Completar Campo</div>
                                                     </div>
                                                 </div>
 
@@ -126,6 +129,8 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Correo electronico
                                                         </label>
+                                                        <div id="mensaje7" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje8" class="errores2 ">Correo invalido</div>
                                             </div>
                                         </div>
                                             </div>
@@ -144,6 +149,7 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Teléfono
                                                         </label>
+                                                        <div id="mensaje9" class="errores2 ">Completar Campo</div>
                                             </div>
                                         </div>
 
@@ -156,6 +162,7 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Nombre de usuario
                                                         </label>
+                                                        <div id="mensaje10" class="errores2 ">Completar Campo</div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -167,6 +174,8 @@ if (isset($_REQUEST['firma'])) {
                                                         <label class="label2">
                                                             Contraseña
                                                         </label>
+                                                        <div id="mensaje11" class="errores2 ">Completar Campo</div>
+                                                        <div id="mensaje12" class="errores2 ">Se necesita minimo 8 caracteres</div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -191,7 +200,7 @@ if (isset($_REQUEST['firma'])) {
                                     
                                     <div class="row">
                                             <div class="col-md-4 ">
-                                                <input type="submit" name="registrar" class="btn color-azul btn-submit btn-lg" value="Registrar">
+                                                <input type="submit" name="registrar" id="registrar" class="btn color-azul btn-submit btn-lg" value="Registrar">
                                             </div>
                                         </div>
                                     </form>

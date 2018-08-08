@@ -596,6 +596,149 @@ $('select.sele').on('change',function(){
     }
      });
 
+
+     $('#cedula').keypress(function(tecla) {
+        var nombre=$('#cedula').val();
+        var re=soloNumeros(tecla,nombre,8);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje4').fadeOut();
+    });
+    $('#telefono').keypress(function(tecla) {
+        var nombre=$('#telefono').val();
+        var re=soloNumeros(tecla,nombre,15);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje9').fadeOut();
+    });
+
+    $('#nombre').keypress(function(tecla) {
+        var nombre=$('#nombre').val();
+        var re=soloLetras(tecla,nombre,20);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje5').fadeOut();
+    });
+    $('#apellido').keypress(function(tecla) {
+        var nombre=$('#apellido').val();    
+        var re= soloLetras(tecla,nombre,20);        
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje6').fadeOut();
+    });
+
+    
+    $('#correo').keypress(function(tecla) {
+        var nombre=$('#correo').val();  
+        var re= limitar(nombre,30,tecla);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje7').fadeOut();
+        $('#mensaje8').fadeOut();
+    });
+    
+    $('#Nusuario').keypress(function(tecla) {
+        var nombre=$('#Nusuario').val();    
+        var re= validarusuario(tecla,nombre,15);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje10').fadeout();
+    });
+
+    $('#clave').keypress(function(tecla) {
+        var nombre=$('#clave').val();    
+        var re=  limitar(nombre,25,tecla);
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje11,#mensaje12').fadeOut();
+    });
+
+$('#registrar').click(function(){
+    var usuario=$('#Nusuario').val();
+    var correo=$('#correo').val();
+    var clave=$('#clave').val();
+    var apellido=$('#apellido').val();
+    var nombre=$('#nombre').val();
+    var telefono=$('#telefono').val();
+    var cedula=$('#cedula').val();
+     if ((cedula=="" && nombre=="") && clave==""){
+        if (apellido=="" && correo=="") {
+            if (telefono=="" && usuario=="") {
+
+                
+                  $('#mensaje4').fadeIn();
+                  $('#mensaje5').fadeIn();
+                  $('#mensaje6').fadeIn();
+                  $('#mensaje7').fadeIn();
+                  $('#mensaje9').fadeIn();
+                  $('#mensaje10').fadeIn();
+                  $('#mensaje11').fadeIn();
+                    return false;
+            }
+        }
+    }
+    if (telefono=="") {
+        $('#mensaje9').fadeIn();
+        return false;
+    }
+    if (usuario=="") {
+        $('#mensaje10').fadeIn();
+        return false;
+    }
+    if (nombre=="") {
+        $('#mensaje5').fadeIn();
+        return false;
+    }
+    if (apellido=="") {
+        $('#mensaje6').fadeIn();
+        return false;
+    }
+    if (cedula=="") {
+        $('#mensaje4').fadeIn();
+        return false;
+    }
+
+    if (correo!="") {
+      var regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+
+    if (!regex.test($('#correo').val().trim())) {
+        
+         $('#mensaje8').fadeIn();
+        return false;
+    }  
+    }
+
+     if (clave=="") {              
+            $('#mensaje11').fadeIn(); 
+             
+        }else{
+            var re=  minimoC(clave,3);
+            if (re==false) {
+            $('#mensaje12').fadeIn();
+           
+            }
+        }
+    
+        
+    if ( GuardarCambios()==true) {
+        
+    }else{
+        return false;
+    }
+
+    
+});
+
+
+
+
      }  
 
 });
