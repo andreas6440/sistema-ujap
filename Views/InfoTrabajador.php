@@ -39,8 +39,9 @@ nivel1();
                               $info = buscarinfo();
                               
                               $prueba = $info;
+                              $info2 = $info;
 
-                              if(pg_num_rows($prueba)<1){
+                              if(pg_num_rows($prueba)==0){
                                    echo '<div class=" my-2">
                                     <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
                                         <div>';
@@ -56,8 +57,9 @@ nivel1();
                           if(isset($_SESSION['mostrar'])){
                               echo $_SESSION['mostrar'];
                           }
-                          
-                          
+                          if (isset($_REQUEST["BuCedula"])) {
+                              $info2 = buscarinfo();
+                            while($row2 = pg_fetch_array($info2)){
                           ?>
                     </div >
                     </div>
@@ -68,7 +70,10 @@ nivel1();
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="nombre" id="nombre" type="text"/>
+                                                       
+                                                        <?php
+                                                        echo '<input class="input2" name="nombre" id="nombre" autocomplete="of" type="text" placeholder='. $row2["nombre"].' />';
+                                                        ?> 
 
                                                         <span class="bar">
                                                         </span>
@@ -81,7 +86,9 @@ nivel1();
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="group">
-                                                        <input class="input2" name="apellido" id="apellido" type="text"/>
+                                                        <?php
+                                                        echo '<input class="input2" name="apellido" id="apellido" autocomplete="of" type="text" placeholder='. $row2["apellido"].'  />';
+                                                        ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -123,7 +130,9 @@ nivel1();
                                         
                                         <div class="col-md-5">
                                                 <div class="group">
-                                                <input class="input2" name="email" id="correo" type="text"/>
+                                                <?php
+                                                echo '<input class="input2" name="email" id="correo" type="text" autocomplete="of" placeholder='. $row2["email"].' />';
+                                                    ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -136,7 +145,11 @@ nivel1();
                                         </div>
                                         <div class="col-md-4">
                                                 <div class="group">
-                                                <input class="input2" name="telefono" id="telefono" type="text"/>
+                                                <?php
+                                                echo '<input class="input2" name="telefono" id="telefono" type="text" autocomplete="of" placeholder='.$row2["telefono"].' />';
+                            }
+                          }
+                                                ?>
 
                                                         <span class="bar">
                                                         </span>
@@ -239,9 +252,8 @@ nivel1();
                       <h3 class="h4 mx-2 py-2 ">Documentos del usuario</h3>
                       </div>
                       <div class="col-lg-8 col-sm-12 ">
-
-                         <form  class="form-inline" method="post">                          
-                      <div class="select ml-auto ">  
+                         <form  class="form-inline" method="post">
+                      <div class="select ml-auto ">
                         <select class="sele" name="slct" id="slct">
                           <option>Tipo de documento</option>
                           <option value="1">ARC</option>
@@ -252,7 +264,6 @@ nivel1();
 
                         </select>
                       </div>
-
                       
              <div id="documentos" class="mx-2">     
       
@@ -260,7 +271,7 @@ nivel1();
       <div id="mensaje20" class="errores2 ">Completar Campo</div>
       </div>  
       <div class=" mr-auto ">
-      <input type="submit" name="Burecibo" id="Burecibo" id="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
+      <input type="submit" name="Burecibo" id="Burecibo" class="btn color-azul btn-submit btn-lg " value="Buscar">
       </div>                                  
       <div id="mensaje11" class="errores2 ">Completar Campo</div>                                          
     </form>
