@@ -47,16 +47,19 @@ if (isset($_REQUEST['firma'])) {
                          <div class="mr-auto mx-2">    
                              <div class="row">
                             <div class="col-lg-3">
-                                <input class="form-control" type="text" name="ci" placeholder="Nº de Cédula" >
+                                <input class="form-control" type="text" name="ci" id="ci" placeholder="Nº de Cédula" >
+                                <div id="mensaje1" class="errores2 ">Completar Campo</div>
                              </div>
                              <div class="col-lg-3">
-                                <input class="form-control" type="text" name="nombre" placeholder="Nombre" >
+                                <input class="form-control" type="text" name="nombre" id="nombres" placeholder="Nombre" >
+                                <div id="mensaje2" class="errores2 ">Completar Campo</div>
                              </div>
                              <div class="col-lg-3">
-                                <input class="form-control" type="text" name="apellido" placeholder="Apellido" >
+                                <input class="form-control" type="text" name="apellido" id="apellidos" placeholder="Apellido" >
+                                <div id="mensaje3" class="errores2 ">Completar Campo</div>
                              </div>
                              <div class="col-lg-3">
-                                <input type="submit" name="firma" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
+                                <input type="submit" name="firma"id="firma" class="btn color-azul btn-submit btn-lg " value="Modificar firma">
                              </div>
                             </div>
                     

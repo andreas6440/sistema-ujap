@@ -306,7 +306,7 @@ $('#submit').click(function(){
 
 
 if ($('#InfoTrabajador').length) {
-  
+  $('#NumDocumento').appendTo("body");
   $('#scedula').keypress(function(tecla) {
         var nombre=$('#scedula').val();
         var re=soloNumeros(tecla,nombre,8);
@@ -396,18 +396,20 @@ if ($('#InfoTrabajador').length) {
     });
 $('#Burecibo').click(function(){
     if ($('#voldi').length) {
-        var valor = $('#slct option:selected').html();
-        var valor=$(this).val();
-        console.log(valor);
-        
-        /*if (valor>0 && valor<6){
+        //var valor = $('#slct option:selected').html();
+        //var valor=$(this).val();
+  
+     
+        // if ((valor==2 || valor==5)||valor==1) {
+         // console.log(valor);
+        // }else{
+            
+         // alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Seleccionar tipo de documento.</h6>', 'custom', 2, function(){console.log('dismissed');});
+         // return false;
+       //  }
+         //console.log(valor);
+        // queda pendiente esta validacion
 
-        console.log(valor);
-        }else{
-          alertify.notify('<h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR. Seleccionar tipo de documento.</h6>', 'custom', 2, function(){console.log('dismissed');});
-          return false;
-         }*/
-         
          if ($('.activo').length) {
             var docu=$('#NumDocumento').val();
             if (docu=="") {
@@ -416,7 +418,7 @@ $('#Burecibo').click(function(){
             }
          }
 
-        
+        return false;
         
 
     }else{
@@ -514,6 +516,7 @@ $('#actualizarpass').click(function(){
 $('#NumDocumento').remove();
 
 $('select.sele').on('change',function(){
+    $('#mensaje20').fadeOut();
    var valor = $('#slct option:selected').html();
    var valor=$(this).val();
   
@@ -533,6 +536,66 @@ $('select.sele').on('change',function(){
 
 }
 
+     if ($('#Configuraciones').length) {
+
+        $('#nombres').keypress(function(tecla) {
+        var nombre=$('#nombres').val();
+        var re=soloLetras(tecla,nombre,20);
+        if (re==false) {
+            return false;
+        }
+       $('#mensaje2').fadeOut();
+    });
+    $('#apellidos').keypress(function(tecla) {
+        var nombre=$('#apellidos').val();    
+        var re= soloLetras(tecla,nombre,20);        
+        if (re==false) {
+            return false;
+        }
+        $('#mensaje3').fadeOut();
+    });
+
+    $('#ci').keypress(function(tecla) {
+        var nombre=$('#ci').val();
+        var re=soloNumeros(tecla,nombre,8);
+        if (re==false) {
+            return false;
+        }
+         $('#mensaje1').fadeOut();
+      
+    });
+
+    $('#firma').click(function(){
+        var cedula=$('#ci').val();
+    var apellido=$('#apellidos').val();
+    var nombre=$('#nombres').val();
     
+    
+     if ( nombre=="" && cedula=="") {
+        if (apellido=="") {
+                           
+                  $('#mensaje1').fadeIn();
+                  $('#mensaje2').fadeIn();
+                  $('#mensaje3').fadeIn();               
+                 
+                    return false;
+            
+        }
+    }
+    if (nombre=="") {
+        $('#mensaje2').fadeIn();
+        return false;
+    }
+    if (apellido=="") {
+        $('#mensaje3').fadeIn();
+        return false;
+    }
+    if (cedula=="") {
+        $('#mensaje1').fadeIn();
+        return false;
+    }
+     });
+
+     }  
 
 });
