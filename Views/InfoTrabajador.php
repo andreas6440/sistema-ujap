@@ -43,7 +43,7 @@ nivel1();
 
                               if(pg_num_rows($prueba)==0){
                                    echo '<div class=" my-2">
-                                    <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>
+                                    <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Cedula incorrecta</label>
                                         <div>';
                               }
                                while($row = pg_fetch_array($info)){
@@ -57,9 +57,7 @@ nivel1();
                           if(isset($_SESSION['mostrar'])){
                               echo $_SESSION['mostrar'];
                           }
-                          if (isset($_REQUEST["BuCedula"])) {
-                              $info2 = buscarinfo();
-                            while($row2 = pg_fetch_array($info2)){
+                          
                           ?>
                     </div >
                     </div>
@@ -67,6 +65,13 @@ nivel1();
                     </div>
                     <div class="card-body ">
                       <form method="post">
+                                           <?php
+                      
+                      if (isset($_REQUEST["BuCedula"])) {
+                              $info2 = buscarinfo();
+                            while($row2 = pg_fetch_array($info2)){
+                                
+                                ?>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="group">
@@ -147,8 +152,6 @@ nivel1();
                                                 <div class="group">
                                                 <?php
                                                 echo '<input class="input2" name="telefono" id="telefono" type="text" autocomplete="of" placeholder='.$row2["telefono"].' />';
-                            }
-                          }
                                                 ?>
 
                                                         <span class="bar">
@@ -164,6 +167,10 @@ nivel1();
 
                                     </div>
                                     
+                                    <?php
+                                  }
+                          }
+                           ?>         
                                     <div class="row">
                                             <div class="col-md-4 ">
                                                 <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
