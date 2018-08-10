@@ -527,7 +527,7 @@ function generarbono(){
         $pdf->SetFont('times', '', 11);
         $pdf->SetAuthor('Universidad Jose Antonio Paez');
         $pdf->SetTitle('Recibo', TRUE);
-        $pdf->SetSubject('Recibo de Pago');
+        $pdf->SetSubject('Bono Alimenticio');
      
         //$border = array('LRTB' => array('width' => 0.1, 'cap' => 'square', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
         $pdf->SetAutoPageBreak(false, 0);
@@ -546,7 +546,26 @@ function generarbono(){
         $pdf->SetXY(93,75.5);
         $pdf->Write(5,$_SESSION['id_doc']);
 
-        
+        //QR
+     
+        $style = array(
+        'border' => false,
+        'vpadding' => 'auto',
+        'hpadding' => 'auto',
+        'fgcolor' => array(0,0,0),
+        'bgcolor' => false, //array(255,255,255)
+        'module_width' => 1, // width of a single module in points
+        'module_height' => 1 // height of a single module in points
+        );
+
+        // write QR
+
+        $code = "Numero de documento: ".$_SESSION['id_doc'].", Nombre: ".$row['nombre'].", Apellido: ".$row['apellido'];
+        $pdf->write2DBarcode($code, 'QRCODE,M', 25, 55, 25, 25, $style, 'N');
+     
+     
+        //FIN QR
+
         //Nombre
         $pdf->SetXY(31,83);
         $pdf->Write(5,$row['nombre']." ".$row['apellido']);

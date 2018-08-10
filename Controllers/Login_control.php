@@ -20,6 +20,7 @@ class Login_control
             $password = md5($_POST['password']);
             $data     = array("usuario" => $usuario, "password" => $password);
             $log      = $login_model->logueo($data);
+            $log2 = $login_model->logueo($data);
 
             
             if(isset($log)){
@@ -42,7 +43,7 @@ class Login_control
                         echo '<meta http-equiv="Refresh" content="0;URL=index.php">';
                     }
                 } 
-                $row = pg_fetch_assoc($log);
+                $row = pg_fetch_assoc($log2);
                 if ($row==false) {
                     echo '<div class=" my-2">
                           <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Usuario o Contraseña incorrecta</label>

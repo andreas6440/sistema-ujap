@@ -410,15 +410,15 @@ $('#Burecibo').click(function(){
          //console.log(valor);
         // queda pendiente esta validacion
 
-         if ($('.activo').length) {
+       /*  if ($('.activo').length) {
             var docu=$('#NumDocumento').val();
             if (docu=="") {
                 $('#mensaje20').fadeIn();
                 return false;
             }
          }
-
-        return false;
+*/
+        
         
 
     }else{

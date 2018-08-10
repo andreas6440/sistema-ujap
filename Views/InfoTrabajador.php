@@ -9,7 +9,7 @@ nivel1();
    <div id="InfoTrabajador" class="container-fluid my-5 punto  ">
     <h5 class=" pestaña"><i class="fa fa-filter" ></i>  Información del usuario</h5>
               <div class="row wrapper">
-                <div class="col-lg-8">
+                <div class="col-lg-8 ">
                   <div class="card ">
                     
                      <div class="card-header d-flex align-items-center">
@@ -39,12 +39,12 @@ nivel1();
                               $info = buscarinfo();
                               
                               $prueba = $info;
-                              $info2 = $info;
+                              //$info2 = $info;
 
                               if(pg_num_rows($prueba)==0){
-                                   echo '<div class=" my-2">
+                                   echo '
                                     <label style="color:#DF0101"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Cedula incorrecta</label>
-                                        <div>';
+                                        ';
                               }
                                while($row = pg_fetch_array($info)){
                                    $_SESSION['mostrar']=$row["nombre"]." ".$row["apellido"];;
@@ -54,9 +54,7 @@ nivel1();
                               echo '<div id="voldi"></div>';
 
                             }
-                          if(isset($_SESSION['mostrar'])){
-                              echo $_SESSION['mostrar'];
-                          }
+                          
                           
                           ?>
                     </div >
@@ -166,11 +164,7 @@ nivel1();
 
 
                                     </div>
-                                    
-                                    <?php
-                                  }
-                          }
-                           ?>         
+                                            
                                     <div class="row">
                                             <div class="col-md-4 ">
                                                 <input type="submit" name="actualizarperfil" id="actualizarperfil" class="btn color-azul btn-submit btn-lg" value="Guardar Cambios">
@@ -182,6 +176,10 @@ nivel1();
                                                  ?>
                                             </div>
                                         </div>
+                                        <?php
+                                  }
+                          }
+                           ?> 
                                     </form>
   </div>
 </div>
