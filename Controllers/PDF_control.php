@@ -4,6 +4,7 @@ session_start();
 require_once('../Models/PDF_model.php');
 require_once('tcpdf.php');
 require_once('../tfpdf.php');
+require_once('NumToLetra_control.php');
 
  function generarrecibo(){
         $drow = new dpdf;
@@ -135,6 +136,8 @@ $pdf->setSignature($certificate, $certificate, 'tcpdfdemo', '', 2, $info);
         $conceptos = json_decode($row2,true);
 
         $total=0;
+        $ta=0;
+        $tr=0;
         foreach ($conceptos as $concepto => $valor) {
             
             $pdf->Cell(65,6,$concepto,0,0,'L');
@@ -143,10 +146,12 @@ $pdf->setSignature($certificate, $certificate, 'tcpdfdemo', '', 2, $info);
                 $pdf->Cell(34,6,'',0,0,'C');
                 $pdf->Cell(34,6,$valor,0,0,'C');
                 $total=$total-$valor;
+                $tr=$tr+$valor;
             }else{
                 $pdf->Cell(34,6,$valor,0,0,'C');
                 $pdf->Cell(34,6,'',0,0,'C');
                 $total=$total+$valor;
+                $ta=$ta+$valor;
             }
             $pdf->Cell(32,6,$total,0,1,'C');
             
@@ -156,6 +161,15 @@ $pdf->setSignature($certificate, $certificate, 'tcpdfdemo', '', 2, $info);
         //total
         //$pdf->SetXY(128,196.4);
         //$pdf->Write(5,$total);
+     
+        /*$pdf->SetXY(90,190);
+        $pdf->Cell(15,6,"Total: ",0,0,'L');
+        $pdf->Cell(34,6,$ta,0,0,'C');
+        $pdf->Cell(34,6,$tr,0,0,'C');*/
+        
+     
+        $pdf->SetXY(10,200);
+        $pdf->Cell(185,6," (".numtoletras($total).")",0,0,'R');
 
         //total neto
         $pdf->SetXY(136,210.5);
@@ -526,7 +540,7 @@ function generarbono(){
         $pdf->AddPage('P', 'Letter', '0');
         $pdf->SetFont('times', '', 11);
         $pdf->SetAuthor('Universidad Jose Antonio Paez');
-        $pdf->SetTitle('Recibo', TRUE);
+        $pdf->SetTitle('Bono Alimenticio', TRUE);
         $pdf->SetSubject('Bono Alimenticio');
      
         //$border = array('LRTB' => array('width' => 0.1, 'cap' => 'square', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
@@ -618,6 +632,9 @@ function generarbono(){
         //$pdf->SetXY(105,182);
         //$pdf->Write(5,$total);
 
+        $pdf->SetXY(10,200);
+        $pdf->Cell(185,6," (".numtoletras($total).")",0,0,'R');
+    
         //total neto
         $pdf->SetXY(136,210.5);
         $pdf->Write(5,$total);
